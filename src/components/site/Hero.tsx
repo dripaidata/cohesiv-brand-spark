@@ -38,6 +38,14 @@ const Hero = () => (
             <a href="/work">See our work</a>
           </Button>
         </div>
+        <p className="mt-6 flex items-center gap-3 text-sm text-primary-foreground/60">
+          <span className="flex -space-x-1">
+            <span className="h-2 w-2 rounded-full bg-cyan" />
+            <span className="h-2 w-2 rounded-full bg-cyan/70" />
+            <span className="h-2 w-2 rounded-full bg-cyan/40" />
+          </span>
+          Trusted by data &amp; AI leaders at Fidelity, Manulife, Rocket Software &amp; Kaspersky
+        </p>
       </div>
     </div>
 
