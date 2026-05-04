@@ -1,17 +1,23 @@
 import { ArrowUpRight } from "lucide-react";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
+import AnimatedNumber from "./AnimatedNumber";
+import Reveal from "./Reveal";
 
 const proofs = [
   {
-    metric: "+293%",
+    value: 293,
+    prefix: "+",
+    suffix: "%",
     label: "Quote form conversion",
     project: "Global MarTech Transformation",
     summary: "Rebuilt the analytics + personalization stack for a global insurer, lifting top-of-funnel conversion across nine markets.",
     icon: iconMartech,
   },
   {
-    metric: "+650%",
+    value: 650,
+    prefix: "+",
+    suffix: "%",
     label: "CTA engagement",
     project: "Content Personalization",
     summary: "Designed and shipped a real-time content personalization framework that turned static pages into responsive journeys.",
@@ -39,24 +45,28 @@ const Proof = () => (
       </div>
 
       <div className="mt-16 grid gap-6 md:grid-cols-2">
-        {proofs.map((p) => (
-          <article
-            key={p.project}
-            className="group relative flex flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev"
-          >
-            <div className="flex items-start justify-between">
-              <div>
-                <p className="display-serif text-7xl text-cyan md:text-8xl">{p.metric}</p>
-                <p className="eyebrow mt-2 text-navy-deep">{p.label}</p>
+        {proofs.map((p, i) => (
+          <Reveal key={p.project} delay={i * 120}>
+            <article className="group relative flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev">
+              <div className="flex items-start justify-between">
+                <div>
+                  <AnimatedNumber
+                    value={p.value}
+                    prefix={p.prefix}
+                    suffix={p.suffix}
+                    className="display-serif block text-7xl text-cyan md:text-8xl"
+                  />
+                  <p className="eyebrow mt-2 text-navy-deep">{p.label}</p>
+                </div>
+                <img src={p.icon} alt="" loading="lazy" className="h-20 w-20 object-contain opacity-90" />
               </div>
-              <img src={p.icon} alt="" loading="lazy" className="h-20 w-20 object-contain opacity-90" />
-            </div>
-            <div className="mt-10 border-t border-border pt-6">
-              <p className="font-mono text-xs text-muted-foreground">→ Engagement</p>
-              <h3 className="mt-2 text-2xl font-medium tracking-tight text-navy-ink">{p.project}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
-            </div>
-          </article>
+              <div className="mt-10 border-t border-border pt-6">
+                <p className="font-mono text-xs text-muted-foreground">→ Engagement</p>
+                <h3 className="mt-2 text-2xl font-medium tracking-tight text-navy-ink">{p.project}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
+              </div>
+            </article>
+          </Reveal>
         ))}
       </div>
     </div>
