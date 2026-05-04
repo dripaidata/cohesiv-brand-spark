@@ -1,17 +1,23 @@
 import { ArrowUpRight } from "lucide-react";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
+import AnimatedNumber from "./AnimatedNumber";
+import Reveal from "./Reveal";
 
 const proofs = [
   {
-    metric: "+293%",
+    value: 293,
+    prefix: "+",
+    suffix: "%",
     label: "Quote form conversion",
     project: "Global MarTech Transformation",
     summary: "Rebuilt the analytics + personalization stack for a global insurer, lifting top-of-funnel conversion across nine markets.",
     icon: iconMartech,
   },
   {
-    metric: "+650%",
+    value: 650,
+    prefix: "+",
+    suffix: "%",
     label: "CTA engagement",
     project: "Content Personalization",
     summary: "Designed and shipped a real-time content personalization framework that turned static pages into responsive journeys.",
