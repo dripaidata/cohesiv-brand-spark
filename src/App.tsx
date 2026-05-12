@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import Work from "./pages/Work.tsx";
 import Labs from "./pages/Labs.tsx";
+import About from "./pages/About.tsx";
 import CongressionalTradesFund from "./pages/CongressionalTradesFund.tsx";
 import DynastyCapManager from "./pages/DynastyCapManager.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
           <Route path="/labs" element={<Labs />} />
+          <Route path="/about" element={<About />} />
           <Route path="/work/global-martech-transformation" element={<GlobalMartechTransformation />} />
           <Route path="/work/real-time-content-personalization" element={<RealTimeContentPersonalization />} />
           <Route path="/work/congressional-trades-fund" element={<CongressionalTradesFund />} />
