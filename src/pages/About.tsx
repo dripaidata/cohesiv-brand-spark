@@ -69,7 +69,7 @@ const About = () => (
               A decade of <em className="text-cyan not-italic">enterprise data leadership</em>, built for mid-market.
             </h1>
             <p className="mt-10 max-w-2xl text-lg text-primary-foreground/75">
-              Drip AI &amp; Data is a boutique consultancy founded by Danny Ellowitz — built on fourteen years of leading data, analytics, and AI inside global enterprises like Fidelity, Manulife, Rocket Software, and Kaspersky Labs.
+              Drip AI &amp; Data is a boutique consultancy founded by Danny Ellowitz — built on eleven years of leading data, analytics, and AI inside global enterprises like Fidelity, Manulife, Rocket Software, and Kaspersky Labs.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/65">
               We exist because mid-market companies have outgrown spreadsheets but can't justify the cost of a Big 4 engagement or a full in-house data team. We bring the same playbook the Fortune 500 uses — applied with focus, shipped end to end, and priced for the businesses that actually need it.
@@ -115,7 +115,7 @@ const About = () => (
           </div>
           <div className="md:col-span-8 space-y-6 text-base leading-relaxed text-navy-deep">
             <p>
-              Danny has spent fourteen years inside global enterprises building the data and AI infrastructure that mid-market leaders only read about in case studies. He's led analytics organizations at Fidelity Investments, run global marketing technology and analytics for Manulife / John Hancock across nine markets, headed analytics and journey orchestration at Rocket Software, and stood up global digital analytics for Kaspersky Labs.
+              Danny has spent eleven years inside global enterprises building the data and AI infrastructure that mid-market leaders only read about in case studies. He's led analytics organizations at Fidelity Investments, run global marketing technology and analytics for Manulife / John Hancock across nine markets, headed analytics and journey orchestration at Rocket Software, and stood up global digital analytics for Kaspersky Labs.
             </p>
             <p>
               The pattern across all of those roles was the same: take a fragmented, half-instrumented, politically-tangled data estate and turn it into something a marketing or product organization could actually run on. The work was rarely glamorous — governed tagging, single sources of truth, decisioning frameworks, measurement models, experimentation discipline — but it was the work that moved the metrics.
