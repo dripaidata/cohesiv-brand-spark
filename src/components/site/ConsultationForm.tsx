@@ -5,19 +5,67 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import { z } from "zod";
+import { supabase } from "@/integrations/supabase/client";
 
 const services = ["AI Strategy", "Data & Analytics", "Agentic Workflows"];
 
+const submissionSchema = z.object({
+  first_name: z.string().trim().min(1, "First name is required").max(100),
+  last_name: z.string().trim().min(1, "Last name is required").max(100),
+  email: z.string().trim().email("Enter a valid email").max(255),
+  company: z.string().trim().min(1, "Company is required").max(200),
+  title: z.string().trim().max(200).optional().or(z.literal("")),
+  challenges: z.string().trim().min(1, "Tell us a bit about your challenges").max(5000),
+});
+
 const ConsultationForm = () => {
   const [selected, setSelected] = useState<string[]>([]);
+  const [submitting, setSubmitting] = useState(false);
   const toggle = (s: string) =>
     setSelected((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const fd = new FormData(form);
+    const raw = {
+      first_name: String(fd.get("firstName") ?? ""),
+      last_name: String(fd.get("lastName") ?? ""),
+      email: String(fd.get("email") ?? ""),
+      company: String(fd.get("company") ?? ""),
+      title: String(fd.get("title") ?? ""),
+      challenges: String(fd.get("challenges") ?? ""),
+    };
+
+    const parsed = submissionSchema.safeParse(raw);
+    if (!parsed.success) {
+      toast.error(parsed.error.issues[0]?.message ?? "Please check the form");
+      return;
+    }
+
+    setSubmitting(true);
+    const { error } = await supabase.from("consultation_submissions").insert({
+      first_name: parsed.data.first_name,
+      last_name: parsed.data.last_name,
+      email: parsed.data.email,
+      company: parsed.data.company,
+      title: parsed.data.title || null,
+      challenges: parsed.data.challenges,
+      services: selected,
+      nda: fd.get("nda") === "on",
+    });
+    setSubmitting(false);
+
+    if (error) {
+      console.error("Consultation submission failed", error);
+      toast.error("Something went wrong. Please try again or email danny@dripaidata.com.");
+      return;
+    }
+
     toast.success("Thanks — we'll be in touch within one business day.");
-    (e.target as HTMLFormElement).reset();
+    form.reset();
     setSelected([]);
   };
 
@@ -92,6 +140,7 @@ const ConsultationForm = () => {
             </Label>
             <Textarea
               id="challenges"
+              name="challenges"
               rows={5}
               required
               className="border-white/15 bg-white/[0.04] text-primary-foreground placeholder:text-primary-foreground/40 focus-visible:ring-cyan"
@@ -100,14 +149,14 @@ const ConsultationForm = () => {
           </div>
 
           <div className="flex items-center gap-3 pt-2">
-            <Checkbox id="nda" />
+            <Checkbox id="nda" name="nda" />
             <Label htmlFor="nda" className="text-sm font-normal text-primary-foreground/70">
               Mutual NDA before we talk
             </Label>
           </div>
 
-          <Button type="submit" variant="hero" size="xl" className="w-full md:w-auto md:justify-self-start">
-            Send message <ArrowRight className="!size-5" />
+          <Button type="submit" variant="hero" size="xl" disabled={submitting} className="w-full md:w-auto md:justify-self-start">
+            {submitting ? (<><Loader2 className="!size-5 animate-spin" /> Sending…</>) : (<>Send message <ArrowRight className="!size-5" /></>)}
           </Button>
         </form>
       </div>
@@ -132,6 +181,7 @@ const Field = ({
     </Label>
     <Input
       id={id}
+      name={id}
       type={type}
       required={required}
       className="h-11 border-white/15 bg-white/[0.04] text-primary-foreground placeholder:text-primary-foreground/40 focus-visible:ring-cyan"
