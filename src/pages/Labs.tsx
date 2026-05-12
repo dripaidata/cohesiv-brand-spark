@@ -4,6 +4,7 @@ import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import iconFantasy from "@/assets/icon-fantasy.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import dripLabsIcon from "@/assets/drip-labs-icon.jpg";
 
 const labs = [
   {
@@ -38,7 +39,12 @@ const Labs = () => {
         <section className="border-b border-border bg-navy-ink py-28 text-primary-foreground md:py-40">
           <div className="container-wide grid gap-10 md:grid-cols-12">
             <div className="md:col-span-8">
-              <p className="eyebrow text-cyan">Drip Labs</p>
+              <div className="flex items-center gap-4">
+                <div className="flex size-16 items-center justify-center rounded-sm bg-white p-2 md:size-20">
+                  <img src={dripLabsIcon} alt="" className="h-full w-full object-contain" />
+                </div>
+                <p className="eyebrow text-cyan">Drip Labs</p>
+              </div>
               <h1 className="display-serif mt-6 text-5xl text-balance md:text-7xl lg:text-8xl">
                 Our R&amp;D arm. <em className="text-cyan not-italic">Where we prove things work</em> before we sell them.
               </h1>

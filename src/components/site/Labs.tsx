@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import iconFantasy from "@/assets/icon-fantasy.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import dripLabsLogo from "@/assets/drip-labs-logo.png";
 
 const labs = [
   {
@@ -25,7 +26,7 @@ const Labs = () => (
     <div className="container-wide">
       <div className="grid items-end gap-10 md:grid-cols-12">
         <div className="md:col-span-7">
-          <p className="eyebrow text-cyan">Drip Labs</p>
+          <img src={dripLabsLogo} alt="Drip Labs" className="h-20 w-auto md:h-24" loading="lazy" />
           <h2 className="display-serif mt-6 text-5xl text-navy-ink text-balance md:text-6xl">
             Our R&amp;D arm. <em className="text-cyan not-italic">Where we prove things work</em> before we sell them.
           </h2>
