@@ -32,7 +32,7 @@ const Labs = () => (
         </p>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
         {labs.map((l) => (
           <article key={l.title} className="group relative flex flex-col rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-cyan hover:shadow-elev">
             <img src={l.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
