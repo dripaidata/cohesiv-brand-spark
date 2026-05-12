@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     q: "What industries do you focus on?",
-    a: "We have the deepest pattern recognition in financial services, healthcare, and cybersecurity — sectors where data sensitivity, regulatory pressure, and decision velocity all collide. We've also shipped in MarTech, insurance, and B2B SaaS.",
+    a: "We have the deepest pattern recognition in financial services, healthcare, and cybersecurity — sectors where data sensitivity, regulatory pressure, and decision velocity all collide. We've also shipped in MarTech, insurance, B2B SaaS, and real estate investment — and we're a particularly strong fit for industries still operating on legacy tools and spreadsheets.",
   },
   {
     q: "How do you price engagements?",
-    a: "Three flexible models depending on what you need: a fixed-fee diagnostic (2–4 weeks), retainer-based fractional leadership (monthly), or outcome-priced delivery engagements where a portion of our fee is tied to the metric we're moving.",
+    a: "Two models depending on what you need: project-based scoping for defined deliverables, or retainers that layer fractional leadership on top of the IC work. Retainers carry a 3-month minimum commitment.",
   },
   {
     q: "Will you work with our existing team and tools?",
