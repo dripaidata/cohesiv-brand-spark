@@ -38,31 +38,6 @@ const Hero = () => (
             <a href="/work">See our work</a>
           </Button>
         </div>
-        <p className="mt-6 flex items-center gap-3 text-sm text-primary-foreground/60">
-          <span className="flex -space-x-1">
-            <span className="h-2 w-2 rounded-full bg-cyan" />
-            <span className="h-2 w-2 rounded-full bg-cyan/70" />
-            <span className="h-2 w-2 rounded-full bg-cyan/40" />
-          </span>
-          Trusted by data &amp; AI leaders at Fidelity, Manulife, Rocket Software &amp; Kaspersky
-        </p>
-      </div>
-    </div>
-
-    {/* Scrolling proof strip */}
-    <div className="relative z-10 border-t border-white/10 bg-navy-ink/80 backdrop-blur">
-      <div className="container-wide grid gap-x-10 gap-y-6 py-8 md:grid-cols-4">
-        {[
-          ["Rocket Software", "Head of Analytics"],
-          ["Fidelity Investments", "Director of Insights"],
-          ["Manulife / John Hancock", "Global MarTech Director"],
-          ["Kaspersky Labs", "Global Digital Analytics"],
-        ].map(([co, role]) => (
-          <div key={co} className="border-l border-cyan/40 pl-4">
-            <p className="text-sm font-semibold text-primary-foreground">{co}</p>
-            <p className="text-xs text-primary-foreground/60">{role}</p>
-          </div>
-        ))}
       </div>
     </div>
   </section>
