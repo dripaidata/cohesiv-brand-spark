@@ -66,7 +66,7 @@ const About = () => (
           <div className="md:col-span-8">
             <p className="eyebrow text-cyan">About</p>
             <h1 className="display-serif mt-6 text-5xl text-balance md:text-7xl lg:text-8xl">
-              A decade of <em className="text-cyan not-italic">enterprise data leadership</em>, built for mid-market.
+              Over a decade of <em className="text-cyan not-italic">enterprise data leadership</em>, built for mid-market.
             </h1>
             <p className="mt-10 max-w-2xl text-lg text-primary-foreground/75">
               Drip AI &amp; Data is a boutique consultancy founded by Danny Ellowitz — built on eleven years of leading data, analytics, and AI inside global enterprises like Fidelity, Manulife, Rocket Software, and Kaspersky Labs.
