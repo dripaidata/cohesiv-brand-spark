@@ -37,20 +37,17 @@ const Comparison = () => (
           <thead>
             <tr className="border-b border-border">
               <th className="p-6"></th>
+              <th className="bg-cyan-soft/40 p-6 text-center">
+                <p className="mt-2 text-base font-semibold text-navy-ink">Drip AI &amp; Data</p>
+                <p className="text-xs text-muted-foreground">Project · fractional retainer</p>
+              </th>
               <th className="p-6 text-center">
-                <p className="eyebrow text-muted-foreground">Option A</p>
                 <p className="mt-2 text-base font-semibold text-navy-ink">Hire in-house</p>
                 <p className="text-xs text-muted-foreground">$300K+/yr loaded</p>
               </th>
               <th className="p-6 text-center">
-                <p className="eyebrow text-muted-foreground">Option B</p>
                 <p className="mt-2 text-base font-semibold text-navy-ink">Big 4 / Tier-1</p>
                 <p className="text-xs text-muted-foreground">$500K+ engagement</p>
-              </th>
-              <th className="bg-cyan-soft/40 p-6 text-center">
-                <p className="eyebrow text-cyan">Option C</p>
-                <p className="mt-2 text-base font-semibold text-navy-ink">Drip AI &amp; Data</p>
-                <p className="text-xs text-muted-foreground">Project · fractional retainer</p>
               </th>
             </tr>
           </thead>
@@ -58,9 +55,9 @@ const Comparison = () => (
             {rows.map((r) => (
               <tr key={r.label} className="border-t border-border">
                 <td className="p-6 text-sm text-navy-deep">{r.label}</td>
+                <td className="bg-cyan-soft/30 p-6 text-center"><Mark v={r.drip} /></td>
                 <td className="p-6 text-center"><Mark v={r.inhouse} /></td>
                 <td className="p-6 text-center"><Mark v={r.bigfour} /></td>
-                <td className="bg-cyan-soft/30 p-6 text-center"><Mark v={r.drip} /></td>
               </tr>
             ))}
           </tbody>
