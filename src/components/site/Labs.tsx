@@ -1,7 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import iconFantasy from "@/assets/icon-fantasy.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
-import iconPersonal from "@/assets/icon-personal.png";
 
 const labs = [
   {
@@ -15,12 +14,6 @@ const labs = [
     blurb: "An agentic decision engine for fantasy football managers — combining real-time stats, odds, and contextual reasoning.",
     stat: "11 autonomous agents",
     icon: iconFantasy,
-  },
-  {
-    title: "AI-Automated MMM",
-    blurb: "Marketing mix modeling without the eight-figure consulting fee. Continuous attribution that updates as your spend does.",
-    stat: "Built in 30 days",
-    icon: iconPersonal,
   },
 ];
 
@@ -39,7 +32,7 @@ const Labs = () => (
         </p>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mt-16 grid gap-6 md:grid-cols-2">
         {labs.map((l) => (
           <article key={l.title} className="group relative flex flex-col rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-cyan hover:shadow-elev">
             <img src={l.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
