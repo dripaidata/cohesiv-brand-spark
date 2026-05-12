@@ -4,14 +4,10 @@ import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
-import iconPipeline from "@/assets/icon-pipeline.png";
-import iconFantasy from "@/assets/icon-fantasy.png";
-import iconAi from "@/assets/icon-ai-strategy.png";
-import iconData from "@/assets/icon-data.png";
 
 const cases = [
   {
-    slug: "global-martech",
+    slug: "global-martech-transformation",
     icon: iconMartech,
     sector: "Global Insurance",
     title: "Global MarTech Transformation",
@@ -20,49 +16,13 @@ const cases = [
     blurb: "Rebuilt the analytics + personalization stack across nine markets for a Fortune 500 insurer.",
   },
   {
-    slug: "content-personalization",
+    slug: "real-time-content-personalization",
     icon: iconEngagement,
     sector: "Financial Services",
     title: "Real-Time Content Personalization",
     metric: "+650%",
     metricLabel: "CTA engagement",
     blurb: "Designed and shipped a content personalization framework that turned static pages into responsive journeys.",
-  },
-  {
-    slug: "congressional-trades-fund",
-    icon: iconPipeline,
-    sector: "Drip Labs",
-    title: "Congressional Trades Fund",
-    metric: "222%",
-    metricLabel: "CAGR validated",
-    blurb: "Autonomous pipeline ingesting STOCK Act disclosures, scoring with ML, and executing trades end-to-end.",
-  },
-  {
-    slug: "fantasy-football",
-    icon: iconFantasy,
-    sector: "Drip Labs",
-    title: "Agentic Fantasy Football Platform",
-    metric: "11",
-    metricLabel: "autonomous agents",
-    blurb: "Real-time decision engine combining stats, odds, and contextual reasoning across an agent swarm.",
-  },
-  {
-    slug: "ai-readiness",
-    icon: iconAi,
-    sector: "Healthcare",
-    title: "AI Readiness Assessment",
-    metric: "12-week",
-    metricLabel: "roadmap delivered",
-    blurb: "Mapped the data, governance, and capability gaps blocking a regional health system from production AI.",
-  },
-  {
-    slug: "data-platform",
-    icon: iconData,
-    sector: "Cybersecurity",
-    title: "Single Source of Truth",
-    metric: "1",
-    metricLabel: "warehouse, 47 sources",
-    blurb: "Consolidated a fragmented analytics estate into a governed, compliant warehouse the GTM team actually trusts.",
   },
 ];
 
@@ -92,7 +52,7 @@ const Work = () => {
             {cases.map((c) => (
               <Link
                 key={c.slug}
-                to={c.slug === "congressional-trades-fund" ? "/work/congressional-trades-fund" : "#"}
+                to={`/work/${c.slug}`}
                 className="group relative flex flex-col gap-6 bg-card p-10 transition-all hover:bg-cyan-soft/30 md:p-12"
               >
                 <div className="flex items-start justify-between gap-6">
