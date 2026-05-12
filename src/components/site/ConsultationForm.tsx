@@ -54,7 +54,7 @@ const ConsultationForm = () => {
       title: parsed.data.title || null,
       challenges: parsed.data.challenges,
       services: selected,
-      nda: fd.get("nda") === "on",
+      nda: false,
     });
     setSubmitting(false);
 
@@ -146,13 +146,6 @@ const ConsultationForm = () => {
               className="border-white/15 bg-white/[0.04] text-primary-foreground placeholder:text-primary-foreground/40 focus-visible:ring-cyan"
               placeholder="What are you trying to figure out?"
             />
-          </div>
-
-          <div className="flex items-center gap-3 pt-2">
-            <Checkbox id="nda" name="nda" />
-            <Label htmlFor="nda" className="text-sm font-normal text-primary-foreground/70">
-              Mutual NDA before we talk
-            </Label>
           </div>
 
           <Button type="submit" variant="hero" size="xl" disabled={submitting} className="w-full md:w-auto md:justify-self-start">
