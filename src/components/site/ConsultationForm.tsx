@@ -181,6 +181,7 @@ const Field = ({
     </Label>
     <Input
       id={id}
+      name={id}
       type={type}
       required={required}
       className="h-11 border-white/15 bg-white/[0.04] text-primary-foreground placeholder:text-primary-foreground/40 focus-visible:ring-cyan"
