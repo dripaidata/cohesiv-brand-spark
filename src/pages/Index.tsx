@@ -23,7 +23,7 @@ const Index = () => {
         <Proof />
         <Comparison />
         <Labs />
-        <Insights />
+        
         <FAQ />
         <ConsultationForm />
       </main>
