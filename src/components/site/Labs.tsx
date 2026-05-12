@@ -1,18 +1,21 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import iconFantasy from "@/assets/icon-fantasy.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 
 const labs = [
   {
+    href: "/labs/congressional-trades-fund",
     title: "Congressional Trades Fund",
     blurb: "A fully autonomous pipeline that ingests STOCK Act disclosures, scores them with ML, and executes trades via brokerage API.",
     stat: "222% CAGR validated",
     icon: iconPipeline,
   },
   {
-    title: "Fantasy Football Platform",
-    blurb: "An agentic decision engine for fantasy football managers — combining real-time stats, odds, and contextual reasoning.",
-    stat: "11 autonomous agents",
+    href: "/labs/dynasty-cap-manager",
+    title: "Dynasty Cap Manager",
+    blurb: "A multi-league dynasty fantasy football platform with a full salary-cap engine, contract types, and an 8-phase state machine that keeps every league safe.",
+    stat: "Multi-league production system",
     icon: iconFantasy,
   },
 ];
@@ -34,14 +37,18 @@ const Labs = () => (
 
       <div className="mt-16 grid gap-6 md:grid-cols-2">
         {labs.map((l) => (
-          <article key={l.title} className="group relative flex flex-col rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-cyan hover:shadow-elev">
+          <Link
+            key={l.title}
+            to={l.href}
+            className="group relative flex flex-col rounded-sm border border-border bg-card p-8 transition-all hover:-translate-y-1 hover:border-cyan hover:shadow-elev"
+          >
             <img src={l.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
             <h3 className="mt-6 text-xl font-semibold tracking-tight text-navy-ink">{l.title}</h3>
             <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{l.blurb}</p>
             <p className="mt-6 border-t border-border pt-4 font-mono text-xs uppercase tracking-wider text-cyan">
               {l.stat}
             </p>
-          </article>
+          </Link>
         ))}
       </div>
 

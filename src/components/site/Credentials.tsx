@@ -12,7 +12,7 @@ const Credentials = () => (
         <div className="md:col-span-5">
           <p className="eyebrow text-cyan">Track record</p>
           <h2 className="display-serif mt-6 text-5xl text-balance md:text-6xl">
-            A decade of enterprise data leadership <em className="text-cyan not-italic">now working for you.</em>
+            Over a decade of enterprise data leadership <em className="text-cyan not-italic">now working for you.</em>
           </h2>
           <p className="mt-8 max-w-md text-base leading-relaxed text-primary-foreground/70">
             The same caliber of leadership that ran analytics organizations at Fortune 500 enterprises — applied to the unique constraints, speed, and scrappiness of mid-market.
