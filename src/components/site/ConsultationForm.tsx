@@ -148,13 +148,6 @@ const ConsultationForm = () => {
             />
           </div>
 
-          <div className="flex items-center gap-3 pt-2">
-            <Checkbox id="nda" name="nda" />
-            <Label htmlFor="nda" className="text-sm font-normal text-primary-foreground/70">
-              Mutual NDA before we talk
-            </Label>
-          </div>
-
           <Button type="submit" variant="hero" size="xl" disabled={submitting} className="w-full md:w-auto md:justify-self-start">
             {submitting ? (<><Loader2 className="!size-5 animate-spin" /> Sending…</>) : (<>Send message <ArrowRight className="!size-5" /></>)}
           </Button>

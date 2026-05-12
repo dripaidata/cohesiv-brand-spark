@@ -8,10 +8,8 @@ import Proof from "@/components/site/Proof";
 import Comparison from "@/components/site/Comparison";
 import Labs from "@/components/site/Labs";
 import Insights from "@/components/site/Insights";
-import Scorecard from "@/components/site/Scorecard";
 import FAQ from "@/components/site/FAQ";
 import ConsultationForm from "@/components/site/ConsultationForm";
-import StickyCTA from "@/components/site/StickyCTA";
 
 const Index = () => {
   return (
@@ -25,13 +23,11 @@ const Index = () => {
         <Proof />
         <Comparison />
         <Labs />
-        <Scorecard />
         <Insights />
         <FAQ />
         <ConsultationForm />
       </main>
       <Footer />
-      <StickyCTA />
     </div>
   );
 };
