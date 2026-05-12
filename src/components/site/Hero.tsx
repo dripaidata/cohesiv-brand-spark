@@ -26,7 +26,7 @@ const Hero = () => (
           </span>
         </h1>
         <p className="mt-10 max-w-2xl text-lg leading-relaxed text-primary-foreground/75 md:text-xl">
-          A decade of enterprise data and AI leadership — from Fidelity, Manulife, Rocket Software, and Kaspersky — now working for mid-market leaders in financial services, healthcare, and cybersecurity. At a fraction of the cost of building in-house.
+          Over a decade of enterprise data and AI leadership — from Fidelity, Manulife, Rocket Software, and Kaspersky — now working for mid-market leaders in financial services, healthcare, and cybersecurity. At a fraction of the cost of building in-house.
         </p>
         <div className="mt-12 flex flex-wrap items-center gap-4">
           <Button asChild variant="hero" size="xl">
