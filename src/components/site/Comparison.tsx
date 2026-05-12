@@ -50,7 +50,7 @@ const Comparison = () => (
               <th className="bg-cyan-soft/40 p-6 text-center">
                 <p className="eyebrow text-cyan">Option C</p>
                 <p className="mt-2 text-base font-semibold text-navy-ink">Drip AI &amp; Data</p>
-                <p className="text-xs text-muted-foreground">Fractional · outcome-priced</p>
+                <p className="text-xs text-muted-foreground">Project · fractional retainer</p>
               </th>
             </tr>
           </thead>
