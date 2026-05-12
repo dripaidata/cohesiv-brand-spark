@@ -8,13 +8,13 @@ const roles = [
   {
     company: "Drip AI & Data",
     title: "Founder & Principal Consultant",
-    period: "2025 — Present",
+    period: "2026 — Present",
     note: "Bringing enterprise-grade data and AI leadership to mid-market companies — without the enterprise price tag.",
   },
   {
     company: "Rocket Software",
     title: "Head of Analytics & Journey Orchestration",
-    period: "2022 — 2025",
+    period: "2022 — 2026",
     note: "Owned the analytics and orchestration stack across a global B2B portfolio. Built the team, the platform, and the operating model behind it.",
   },
   {
@@ -81,7 +81,7 @@ const About = () => (
               <dl className="mt-6 space-y-4 text-sm">
                 <div className="border-t border-white/10 pt-3">
                   <dt className="font-mono text-xs uppercase tracking-widest text-primary-foreground/50">Founded</dt>
-                  <dd className="mt-1">2025 · Boston, MA</dd>
+                  <dd className="mt-1">2026 · Boston, MA</dd>
                 </div>
                 <div className="border-t border-white/10 pt-3">
                   <dt className="font-mono text-xs uppercase tracking-widest text-primary-foreground/50">Founder</dt>
