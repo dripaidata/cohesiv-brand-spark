@@ -54,7 +54,7 @@ const ConsultationForm = () => {
       title: parsed.data.title || null,
       challenges: parsed.data.challenges,
       services: selected,
-      nda: fd.get("nda") === "on",
+      nda: false,
     });
     setSubmitting(false);
 
