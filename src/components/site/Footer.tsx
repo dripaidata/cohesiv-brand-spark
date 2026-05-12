@@ -23,7 +23,7 @@ const Footer = () => (
         <ul className="mt-4 space-y-3 text-sm">
           <li><a href="https://www.linkedin.com/company/drip-ai-data/" target="_blank" rel="noreferrer" className="hover:text-cyan">Drip AI &amp; Data on LinkedIn</a></li>
           <li><a href="https://www.linkedin.com/in/danny-ellowitz/" target="_blank" rel="noreferrer" className="hover:text-cyan">Danny Ellowitz on LinkedIn</a></li>
-          <li><a href="mailto:hello@dripaidata.com" className="hover:text-cyan">hello@dripaidata.com</a></li>
+          <li><a href="mailto:danny@dripaidata.com" className="hover:text-cyan">danny@dripaidata.com</a></li>
         </ul>
       </div>
     </div>
