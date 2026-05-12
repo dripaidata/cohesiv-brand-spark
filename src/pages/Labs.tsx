@@ -8,7 +8,7 @@ import iconPipeline from "@/assets/icon-pipeline.png";
 const labs = [
   {
     slug: "dynasty-cap-manager",
-    href: "#",
+    href: "/labs/dynasty-cap-manager",
     icon: iconFantasy,
     date: "May 2026",
     title: "Dynasty Cap Manager",
@@ -19,7 +19,7 @@ const labs = [
   },
   {
     slug: "congressional-trades-fund",
-    href: "/work/congressional-trades-fund",
+    href: "/labs/congressional-trades-fund",
     icon: iconPipeline,
     date: "February 2026",
     title: "Congressional Trades Fund",
