@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="md:col-span-5">
         <img src={logo} alt="Drip AI & Data" className="h-14 w-auto bg-background/95 rounded-sm p-2" />
         <p className="mt-6 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
-          Enterprise-grade decision intelligence for mid-market leaders. A decade of data and AI leadership, deployed at a fraction of the in-house cost.
+          Enterprise-grade decision intelligence for mid-market leaders. Over a decade of data and AI leadership, deployed at a fraction of the in-house cost.
         </p>
       </div>
       <div className="md:col-span-3">
