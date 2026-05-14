@@ -22,6 +22,11 @@ const CongressionalTradesFund = () => (
       ["Status", "Live, paper-traded, monitored"],
     ]}
     next={{ href: "/labs/dynasty-cap-manager", label: "Dynasty Cap Manager" }}
+    seo={{
+      path: "/labs/congressional-trades-fund",
+      title: "Congressional Trades Fund — Drip Labs",
+      description: "Autonomous pipeline ingesting STOCK Act disclosures, scoring signals with ML, and executing trades via brokerage API with human approval gates.",
+    }}
   >
     <h2>What we built and why it matters</h2>
     <p>

@@ -22,6 +22,11 @@ const GlobalMartechTransformation = () => (
       ["Scope", "Strategy, architecture, vendor, delivery"],
     ]}
     next={{ href: "/work/real-time-content-personalization", label: "Real-Time Content Personalization" }}
+    seo={{
+      path: "/work/global-martech-transformation",
+      title: "Global MarTech Transformation — Drip AI & Data",
+      description: "Nine-market analytics, tagging, and personalization rebuild for a Fortune 500 insurer. Quote form conversion lifted +293%.",
+    }}
   >
     <h2>The situation</h2>
     <p>
