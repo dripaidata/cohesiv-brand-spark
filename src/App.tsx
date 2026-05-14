@@ -8,7 +8,7 @@ import Work from "./pages/Work.tsx";
 import Labs from "./pages/Labs.tsx";
 import About from "./pages/About.tsx";
 import CongressionalTradesFund from "./pages/CongressionalTradesFund.tsx";
-import DynastyCapManager from "./pages/DynastyCapManager.tsx";
+import DynastyWarRoom from "./pages/DynastyWarRoom.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import NotFound from "./pages/NotFound.tsx";
@@ -30,7 +30,8 @@ const App = () => (
           <Route path="/work/real-time-content-personalization" element={<RealTimeContentPersonalization />} />
           <Route path="/work/congressional-trades-fund" element={<CongressionalTradesFund />} />
           <Route path="/labs/congressional-trades-fund" element={<CongressionalTradesFund />} />
-          <Route path="/labs/dynasty-cap-manager" element={<DynastyCapManager />} />
+          <Route path="/labs/dynasty-war-room" element={<DynastyWarRoom />} />
+          <Route path="/labs/dynasty-cap-manager" element={<DynastyWarRoom />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

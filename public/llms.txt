@@ -14,7 +14,7 @@
 - [Global MarTech Transformation](/work/global-martech-transformation): Nine-market analytics rebuild, +293% quote form conversion.
 - [Real-Time Content Personalization](/work/real-time-content-personalization): First-party personalization framework, +650% CTA engagement.
 - [Congressional Trades Fund](/labs/congressional-trades-fund): Autonomous trading pipeline on STOCK Act disclosures.
-- [Dynasty Cap Manager](/labs/dynasty-cap-manager): Multi-league fantasy football platform with full NFL salary cap modeling.
+- [Dynasty War Room](/labs/dynasty-war-room): Multi-league fantasy football platform with full NFL salary cap modeling.
 
 ## Optional
 

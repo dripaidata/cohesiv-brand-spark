@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import iconFantasy from "@/assets/icon-fantasy.png";
+import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import dripLabsLogo from "@/assets/drip-labs-logo.png";
 
@@ -13,11 +13,11 @@ const labs = [
     icon: iconPipeline,
   },
   {
-    href: "/labs/dynasty-cap-manager",
-    title: "Dynasty Cap Manager",
+    href: "/labs/dynasty-war-room",
+    title: "Dynasty War Room",
     blurb: "A multi-league dynasty fantasy football platform with a full salary-cap engine, contract types, and an 8-phase state machine that keeps every league safe.",
     stat: "Multi-league production system",
-    icon: iconFantasy,
+    icon: dynastyWarRoomLogo,
   },
 ];
 
