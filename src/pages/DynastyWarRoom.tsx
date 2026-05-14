@@ -1,14 +1,14 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
-import iconFantasy from "@/assets/icon-fantasy.png";
+import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
 
-const DynastyCapManager = () => (
+const DynastyWarRoom = () => (
   <CaseStudyLayout
     backHref="/labs"
     backLabel="All labs"
     eyebrow="Drip Labs · May 2026"
-    title="Dynasty Cap Manager"
+    title="Dynasty War Room"
     intro="A fantasy football platform built to model the NFL — manage a full salary cap, contract types, and more as you look to build a true dynasty."
-    icon={iconFantasy}
+    icon={dynastyWarRoomLogo}
     stats={[
       ["Multi-league", "production system"],
       ["8", "phase state machine"],
@@ -24,7 +24,7 @@ const DynastyCapManager = () => (
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
     seo={{
       path: "/labs/dynasty-cap-manager",
-      title: "Dynasty Cap Manager — Drip Labs",
+      title: "Dynasty War Room — Drip Labs",
       description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
     }}
   >
@@ -198,4 +198,4 @@ const DynastyCapManager = () => (
   </CaseStudyLayout>
 );
 
-export default DynastyCapManager;
+export default DynastyWarRoom;

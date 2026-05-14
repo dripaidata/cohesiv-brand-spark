@@ -3,17 +3,17 @@ import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
-import iconFantasy from "@/assets/icon-fantasy.png";
+import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import dripLabsIcon from "@/assets/drip-labs-icon.jpg";
 
 const labs = [
   {
-    slug: "dynasty-cap-manager",
-    href: "/labs/dynasty-cap-manager",
-    icon: iconFantasy,
+    slug: "dynasty-war-room",
+    href: "/labs/dynasty-war-room",
+    icon: dynastyWarRoomLogo,
     date: "May 2026",
-    title: "Dynasty Cap Manager",
+    title: "Dynasty War Room",
     blurb:
       "A fantasy football platform built to model the NFL — full salary cap, contract types, multi-league architecture, and a state machine that keeps every league safe.",
     stat: "Multi-league",
