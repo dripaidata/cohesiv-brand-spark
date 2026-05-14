@@ -198,4 +198,4 @@ const DynastyWarRoom = () => (
   </CaseStudyLayout>
 );
 
-export default DynastyCapManager;
+export default DynastyWarRoom;
