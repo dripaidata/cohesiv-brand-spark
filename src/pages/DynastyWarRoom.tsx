@@ -24,7 +24,7 @@ const DynastyWarRoom = () => (
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
     seo={{
       path: "/labs/dynasty-cap-manager",
-      title: "Dynasty Cap Manager — Drip Labs",
+      title: "Dynasty War Room — Drip Labs",
       description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
     }}
   >
