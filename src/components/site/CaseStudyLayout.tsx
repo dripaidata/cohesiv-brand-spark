@@ -53,8 +53,8 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
           <Link to={backHref} className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-cyan">
             <ArrowLeft className="size-4" /> {backLabel}
           </Link>
-          <div className="mt-12 grid items-start gap-10 md:grid-cols-12 md:gap-12">
-            <div className="md:col-span-9">
+          <div className="mt-12 flex flex-col items-start gap-8 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
+            <div className="order-1 min-w-0 flex-1">
               <p className="eyebrow text-cyan">{eyebrow}</p>
               <h1 className="display-serif mt-6 text-5xl text-balance md:text-7xl lg:text-8xl">{title}</h1>
               <p className="mt-8 max-w-2xl text-lg text-primary-foreground/75">{intro}</p>
@@ -62,7 +62,7 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
             <img
               src={icon}
               alt=""
-              className="order-first h-24 w-24 rounded-md object-contain md:order-none md:col-span-3 md:h-40 md:w-40 md:justify-self-end"
+              className="order-2 h-24 w-24 flex-shrink-0 rounded-md object-contain sm:h-32 sm:w-32 md:h-40 md:w-40"
             />
           </div>
 
