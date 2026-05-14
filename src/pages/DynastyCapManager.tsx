@@ -28,7 +28,37 @@ const DynastyCapManager = () => (
       description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
     }}
   >
-    <h2>Multi-League Architecture — February–March 2026</h2>
+    <h2>The Quality Audit — March 2026</h2>
+    <p>
+      Four months into the build, feature work stopped and a full audit began. 28 distinct issues
+      surfaced across security, data integrity, and code quality.
+    </p>
+    <p>
+      Eight were critical: hardcoded API keys (a leftover from earlier prototypes), socket column
+      mismatches that could silently corrupt state, scoring rules that weren't actually configurable
+      per league despite the new multi-league architecture. Twelve were warnings: season year, team
+      count, and roster size hardcoded in places where they should have been pulled from config.
+      Eight were cleanup items: dead code, unused imports, orphaned files from earlier pivots.
+    </p>
+    <p>
+      In two focused sessions, 23 of 28 issues were fixed. The remaining 5 went into a migration
+      framework for schema versioning, so the database can evolve without breaking existing leagues.
+      The audit also added dynamic configuration for previously-hardcoded values and per-league
+      scoring rule customization that the original v1 promised but never fully delivered.
+    </p>
+    <p>
+      The codebase is now meaningfully more maintainable. More importantly, the audit established a
+      habit: stop, look honestly, pay down debt before it compounds.
+    </p>
+    <h3>Key technical decisions</h3>
+    <ul>
+      <li>Schema migration framework for safe long-term evolution</li>
+      <li>Dynamic configuration replacing hardcoded league assumptions</li>
+      <li>Audit cadence baked into the development rhythm</li>
+    </ul>
+    <p><em>What's next:</em> The trading system — multi-team trades, conditional picks, and salary retention.</p>
+
+    <h2>Build Log: Feb–Mar 2026 — Multi-League Architecture</h2>
     <p>
       Within a week of v1 going live, two other commissioners asked if their leagues could use it. The
       original schema assumed one league — salary caps, roster sizes, and scoring rules were all baked
