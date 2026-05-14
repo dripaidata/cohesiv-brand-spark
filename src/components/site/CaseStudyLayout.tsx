@@ -53,13 +53,17 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
           <Link to={backHref} className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-cyan">
             <ArrowLeft className="size-4" /> {backLabel}
           </Link>
-          <div className="mt-12 grid gap-16 md:grid-cols-12">
-            <div className="md:col-span-8">
+          <div className="mt-12 grid items-start gap-10 md:grid-cols-12 md:gap-12">
+            <div className="md:col-span-9">
               <p className="eyebrow text-cyan">{eyebrow}</p>
               <h1 className="display-serif mt-6 text-5xl text-balance md:text-7xl lg:text-8xl">{title}</h1>
               <p className="mt-8 max-w-2xl text-lg text-primary-foreground/75">{intro}</p>
             </div>
-            <img src={icon} alt="" className="md:col-span-4 h-48 w-48 self-end justify-self-end object-contain" />
+            <img
+              src={icon}
+              alt=""
+              className="order-first h-24 w-24 rounded-md object-contain md:order-none md:col-span-3 md:h-40 md:w-40 md:justify-self-end"
+            />
           </div>
 
           {stats.length > 0 && (
