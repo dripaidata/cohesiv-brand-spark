@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+import Seo from "@/components/site/Seo";
 import iconFantasy from "@/assets/icon-fantasy.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import dripLabsIcon from "@/assets/drip-labs-icon.jpg";
@@ -34,6 +35,11 @@ const labs = [
 const Labs = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Seo
+        title="Drip Labs — Internal R&D"
+        description="Production systems Drip AI & Data builds to validate ideas before recommending them. Open-source playbooks from our internal R&D arm."
+        path="/labs"
+      />
       <Navbar />
       <main>
         <section className="border-b border-border bg-navy-ink py-28 text-primary-foreground md:py-40">

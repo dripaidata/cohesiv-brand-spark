@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Seo from "./Seo";
 import { Button } from "@/components/ui/button";
 
 interface Props {
@@ -16,10 +17,35 @@ interface Props {
   meta: [string, string][];
   children: ReactNode;
   next?: { href: string; label: string };
+  seo: {
+    path: string;
+    title: string;
+    description: string;
+  };
 }
 
-const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next }: Props) => (
+const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next, seo }: Props) => (
   <div className="min-h-screen bg-background font-sans">
+    <Seo
+      title={seo.title}
+      description={seo.description}
+      path={seo.path}
+      ogType="article"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description: intro,
+        image: `https://dripaidata.com${icon}`,
+        author: { "@type": "Person", name: "Danny Ellowitz" },
+        publisher: {
+          "@type": "Organization",
+          name: "Drip AI & Data",
+          logo: { "@type": "ImageObject", url: "https://dripaidata.com/og-image.jpg" },
+        },
+        mainEntityOfPage: `https://dripaidata.com${seo.path}`,
+      }}
+    />
     <Navbar />
     <main>
       <section className="bg-navy-ink py-24 text-primary-foreground md:py-32">

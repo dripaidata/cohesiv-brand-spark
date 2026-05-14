@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+import Seo from "@/components/site/Seo";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 
@@ -29,6 +30,11 @@ const cases = [
 const Work = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Seo
+        title="Our Work — Drip AI & Data"
+        description="Selected client engagements across financial services, insurance, healthcare, and cybersecurity. Verified outcomes from enterprise data and AI leadership."
+        path="/work"
+      />
       <Navbar />
       <main>
         {/* Header */}

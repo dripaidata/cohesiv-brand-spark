@@ -22,6 +22,11 @@ const DynastyCapManager = () => (
       ["Started", "January 2026"],
     ]}
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
+    seo={{
+      path: "/labs/dynasty-cap-manager",
+      title: "Dynasty Cap Manager — Drip Labs",
+      description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
+    }}
   >
     <h2>Multi-League Architecture — February–March 2026</h2>
     <p>
