@@ -12,6 +12,7 @@ import DynastyWarRoom from "./pages/DynastyWarRoom.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import AnnouncementBanner from "./components/site/AnnouncementBanner.tsx";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <AnnouncementBanner />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
