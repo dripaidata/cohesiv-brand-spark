@@ -14,6 +14,7 @@ import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalizati
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AnnouncementBanner from "./components/site/AnnouncementBanner.tsx";
+import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <AnnouncementBanner />
         <Routes>
           <Route path="/" element={<Index />} />
