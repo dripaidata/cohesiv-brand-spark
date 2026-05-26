@@ -5,8 +5,18 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
+import iconPipeline from "@/assets/icon-pipeline.png";
 
 const cases = [
+  {
+    slug: "prospecting-agent",
+    icon: iconPipeline,
+    sector: "Custom AI Product",
+    title: "The Prospecting Agent",
+    metric: "5 min",
+    metricLabel: "replaces 4–6 weekly hours",
+    blurb: "Custom prospecting agents that find and qualify outbound leads for you — built around each client's ICP.",
+  },
   {
     slug: "global-martech-transformation",
     icon: iconMartech,
