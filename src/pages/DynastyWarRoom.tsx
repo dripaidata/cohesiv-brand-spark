@@ -22,6 +22,7 @@ const DynastyWarRoom = () => (
       ["Started", "January 2026"],
     ]}
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
+    heroCta={{ href: "https://www.dynastywarroom.com", label: "Enlist Now!", external: true }}
     seo={{
       path: "/labs/dynasty-cap-manager",
       title: "Dynasty War Room - Drip Labs",
