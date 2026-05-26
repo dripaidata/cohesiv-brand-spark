@@ -25,7 +25,7 @@ interface Props {
   };
 }
 
-const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next, seo }: Props) => (
+const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next, heroCta, seo }: Props) => (
   <div className="min-h-screen bg-background font-sans">
     <Seo
       title={seo.title}
