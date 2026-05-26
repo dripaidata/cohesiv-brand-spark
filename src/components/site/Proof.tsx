@@ -1,26 +1,41 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
+import iconPipeline from "@/assets/icon-pipeline.png";
 import AnimatedNumber from "./AnimatedNumber";
 import Reveal from "./Reveal";
 
+const featured = {
+  href: "/work/prospecting-agent",
+  value: 5,
+  suffix: " min",
+  label: "Replaces 4 to 6 weekly hours",
+  project: "The Prospecting Agent",
+  summary:
+    "A custom AI prospecting agent that researches accounts, verifies LinkedIn profiles, and drafts outreach in the client's voice. Built around their ICP. A creative agency reclaimed an entire morning every week and put it back into real conversations.",
+  icon: iconPipeline,
+};
+
 const proofs = [
   {
+    href: "/work/global-martech-transformation",
     value: 293,
     prefix: "+",
     suffix: "%",
     label: "Quote form conversion",
     project: "Global MarTech Transformation",
-    summary: "Rebuilt the analytics + personalization stack for a global insurer, lifting top-of-funnel conversion across nine markets.",
+    summary: "Rebuilt the analytics + personalization stack for a global insurer, lifting top of funnel conversion across nine markets.",
     icon: iconMartech,
   },
   {
+    href: "/work/real-time-content-personalization",
     value: 650,
     prefix: "+",
     suffix: "%",
     label: "CTA engagement",
     project: "Content Personalization",
-    summary: "Designed and shipped a real-time content personalization framework that turned static pages into responsive journeys.",
+    summary: "Designed and shipped a real time content personalization framework that turned static pages into responsive journeys.",
     icon: iconEngagement,
   },
 ];
@@ -44,10 +59,45 @@ const Proof = () => (
         </a>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-2">
+      <Reveal>
+        <Link
+          to={featured.href}
+          className="group mt-16 flex flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev md:p-12"
+        >
+          <div className="flex items-start justify-between gap-6">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-widest text-cyan">Newest</p>
+              <h3 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{featured.project}</h3>
+            </div>
+            <img src={featured.icon} alt="" loading="lazy" className="h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28" />
+          </div>
+          <div className="mt-10 grid gap-10 border-t border-border pt-8 md:grid-cols-12 md:gap-12">
+            <div className="md:col-span-5">
+              <AnimatedNumber
+                value={featured.value}
+                suffix={featured.suffix}
+                className="display-serif block text-7xl text-cyan md:text-8xl"
+              />
+              <p className="eyebrow mt-2 text-navy-deep">{featured.label}</p>
+            </div>
+            <div className="md:col-span-7">
+              <p className="text-base leading-relaxed text-muted-foreground">{featured.summary}</p>
+              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-navy-deep group-hover:text-cyan">
+                Read the case study
+                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
+            </div>
+          </div>
+        </Link>
+      </Reveal>
+
+      <div className="mt-6 grid gap-6 md:grid-cols-2">
         {proofs.map((p, i) => (
           <Reveal key={p.project} delay={i * 120}>
-            <article className="group relative flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev">
+            <Link
+              to={p.href}
+              className="group relative flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev"
+            >
               <div className="flex items-start justify-between">
                 <div>
                   <AnimatedNumber
@@ -65,7 +115,7 @@ const Proof = () => (
                 <h3 className="mt-2 text-2xl font-medium tracking-tight text-navy-ink">{p.project}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.summary}</p>
               </div>
-            </article>
+            </Link>
           </Reveal>
         ))}
       </div>
