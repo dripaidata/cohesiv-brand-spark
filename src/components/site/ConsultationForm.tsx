@@ -64,7 +64,7 @@ const ConsultationForm = () => {
       return;
     }
 
-    toast.success("Thanks — we'll be in touch within one business day.");
+    toast.success("Thanks - we'll be in touch within one business day.");
     form.reset();
     setSelected([]);
   };
@@ -79,7 +79,7 @@ const ConsultationForm = () => {
             Let's figure out <em className="text-cyan not-italic">what's holding you back.</em>
           </h2>
           <p className="mt-8 max-w-md text-base leading-relaxed text-primary-foreground/70">
-            Every engagement starts with a free, honest conversation. No pitch deck, no pressure. Just a clear-eyed look at where your data and AI gaps are — and whether we're the right team to fix them.
+            Every engagement starts with a free, honest conversation. No pitch deck, no pressure. Just a clear-eyed look at where your data and AI gaps are - and whether we're the right team to fix them.
           </p>
           <ul className="mt-10 space-y-4 text-sm text-primary-foreground/80">
             {[

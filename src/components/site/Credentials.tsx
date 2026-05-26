@@ -15,7 +15,7 @@ const Credentials = () => (
             Over a decade of enterprise data leadership <em className="text-cyan not-italic">now working for you.</em>
           </h2>
           <p className="mt-8 max-w-md text-base leading-relaxed text-primary-foreground/70">
-            The same caliber of leadership that ran analytics organizations at Fortune 500 enterprises — applied to the unique constraints, speed, and scrappiness of mid-market.
+            The same caliber of leadership that ran analytics organizations at Fortune 500 enterprises - applied to the unique constraints, speed, and scrappiness of mid-market.
           </p>
         </div>
         <ol className="md:col-span-7 md:pl-10">

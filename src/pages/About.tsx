@@ -9,31 +9,31 @@ const roles = [
   {
     company: "Drip AI & Data",
     title: "Founder & Principal Consultant",
-    period: "2026 — Present",
-    note: "Bringing enterprise-grade data and AI leadership to mid-market companies — without the enterprise price tag.",
+    period: "2026 - Present",
+    note: "Bringing enterprise-grade data and AI leadership to mid-market companies - without the enterprise price tag.",
   },
   {
     company: "Rocket Software",
     title: "Head of Analytics & Journey Orchestration",
-    period: "2022 — 2026",
+    period: "2022 - 2026",
     note: "Owned the analytics and orchestration stack across a global B2B portfolio. Built the team, the platform, and the operating model behind it.",
   },
   {
     company: "Fidelity Investments",
     title: "Director of Insights & Analytics for Personalization",
-    period: "2019 — 2022",
-    note: "Led the analytics organization behind Fidelity's customer personalization program — measurement, experimentation, and decisioning at scale.",
+    period: "2019 - 2022",
+    note: "Led the analytics organization behind Fidelity's customer personalization program - measurement, experimentation, and decisioning at scale.",
   },
   {
     company: "Manulife / John Hancock",
     title: "Global Director of Marketing Technology & Analytics",
-    period: "2016 — 2019",
+    period: "2016 - 2019",
     note: "Rebuilt the global MarTech and analytics stack across nine markets. Lifted quote form conversion +293%.",
   },
   {
     company: "Kaspersky Labs",
     title: "Global Digital Analytics",
-    period: "2013 — 2016",
+    period: "2013 - 2016",
     note: "Stood up the global digital analytics function across product, marketing, and e-commerce surfaces.",
   },
 ];
@@ -41,7 +41,7 @@ const roles = [
 const principles = [
   {
     title: "Foundations before features.",
-    body: "AI doesn't fix a broken data layer — it amplifies it. Every engagement starts with the boring, important plumbing.",
+    body: "AI doesn't fix a broken data layer - it amplifies it. Every engagement starts with the boring, important plumbing.",
   },
   {
     title: "Strategy is what you don't build.",
@@ -60,7 +60,7 @@ const principles = [
 const About = () => (
   <div className="min-h-screen bg-background font-sans">
     <Seo
-      title="About Danny Ellowitz — Drip AI & Data"
+      title="About Danny Ellowitz - Drip AI & Data"
       description="Boutique consultancy founded by Danny Ellowitz on eleven years of leading data, analytics, and AI inside Fidelity, Manulife, Rocket Software, and Kaspersky."
       path="/about"
     />
@@ -75,10 +75,10 @@ const About = () => (
               Over a decade of <em className="text-cyan not-italic">enterprise data leadership</em>, built for mid-market.
             </h1>
             <p className="mt-10 max-w-2xl text-lg text-primary-foreground/75">
-              Drip AI &amp; Data is a boutique consultancy founded by Danny Ellowitz — built on eleven years of leading data, analytics, and AI inside global enterprises like Fidelity, Manulife, Rocket Software, and Kaspersky Labs.
+              Drip AI &amp; Data is a boutique consultancy founded by Danny Ellowitz - built on eleven years of leading data, analytics, and AI inside global enterprises like Fidelity, Manulife, Rocket Software, and Kaspersky Labs.
             </p>
             <p className="mt-6 max-w-2xl text-base leading-relaxed text-primary-foreground/65">
-              We exist because mid-market companies have outgrown spreadsheets but can't justify the cost of a Big 4 engagement or a full in-house data team. We bring the same playbook the Fortune 500 uses — applied with focus, shipped end to end, and priced for the businesses that actually need it.
+              We exist because mid-market companies have outgrown spreadsheets but can't justify the cost of a Big 4 engagement or a full in-house data team. We bring the same playbook the Fortune 500 uses - applied with focus, shipped end to end, and priced for the businesses that actually need it.
             </p>
           </div>
           <div className="md:col-span-4 self-end">
@@ -124,13 +124,13 @@ const About = () => (
               Danny has spent eleven years inside global enterprises building the data and AI infrastructure that mid-market leaders only read about in case studies. He's led analytics organizations at Fidelity Investments, run global marketing technology and analytics for Manulife / John Hancock across nine markets, headed analytics and journey orchestration at Rocket Software, and stood up global digital analytics for Kaspersky Labs.
             </p>
             <p>
-              The pattern across all of those roles was the same: take a fragmented, half-instrumented, politically-tangled data estate and turn it into something a marketing or product organization could actually run on. The work was rarely glamorous — governed tagging, single sources of truth, decisioning frameworks, measurement models, experimentation discipline — but it was the work that moved the metrics.
+              The pattern across all of those roles was the same: take a fragmented, half-instrumented, politically-tangled data estate and turn it into something a marketing or product organization could actually run on. The work was rarely glamorous - governed tagging, single sources of truth, decisioning frameworks, measurement models, experimentation discipline - but it was the work that moved the metrics.
             </p>
             <p>
               He started Drip AI &amp; Data because he kept watching mid-market companies get sold one of two things: a $2M Big 4 deck, or an off-the-shelf SaaS tool that promised AI and delivered a dashboard. Neither one ships into production. Both leave the customer worse off than when they started.
             </p>
             <p>
-              Outside of client work, Danny runs <strong>Drip Labs</strong> — an internal R&amp;D arm where he ships production-grade agentic systems on real data and real money before recommending the same patterns to clients. Recent builds include an 11-agent congressional trades pipeline (222% backtested CAGR) and a multi-league dynasty fantasy football platform with a full salary-cap engine.
+              Outside of client work, Danny runs <strong>Drip Labs</strong> - an internal R&amp;D arm where he ships production-grade agentic systems on real data and real money before recommending the same patterns to clients. Recent builds include an 11-agent congressional trades pipeline (222% backtested CAGR) and a multi-league dynasty fantasy football platform with a full salary-cap engine.
             </p>
           </div>
         </div>

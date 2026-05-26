@@ -5,7 +5,7 @@ const steps = [
     n: "01",
     title: "Diagnose",
     days: "Week 1–2",
-    body: "We meet your team where they are — auditing the stack, the data, the gaps, and the goals nobody's written down yet. You walk away with a written diagnosis whether or not we work together.",
+    body: "We meet your team where they are - auditing the stack, the data, the gaps, and the goals nobody's written down yet. You walk away with a written diagnosis whether or not we work together.",
   },
   {
     n: "02",

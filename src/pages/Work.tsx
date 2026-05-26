@@ -15,7 +15,7 @@ const cases = [
     title: "The Prospecting Agent",
     metric: "5 min",
     metricLabel: "replaces 4–6 weekly hours",
-    blurb: "Custom prospecting agents that find and qualify outbound leads for you — built around each client's ICP.",
+    blurb: "Custom prospecting agents that find and qualify outbound leads for you - built around each client's ICP.",
   },
   {
     slug: "global-martech-transformation",
@@ -41,7 +41,7 @@ const Work = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
       <Seo
-        title="Our Work — Drip AI & Data"
+        title="Our Work - Drip AI & Data"
         description="Selected client engagements across financial services, insurance, healthcare, and cybersecurity. Verified outcomes from enterprise data and AI leadership."
         path="/work"
       />

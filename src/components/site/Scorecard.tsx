@@ -9,7 +9,7 @@ const includes = [
   "12-question diagnostic across data, AI, governance, and team",
   "Benchmark scoring against 40+ mid-market peers we've assessed",
   "Prioritized 90-day roadmap based on your weakest dimensions",
-  "Common pitfalls we see in companies your size — and how to dodge them",
+  "Common pitfalls we see in companies your size - and how to dodge them",
 ];
 
 const Scorecard = () => {
@@ -18,7 +18,7 @@ const Scorecard = () => {
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    toast.success("Check your inbox — the scorecard is on its way.");
+    toast.success("Check your inbox - the scorecard is on its way.");
   };
 
   return (
@@ -34,7 +34,7 @@ const Scorecard = () => {
             The Mid-Market <em className="text-cyan not-italic">AI Readiness</em> Scorecard.
           </h2>
           <p className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground">
-            Most mid-market AI initiatives stall before they ship — usually for the same five reasons. This scorecard tells you in five minutes whether you're set up to succeed, and exactly where to focus first.
+            Most mid-market AI initiatives stall before they ship - usually for the same five reasons. This scorecard tells you in five minutes whether you're set up to succeed, and exactly where to focus first.
           </p>
 
           <ul className="mt-10 space-y-4">
@@ -62,7 +62,7 @@ const Scorecard = () => {
                 <CheckCircle2 className="size-12 text-cyan" />
                 <h3 className="display-serif mt-6 text-3xl text-navy-ink">You're in.</h3>
                 <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-                  We just sent the scorecard to your inbox. While you're here — want to walk through your results with Danny?
+                  We just sent the scorecard to your inbox. While you're here - want to walk through your results with Danny?
                 </p>
                 <Button asChild variant="hero" size="lg" className="mt-6">
                   <a href="#consultation">

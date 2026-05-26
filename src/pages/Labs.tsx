@@ -15,7 +15,7 @@ const labs = [
     date: "May 2026",
     title: "Dynasty War Room",
     blurb:
-      "A fantasy football platform built to model the NFL — full salary cap, contract types, multi-league architecture, and a state machine that keeps every league safe.",
+      "A fantasy football platform built to model the NFL - full salary cap, contract types, multi-league architecture, and a state machine that keeps every league safe.",
     stat: "Multi-league",
     statLabel: "production system",
   },
@@ -26,7 +26,7 @@ const labs = [
     date: "February 2026",
     title: "Congressional Trades Fund",
     blurb:
-      "AI-powered trading system that monitors congressional stock disclosures, scores them with ML, and executes trades via brokerage API — with human approval at every step.",
+      "AI-powered trading system that monitors congressional stock disclosures, scores them with ML, and executes trades via brokerage API - with human approval at every step.",
     stat: "222%",
     statLabel: "CAGR validated",
   },
@@ -36,7 +36,7 @@ const Labs = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
       <Seo
-        title="Drip Labs — Internal R&D"
+        title="Drip Labs - Internal R&D"
         description="Production systems Drip AI & Data builds to validate ideas before recommending them. Open-source playbooks from our internal R&D arm."
         path="/labs"
       />
@@ -56,7 +56,7 @@ const Labs = () => {
               </h1>
             </div>
             <p className="md:col-span-4 self-end text-base leading-relaxed text-primary-foreground/70">
-              We don't just talk about agentic AI — we ship it. Drip Labs is where we build production-grade autonomous systems on real data, real money, and real outcomes.
+              We don't just talk about agentic AI - we ship it. Drip Labs is where we build production-grade autonomous systems on real data, real money, and real outcomes.
             </p>
           </div>
         </section>
