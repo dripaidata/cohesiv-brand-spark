@@ -17,6 +17,7 @@ interface Props {
   meta: [string, string][];
   children: ReactNode;
   next?: { href: string; label: string };
+  heroCta?: { href: string; label: string; external?: boolean };
   seo: {
     path: string;
     title: string;
