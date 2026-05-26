@@ -11,6 +11,7 @@ import CongressionalTradesFund from "./pages/CongressionalTradesFund.tsx";
 import DynastyWarRoom from "./pages/DynastyWarRoom.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
+import ProspectingAgent from "./pages/ProspectingAgent.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import AnnouncementBanner from "./components/site/AnnouncementBanner.tsx";
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/work/global-martech-transformation" element={<GlobalMartechTransformation />} />
           <Route path="/work/real-time-content-personalization" element={<RealTimeContentPersonalization />} />
+          <Route path="/work/prospecting-agent" element={<ProspectingAgent />} />
           <Route path="/work/congressional-trades-fund" element={<CongressionalTradesFund />} />
           <Route path="/labs/congressional-trades-fund" element={<CongressionalTradesFund />} />
           <Route path="/labs/dynasty-war-room" element={<DynastyWarRoom />} />
