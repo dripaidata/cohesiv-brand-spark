@@ -17,6 +17,7 @@ interface Props {
   meta: [string, string][];
   children: ReactNode;
   next?: { href: string; label: string };
+  heroCta?: { href: string; label: string; external?: boolean };
   seo: {
     path: string;
     title: string;
@@ -24,7 +25,7 @@ interface Props {
   };
 }
 
-const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next, seo }: Props) => (
+const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, stats, meta, children, next, heroCta, seo }: Props) => (
   <div className="min-h-screen bg-background font-sans">
     <Seo
       title={seo.title}
@@ -58,6 +59,19 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
               <p className="eyebrow text-cyan">{eyebrow}</p>
               <h1 className="display-serif mt-6 text-5xl text-balance md:text-7xl lg:text-8xl">{title}</h1>
               <p className="mt-8 max-w-2xl text-lg text-primary-foreground/75">{intro}</p>
+              {heroCta && (
+                <Button asChild variant="hero" size="xl" className="mt-8">
+                  {heroCta.external ? (
+                    <a href={heroCta.href} target="_blank" rel="noopener noreferrer">
+                      {heroCta.label} <ArrowRight className="!size-5" />
+                    </a>
+                  ) : (
+                    <a href={heroCta.href}>
+                      {heroCta.label} <ArrowRight className="!size-5" />
+                    </a>
+                  )}
+                </Button>
+              )}
             </div>
             <img
               src={icon}
