@@ -7,7 +7,7 @@ const GlobalMartechTransformation = () => (
     backLabel="All work"
     eyebrow="Case study · Global Insurance"
     title="Global MarTech Transformation"
-    intro="A nine-market rebuild of the analytics, tagging, and personalization stack at a Fortune 500 insurer — moving the digital organization from siloed reporting to a single, governed engagement platform."
+    intro="A nine-market rebuild of the analytics, tagging, and personalization stack at a Fortune 500 insurer - moving the digital organization from siloed reporting to a single, governed engagement platform."
     icon={iconMartech}
     stats={[
       ["+293%", "Quote form conversion"],
@@ -24,7 +24,7 @@ const GlobalMartechTransformation = () => (
     next={{ href: "/work/real-time-content-personalization", label: "Real-Time Content Personalization" }}
     seo={{
       path: "/work/global-martech-transformation",
-      title: "Global MarTech Transformation — Drip AI & Data",
+      title: "Global MarTech Transformation - Drip AI & Data",
       description: "Nine-market analytics, tagging, and personalization rebuild for a Fortune 500 insurer. Quote form conversion lifted +293%.",
     }}
   >
@@ -32,8 +32,8 @@ const GlobalMartechTransformation = () => (
     <p>
       A global insurance and wealth business was running nine country sites on inconsistent tagging, three
       different analytics tools, and a personalization platform that nobody trusted. Marketing leadership
-      could not answer basic questions — how many quote starts did we have last week, what is our true
-      cost per acquisition, which campaigns actually moved the needle — without a two-week analyst project.
+      could not answer basic questions - how many quote starts did we have last week, what is our true
+      cost per acquisition, which campaigns actually moved the needle - without a two-week analyst project.
     </p>
     <p>
       The quote funnel was the most expensive surface in the business and also the least understood.
@@ -45,7 +45,7 @@ const GlobalMartechTransformation = () => (
     <ul>
       <li>A single global data layer specification, deployed across all nine markets via a centrally governed tag management implementation.</li>
       <li>A unified analytics architecture consolidating three legacy tools into one governed reporting layer with shared KPIs and definitions.</li>
-      <li>A re-architected personalization platform — moving from page-level rule chaos to a component-level decisioning model with experimentation built in.</li>
+      <li>A re-architected personalization platform - moving from page-level rule chaos to a component-level decisioning model with experimentation built in.</li>
       <li>A measurement framework that tied every campaign, audience, and experience to revenue, not clicks.</li>
     </ul>
 
@@ -53,7 +53,7 @@ const GlobalMartechTransformation = () => (
     <p>
       Within the first two release waves, quote form conversion lifted <strong>+293%</strong> on the
       highest-traffic market, with double-digit gains replicated across the other eight. More importantly,
-      the marketing organization could answer its own questions for the first time — without filing a
+      the marketing organization could answer its own questions for the first time - without filing a
       ticket, and without waiting for an analyst.
     </p>
     <p>

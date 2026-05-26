@@ -32,7 +32,7 @@ const Labs = () => (
           </h2>
         </div>
         <p className="md:col-span-5 text-base leading-relaxed text-muted-foreground">
-          We don't just talk about agentic AI — we ship it. Drip Labs is where we build production-grade autonomous systems on real data, real money, and real outcomes.
+          We don't just talk about agentic AI - we ship it. Drip Labs is where we build production-grade autonomous systems on real data, real money, and real outcomes.
         </p>
       </div>
 

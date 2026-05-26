@@ -37,7 +37,7 @@ const Services = () => (
           </h2>
         </div>
         <p className="text-lg text-muted-foreground md:col-span-5">
-          Not every company needs the same thing. We scope every engagement around your actual situation — from a single dashboard to a full data platform.
+          Not every company needs the same thing. We scope every engagement around your actual situation - from a single dashboard to a full data platform.
         </p>
       </div>
 

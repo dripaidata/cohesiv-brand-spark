@@ -7,7 +7,7 @@ const DynastyWarRoom = () => (
     backLabel="All labs"
     eyebrow="Drip Labs · May 2026"
     title="Dynasty War Room"
-    intro="A fantasy football platform built to model the NFL — manage a full salary cap, contract types, and more as you look to build a true dynasty."
+    intro="A fantasy football platform built to model the NFL - manage a full salary cap, contract types, and more as you look to build a true dynasty."
     icon={dynastyWarRoomLogo}
     stats={[
       ["Multi-league", "production system"],
@@ -24,11 +24,11 @@ const DynastyWarRoom = () => (
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
     seo={{
       path: "/labs/dynasty-cap-manager",
-      title: "Dynasty War Room — Drip Labs",
+      title: "Dynasty War Room - Drip Labs",
       description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
     }}
   >
-    <h2>The Quality Audit — March 2026</h2>
+    <h2>The Quality Audit - March 2026</h2>
     <p>
       Four months into the build, feature work stopped and a full audit began. 28 distinct issues
       surfaced across security, data integrity, and code quality.
@@ -56,18 +56,18 @@ const DynastyWarRoom = () => (
       <li>Dynamic configuration replacing hardcoded league assumptions</li>
       <li>Audit cadence baked into the development rhythm</li>
     </ul>
-    <p><em>What's next:</em> The trading system — multi-team trades, conditional picks, and salary retention.</p>
+    <p><em>What's next:</em> The trading system - multi-team trades, conditional picks, and salary retention.</p>
 
-    <h2>Build Log: Feb–Mar 2026 — Multi-League Architecture</h2>
+    <h2>Build Log: Feb–Mar 2026 - Multi-League Architecture</h2>
     <p>
       Within a week of v1 going live, two other commissioners asked if their leagues could use it. The
-      original schema assumed one league — salary caps, roster sizes, and scoring rules were all baked
+      original schema assumed one league - salary caps, roster sizes, and scoring rules were all baked
       into calculation functions. Supporting a second league meant rebuilding the foundation.
     </p>
     <p>
-      The new architecture splits the database three ways: shared NFL data (32 teams, 2,550+ players —
+      The new architecture splits the database three ways: shared NFL data (32 teams, 2,550+ players -
       read-only), shared auth (users, sessions, permissions), and per-league dynasty databases (rosters,
-      contracts, trades — completely isolated). Every league is its own world. A bug in one league's
+      contracts, trades - completely isolated). Every league is its own world. A bug in one league's
       cap math can't corrupt another league's data.
     </p>
     <p>
@@ -76,7 +76,7 @@ const DynastyWarRoom = () => (
       templates, and registers the commissioner in under five seconds.
     </p>
     <p>
-      A league state machine — 8 distinct phases from "setup" through "regular season" to "offseason" —
+      A league state machine - 8 distinct phases from "setup" through "regular season" to "offseason" -
       controls what features are visible at any given time. You can't accidentally cut a player during
       the live draft. You can't open waivers before week 1. The state machine is the difference between
       "configurable" and "safe."
@@ -87,12 +87,12 @@ const DynastyWarRoom = () => (
       <li>Wizard-based provisioning under five seconds</li>
       <li>8-phase state machine controlling feature availability</li>
     </ul>
-    <p><em>What's next:</em> Auditing the codebase honestly — 28 issues found, fixes prioritized.</p>
+    <p><em>What's next:</em> Auditing the codebase honestly - 28 issues found, fixes prioritized.</p>
 
-    <h2>Build Log: Feb 2026 — Real-Time Drafts &amp; Auctions</h2>
+    <h2>Build Log: Feb 2026 - Real-Time Drafts &amp; Auctions</h2>
     <p>
       The live draft system uses Socket.io for real-time, multi-user interaction. When a commissioner
-      opens the draft lobby, all connected team owners see updates instantly — no refreshing.
+      opens the draft lobby, all connected team owners see updates instantly - no refreshing.
     </p>
     <p>
       Draft features include a configurable pick timer with auto-skip, smart auto-pick (fills critical
@@ -116,16 +116,16 @@ const DynastyWarRoom = () => (
       <li>Server-side validation for every action (no optimistic-only updates)</li>
       <li>Shared infrastructure between draft formats for maintainability</li>
     </ul>
-    <p><em>What's next:</em> Multi-league architecture — turning a single-league app into a true SaaS platform.</p>
+    <p><em>What's next:</em> Multi-league architecture - turning a single-league app into a true SaaS platform.</p>
 
-    <h2>Build Log: Feb 2026 — The Salary Cap Engine</h2>
+    <h2>Build Log: Feb 2026 - The Salary Cap Engine</h2>
     <p>
       The most complex phase of the build: 91 distinct features across salary cap management, contract
       extensions, and the offseason cuts/extensions workflow.
     </p>
     <p>
       The engine calculates extension costs as a blend of a player's current contract tier and their
-      market fair value — rookies weight 75% fair value / 25% old value, veterans split 50/50. Four
+      market fair value - rookies weight 75% fair value / 25% old value, veterans split 50/50. Four
       salary tiers ($35+, $25–34, $11–24, $1–10) drive different annual escalation rates.
     </p>
     <p>
@@ -141,9 +141,9 @@ const DynastyWarRoom = () => (
       <li>Tier-based salary escalation mirroring NFL economics</li>
       <li>Snapshot-based audit trail for every contract action</li>
     </ul>
-    <p><em>What's next:</em> Real-time drafts — 12 people connected simultaneously via Socket.io.</p>
+    <p><em>What's next:</em> Real-time drafts - 12 people connected simultaneously via Socket.io.</p>
 
-    <h2>Build Log: Jan–Feb 2026 — The NFL Data Pipeline</h2>
+    <h2>Build Log: Jan–Feb 2026 - The NFL Data Pipeline</h2>
     <p>
       Connecting to real NFL data was the first major challenge. We started with the Sportradar API
       but hit trial key limitations before we could test a full season pull. After evaluating
@@ -164,9 +164,9 @@ const DynastyWarRoom = () => (
       <li>Store calculated fantasy scores per game (not compute on the fly)</li>
       <li>Five seasons of historical data for meaningful career context</li>
     </ul>
-    <p><em>What's next:</em> The salary cap engine — 91 features to replace the league's most painful Google Sheet.</p>
+    <p><em>What's next:</em> The salary cap engine - 91 features to replace the league's most painful Google Sheet.</p>
 
-    <h2>Build Log: Jan 2026 — The Origin Story</h2>
+    <h2>Build Log: Jan 2026 - The Origin Story</h2>
     <p>
       BroNasty League has been running for 12 years across four disconnected platforms: Sleeper for
       matchups, Google Sheets for salary caps, Google Docs for rules, and Yahoo Email for waivers. The
@@ -194,7 +194,7 @@ const DynastyWarRoom = () => (
       <li>SQLite → PostgreSQL migration path for zero-config dev</li>
       <li>Role-based access (Commissioner vs. Owner) from the start</li>
     </ul>
-    <p><em>What's next:</em> Connecting to real NFL data — 2,550+ players, 5 seasons of stats, and a Python pipeline to pull it all together.</p>
+    <p><em>What's next:</em> Connecting to real NFL data - 2,550+ players, 5 seasons of stats, and a Python pipeline to pull it all together.</p>
   </CaseStudyLayout>
 );
 
