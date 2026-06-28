@@ -13,7 +13,7 @@ import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
 import NotFound from "./pages/NotFound.tsx";
-import AnnouncementBanner from "./components/site/AnnouncementBanner.tsx";
+
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
 const queryClient = new QueryClient();
@@ -25,7 +25,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
-        <AnnouncementBanner />
+        
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
