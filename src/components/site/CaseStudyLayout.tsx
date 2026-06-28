@@ -76,7 +76,7 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
             <img
               src={icon}
               alt=""
-              className="order-2 h-24 w-24 flex-shrink-0 rounded-md object-contain sm:h-32 sm:w-32 md:h-40 md:w-40"
+              className="order-2 h-48 w-48 flex-shrink-0 rounded-md object-contain sm:h-64 sm:w-64 md:h-80 md:w-80"
             />
           </div>
 
