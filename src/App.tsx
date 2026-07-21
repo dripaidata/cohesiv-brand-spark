@@ -12,6 +12,7 @@ import DynastyWarRoom from "./pages/DynastyWarRoom.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
+import MultifamilyDataPlatform from "./pages/MultifamilyDataPlatform.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 import ScrollToTop from "./components/ScrollToTop.tsx";
