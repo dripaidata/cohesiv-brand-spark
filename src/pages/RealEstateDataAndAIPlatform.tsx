@@ -159,8 +159,7 @@ const RealEstateDataAndAIPlatform = () => (
     <p>
       Accuracy was treated as a feature, not an aspiration. When we rebuilt their operating expense
       figures with accrual corrections, we reconciled all 516 property months against their books, to
-      the penny, before switching anything over. When the CFO's hand built tally said 20 for a
-      property quarter, we didn't stop until the model said 20 for the same reasons he did. Along the
+      the penny, before switching anything over. When the CFO's hand-kept tally and our model disagreed by one on a key leasing metric, we didn't stop until the model matched his number — for the same reasons he had. Along the
       way, the platform surfaced data quality issues in the source system the firm didn't know it had:
       mis tagged accounts, duplicated entries, placeholder dates, each documented and fixed or flagged.
     </p>
