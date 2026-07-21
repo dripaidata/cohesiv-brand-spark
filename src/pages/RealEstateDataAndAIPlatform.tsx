@@ -38,9 +38,11 @@ const beforeItems = [
   "Historical market rents overwritten by the PMS, no way to see rent change history",
   "Pro forma performance, mark to markets, and distributions tracked in fragile manual workbooks",
   "Every executive question became an interruption to the CFO's day",
+  "Weeks of manual work every month and quarter to close books and answer leadership questions",
 ];
 
 const afterItems = [
+  "Weeks of manual reporting and analysis now done in hours every month and quarter",
   "All 24 core reports land in one warehouse automatically, every night",
   "Official API integration, stable across vendor UI changes",
   "Daily snapshots preserve history the source system discards",
@@ -55,13 +57,13 @@ const chat: { role: "q" | "a"; text: string }[] = [
   { role: "a", text: "6 renovated lease ups · +50.6% vs. pre renovation rents · +8.5% vs. pro forma. And where underlying data was incomplete, the agent flagged the estimate instead of stating it as fact." },
 ];
 
-const MultifamilyDataPlatform = () => (
+const RealEstateDataAndAIPlatform = () => (
   <CaseStudyLayout
     backHref="/case-studies"
     backLabel="All case studies"
-    eyebrow="24 PROPERTIES · ~1,350 UNITS · NORTHEAST U.S."
-    title="Their portfolio data lived in exports and a tool that kept breaking. Four months later, the CEO asks it questions in plain English."
-    intro="How a family run multifamily investment firm went from spreadsheet archaeology to an automated data platform: nightly pipelines, executive dashboards, and three AI analysts their leadership team uses every day."
+    eyebrow="REAL ESTATE · DATA FOUNDATION · ANALYTICS · AI"
+    title="Real Estate Data & AI Platform"
+    intro="How a family-run real estate investor went from spreadsheet archaeology to a fully custom data and AI platform: data accuracy and automation, customized and always on analytics, and LLM analysts for financial reporting, leasing and vacancy, performance vs pro forma, and distributions. Weeks of manual work now done in hours, every month and quarter."
     icon={iconData}
     stats={[
       ["4 months", "kickoff to platform + AI agents in daily use"],
@@ -70,18 +72,18 @@ const MultifamilyDataPlatform = () => (
       ["< $20/mo", "total cloud infra to run the platform"],
     ]}
     meta={[
-      ["Sector", "Multifamily real estate"],
+      ["Sector", "Real estate"],
       ["Portfolio", "24 properties, ~1,350 units"],
       ["Region", "Northeast U.S."],
-      ["Role", "Design, build, deploy"],
+      ["Role", "Data foundation, analytics, AI implementation"],
       ["Stack", "Cloud data warehouse · Governed metrics layer · Dashboards · LLM agents"],
       ["Timeline", "4 months to full platform"],
     ]}
     seo={{
-      path: "/case-studies/multifamily-data-platform",
-      title: "Case Study: Multifamily Data Platform & AI Analysts | Drip AI & Data",
+      path: "/case-studies/real-estate-data-and-ai-platform",
+      title: "Case Study: Real Estate Data & AI Platform | Drip AI & Data",
       description:
-        "How a 24 property multifamily investor replaced spreadsheets and a breaking dashboard tool with an automated data platform and AI analysts, in four months, reconciled to the penny.",
+        "How a family-run real estate investor replaced spreadsheets and a breaking dashboard tool with a custom data foundation, analytics, and LLM analysts, saving weeks of manual work every month and quarter.",
     }}
   >
     <p className="eyebrow text-cyan !mt-0">THE STARTING POINT</p>
@@ -94,7 +96,9 @@ const MultifamilyDataPlatform = () => (
       budget, this month and cumulatively?
     </p>
     <p>
-      They had already tried to solve it. A contractor built them a custom dashboard tool that worked by
+      What they needed was a real estate data and AI platform from the ground up: a data foundation, an analytics
+      layer, and LLM analysts that could handle financial reporting, leasing and vacancy, performance vs pro forma,
+      and distributions. They had already tried to solve it. A contractor built them a custom dashboard tool that worked by
       screen scraping their PMS, and every time the vendor changed its login flow or page structure, the
       tool went dark. Off the shelf BI subscriptions covered some dashboards but none of the analysis
       that lived outside the PMS: pro forma comparisons, mark to markets, investor level performance. So
@@ -154,10 +158,14 @@ const MultifamilyDataPlatform = () => (
     <p>
       Accuracy was treated as a feature, not an aspiration. When we rebuilt their operating expense
       figures with accrual corrections, we reconciled all 516 property months against their books, to
-      the penny, before switching anything over. When the CFO's hand kept move in tally said 20 for a
+      the penny, before switching anything over. When the CFO's hand built tally said 20 for a
       property quarter, we didn't stop until the model said 20 for the same reasons he did. Along the
       way, the platform surfaced data quality issues in the source system the firm didn't know it had:
       mis tagged accounts, duplicated entries, placeholder dates, each documented and fixed or flagged.
+    </p>
+
+    <p className="!mt-6 text-base leading-relaxed text-navy-deep">
+      The real payoff is time. Work that used to consume weeks of manual effort every month and quarter — pulling exports, reconciling accounts, building board reports, and answering ad hoc questions — now happens in hours. The CFO's team is no longer the bottleneck for every leadership question.
     </p>
 
     <p className="eyebrow text-cyan mt-16">BEFORE & AFTER</p>
@@ -201,4 +209,4 @@ const MultifamilyDataPlatform = () => (
   </CaseStudyLayout>
 );
 
-export default MultifamilyDataPlatform;
+export default RealEstateDataAndAIPlatform;

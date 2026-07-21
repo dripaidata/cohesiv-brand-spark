@@ -9,13 +9,13 @@ import Reveal from "./Reveal";
 
 const featured = [
   {
-    href: "/case-studies/multifamily-data-platform",
+    href: "/case-studies/real-estate-data-and-ai-platform",
     value: 4,
     suffix: " months",
-    label: "Spreadsheets to AI analysts",
-    project: "Multifamily Data Platform",
+    label: "Data foundation, analytics & AI",
+    project: "Real Estate Data & AI Platform",
     summary:
-      "A family-run multifamily investor replaced a breaking screen-scraping dashboard and hand-built spreadsheets with nightly pipelines, executive dashboards, and three AI analysts. Reconciled to the penny across 24 properties and ~1,350 units.",
+      "A family-run real estate investor replaced manual exports and a breaking dashboard with a custom data foundation, always on analytics, and LLM analysts for financial reporting, leasing, performance vs pro forma, and distributions. Weeks of manual work now done in hours.",
     icon: iconData,
     badge: "Newest",
   },
