@@ -86,7 +86,7 @@ const Work = () => {
             {cases.map((c) => (
               <Link
                 key={c.slug}
-                to={`/work/${c.slug}`}
+                to={c.href}
                 className="group relative flex flex-col gap-6 bg-card p-10 transition-all hover:bg-cyan-soft/30 md:p-12"
               >
                 <div className="flex items-start justify-between gap-6">
@@ -100,6 +100,19 @@ const Work = () => {
                 </div>
 
                 <p className="text-base leading-relaxed text-muted-foreground">{c.blurb}</p>
+
+                {c.chips.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {c.chips.map((chip) => (
+                      <span
+                        key={chip}
+                        className="rounded-sm border border-border bg-background px-3 py-1 font-mono text-xs uppercase tracking-widest text-navy-deep"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                )}
 
                 <div className="mt-auto flex items-end justify-between border-t border-border pt-6">
                   <div>
