@@ -12,6 +12,7 @@ import DynastyWarRoom from "./pages/DynastyWarRoom.tsx";
 import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx";
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
+import MultifamilyDataPlatform from "./pages/MultifamilyDataPlatform.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 import ScrollToTop from "./components/ScrollToTop.tsx";
@@ -29,12 +30,14 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/work" element={<Work />} />
+          <Route path="/case-studies" element={<Work />} />
           <Route path="/labs" element={<Labs />} />
           <Route path="/about" element={<About />} />
           <Route path="/work/global-martech-transformation" element={<GlobalMartechTransformation />} />
           <Route path="/work/real-time-content-personalization" element={<RealTimeContentPersonalization />} />
           <Route path="/work/prospecting-agent" element={<ProspectingAgent />} />
           <Route path="/work/congressional-trades-fund" element={<CongressionalTradesFund />} />
+          <Route path="/case-studies/multifamily-data-platform" element={<MultifamilyDataPlatform />} />
           <Route path="/labs/congressional-trades-fund" element={<CongressionalTradesFund />} />
           <Route path="/labs/dynasty-war-room" element={<DynastyWarRoom />} />
           <Route path="/labs/dynasty-cap-manager" element={<Navigate to="/labs/dynasty-war-room" replace />} />
