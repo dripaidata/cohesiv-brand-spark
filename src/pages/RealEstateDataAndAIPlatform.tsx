@@ -52,9 +52,9 @@ const afterItems = [
 
 const chat: { role: "q" | "a"; text: string }[] = [
   { role: "q", text: "How did renewals at [property] trend this quarter, how many, and what was the average increase?" },
-  { role: "a", text: "12 renewals · +4.9% average increase. Correctly weighted across the quarter's months, formatted and sourced from the governed views." },
+  { role: "a", text: "Exact count, correctly weighted average — computed across the quarter's months from the governed views, not a flat average of monthly rates." },
   { role: "q", text: "How are renovated units leasing up against pro forma?" },
-  { role: "a", text: "6 renovated lease ups · +50.6% vs. pre renovation rents · +8.5% vs. pro forma. And where underlying data was incomplete, the agent flagged the estimate instead of stating it as fact." },
+  { role: "a", text: "Each lease-up vs. pre-renovation rent and original underwriting — and where underlying data was incomplete, the agent flagged the estimate instead of stating it as fact." },
 ];
 
 const RealEstateDataAndAIPlatform = () => (
@@ -70,6 +70,7 @@ const RealEstateDataAndAIPlatform = () => (
       ["24 reports", "pulled from their PMS automatically, every night"],
       ["516/516", "property months reconciled to the penny"],
       ["< $20/mo", "total cloud infra to run the platform"],
+      ["Weeks → hours", "monthly and quarterly reporting work, compressed by automation"],
     ]}
     meta={[
       ["Sector", "Real estate"],
@@ -158,8 +159,7 @@ const RealEstateDataAndAIPlatform = () => (
     <p>
       Accuracy was treated as a feature, not an aspiration. When we rebuilt their operating expense
       figures with accrual corrections, we reconciled all 516 property months against their books, to
-      the penny, before switching anything over. When the CFO's hand built tally said 20 for a
-      property quarter, we didn't stop until the model said 20 for the same reasons he did. Along the
+      the penny, before switching anything over. When the CFO's hand-kept tally and our model disagreed by one on a key leasing metric, we didn't stop until the model matched his number — for the same reasons he had. Along the
       way, the platform surfaced data quality issues in the source system the firm didn't know it had:
       mis tagged accounts, duplicated entries, placeholder dates, each documented and fixed or flagged.
     </p>
