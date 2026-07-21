@@ -3,19 +3,34 @@ import { Link } from "react-router-dom";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import iconData from "@/assets/icon-data.png";
 import AnimatedNumber from "./AnimatedNumber";
 import Reveal from "./Reveal";
 
-const featured = {
-  href: "/work/prospecting-agent",
-  value: 5,
-  suffix: " min",
-  label: "Replaces 4 to 6 weekly hours",
-  project: "The Prospecting Agent",
-  summary:
-    "A custom AI prospecting agent that researches accounts, verifies LinkedIn profiles, and drafts outreach in the client's voice. Built around their ICP. A creative agency reclaimed an entire morning every week and put it back into real conversations.",
-  icon: iconPipeline,
-};
+const featured = [
+  {
+    href: "/case-studies/multifamily-data-platform",
+    value: 4,
+    suffix: " months",
+    label: "Spreadsheets to AI analysts",
+    project: "Multifamily Data Platform",
+    summary:
+      "A family-run multifamily investor replaced a breaking screen-scraping dashboard and hand-built spreadsheets with nightly pipelines, executive dashboards, and three AI analysts. Reconciled to the penny across 24 properties and ~1,350 units.",
+    icon: iconData,
+    badge: "Newest",
+  },
+  {
+    href: "/work/prospecting-agent",
+    value: 5,
+    suffix: " min",
+    label: "Replaces 4 to 6 weekly hours",
+    project: "The Prospecting Agent",
+    summary:
+      "A custom AI prospecting agent that researches accounts, verifies LinkedIn profiles, and drafts outreach in the client's voice. Built around their ICP. A creative agency reclaimed an entire morning every week and put it back into real conversations.",
+    icon: iconPipeline,
+    badge: "Engagement",
+  },
+];
 
 const proofs = [
   {
@@ -59,37 +74,39 @@ const Proof = () => (
         </a>
       </div>
 
-      <Reveal>
-        <Link
-          to={featured.href}
-          className="group mt-16 flex flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev md:p-12"
-        >
-          <div className="flex items-start justify-between gap-6">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-widest text-cyan">Newest</p>
-              <h3 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{featured.project}</h3>
+      {featured.map((f, i) => (
+        <Reveal key={f.project} delay={i * 120}>
+          <Link
+            to={f.href}
+            className={`group ${i === 0 ? "mt-16" : "mt-6"} flex flex-col overflow-hidden rounded-sm border border-border bg-card p-10 shadow-card transition-all hover:border-cyan hover:shadow-elev md:p-12`}
+          >
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <p className="font-mono text-xs uppercase tracking-widest text-cyan">{f.badge}</p>
+                <h3 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{f.project}</h3>
+              </div>
+              <img src={f.icon} alt="" loading="lazy" className="h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28" />
             </div>
-            <img src={featured.icon} alt="" loading="lazy" className="h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28" />
-          </div>
-          <div className="mt-10 grid gap-10 border-t border-border pt-8 md:grid-cols-12 md:gap-12">
-            <div className="md:col-span-5">
-              <AnimatedNumber
-                value={featured.value}
-                suffix={featured.suffix}
-                className="display-serif block text-7xl text-cyan md:text-8xl"
-              />
-              <p className="eyebrow mt-2 text-navy-deep">{featured.label}</p>
+            <div className="mt-10 grid gap-10 border-t border-border pt-8 md:grid-cols-12 md:gap-12">
+              <div className="md:col-span-5">
+                <AnimatedNumber
+                  value={f.value}
+                  suffix={f.suffix}
+                  className="display-serif block text-7xl text-cyan md:text-8xl"
+                />
+                <p className="eyebrow mt-2 text-navy-deep">{f.label}</p>
+              </div>
+              <div className="md:col-span-7">
+                <p className="text-base leading-relaxed text-muted-foreground">{f.summary}</p>
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-navy-deep group-hover:text-cyan">
+                  Read the case study
+                  <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
+              </div>
             </div>
-            <div className="md:col-span-7">
-              <p className="text-base leading-relaxed text-muted-foreground">{featured.summary}</p>
-              <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-navy-deep group-hover:text-cyan">
-                Read the case study
-                <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </div>
-          </div>
-        </Link>
-      </Reveal>
+          </Link>
+        </Reveal>
+      ))}
 
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         {proofs.map((p, i) => (
