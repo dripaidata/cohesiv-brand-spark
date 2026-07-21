@@ -6,34 +6,52 @@ import Seo from "@/components/site/Seo";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import iconData from "@/assets/icon-data.png";
 
 const cases = [
   {
     slug: "prospecting-agent",
+    href: "/work/prospecting-agent",
     icon: iconPipeline,
     sector: "Custom AI Product",
     title: "The Prospecting Agent",
     metric: "5 min",
     metricLabel: "replaces 4–6 weekly hours",
     blurb: "Custom prospecting agents that find and qualify outbound leads for you - built around each client's ICP.",
+    chips: [] as string[],
+  },
+  {
+    slug: "multifamily-data-platform",
+    href: "/case-studies/multifamily-data-platform",
+    icon: iconData,
+    sector: "Multifamily Real Estate",
+    title: "From spreadsheets to a portfolio that answers questions",
+    metric: "4 months",
+    metricLabel: "to a platform + AI analysts",
+    blurb: "A 24-property multifamily investor replaced manual exports and a breaking dashboard tool with an automated data platform, and AI analysts their CEO uses every day.",
+    chips: ["4 months", "~1,350 units", "<$20/mo infra"],
   },
   {
     slug: "global-martech-transformation",
+    href: "/work/global-martech-transformation",
     icon: iconMartech,
     sector: "Global Insurance",
     title: "Global MarTech Transformation",
     metric: "+293%",
     metricLabel: "quote form conversion",
     blurb: "Rebuilt the analytics + personalization stack across nine markets for a Fortune 500 insurer.",
+    chips: [] as string[],
   },
   {
     slug: "real-time-content-personalization",
+    href: "/work/real-time-content-personalization",
     icon: iconEngagement,
     sector: "Financial Services",
     title: "Real-Time Content Personalization",
     metric: "+650%",
     metricLabel: "CTA engagement",
     blurb: "Designed and shipped a content personalization framework that turned static pages into responsive journeys.",
+    chips: [] as string[],
   },
 ];
 
