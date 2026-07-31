@@ -47,8 +47,8 @@ const offers: Offer[] = [
       { lead: "Take-home playbook:", rest: "the prompts, workflows, and guardrails your team built" },
       { lead: "30-day follow-up session", rest: "to reinforce adoption and answer what came up in practice" },
     ],
-    price: "$4,500",
-    timeline: "$7,500 full day · 2 weeks from signing to session",
+    price: "$4,000",
+    timeline: "half-day workshop · $7,500 full day · 2 weeks from signing to session",
     value:
       "Trained by the architect who shipped production AI at Fidelity, Manulife, and Rocket Software.",
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
