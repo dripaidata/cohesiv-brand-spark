@@ -36,7 +36,7 @@ const offers = [
 ];
 
 const HomeOffers = () => (
-  <section className="bg-cool py-28 md:py-40">
+  <section className="bg-secondary py-28 md:py-40">
     <div className="container-wide">
       <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
         <div className="max-w-2xl">
