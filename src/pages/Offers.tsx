@@ -183,7 +183,7 @@ const OfferCard = ({
     onFocus={onActivate}
     onClick={onActivate}
     tabIndex={0}
-    className={`group relative scroll-mt-28 cursor-pointer rounded-sm border bg-card p-7 text-left shadow-card outline-none transition-all duration-500 ease-out lg:min-w-0 ${
+    className={`group relative scroll-mt-28 cursor-pointer rounded-sm border bg-card p-7 text-left shadow-card w-full outline-none transition-all duration-500 ease-out lg:min-w-0 ${
       active
         ? "border-cyan shadow-elev lg:flex-[2.2] lg:-translate-y-1"
         : "border-border lg:flex-[1] lg:opacity-80 hover:border-cyan/50"
