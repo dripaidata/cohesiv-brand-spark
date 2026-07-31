@@ -1,0 +1,1 @@
+ALTER TABLE public.consultation_submissions ADD COLUMN IF NOT EXISTS offers text[] NOT NULL DEFAULT '{}'::text[];

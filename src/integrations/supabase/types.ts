@@ -24,6 +24,7 @@ export type Database = {
           id: string
           last_name: string
           nda: boolean
+          offers: string[]
           services: string[]
           title: string | null
         }
@@ -36,6 +37,7 @@ export type Database = {
           id?: string
           last_name: string
           nda?: boolean
+          offers?: string[]
           services?: string[]
           title?: string | null
         }
@@ -48,6 +50,7 @@ export type Database = {
           id?: string
           last_name?: string
           nda?: boolean
+          offers?: string[]
           services?: string[]
           title?: string | null
         }
