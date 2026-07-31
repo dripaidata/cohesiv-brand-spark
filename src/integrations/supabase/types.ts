@@ -53,6 +53,33 @@ export type Database = {
         }
         Relationships: []
       }
+      offer_sheet_requests: {
+        Row: {
+          company: string
+          created_at: string
+          email: string
+          id: string
+          name: string
+          offer: string | null
+        }
+        Insert: {
+          company: string
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          offer?: string | null
+        }
+        Update: {
+          company?: string
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          offer?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
