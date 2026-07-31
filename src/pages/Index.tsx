@@ -3,6 +3,7 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Hero from "@/components/site/Hero";
 import Services from "@/components/site/Services";
+import HomeOffers from "@/components/site/HomeOffers";
 import HowWeWork from "@/components/site/HowWeWork";
 import Credentials from "@/components/site/Credentials";
 import Proof from "@/components/site/Proof";
