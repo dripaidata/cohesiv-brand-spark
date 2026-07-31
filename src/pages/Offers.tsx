@@ -105,8 +105,10 @@ const offers: Offer[] = [
       { lead: "A team of LLM analysts", rest: "answering plain-English questions with real SQL, guardrails, and a QA suite" },
       { lead: "Enablement throughout,", rest: "so your people run it after handoff" },
     ],
-    price: "From $40,000",
-    timeline: "+ $2,500–3,500/mo optional active maintenance · 120 days · 3 phases with hard outputs and an off-ramp at each",
+    timeline: "120 days · 3 phases · hard outputs at each",
+    priceNote:
+      "Engagements are scoped to your systems and typically start in the mid five figures.",
+    offerSheet: true,
     value:
       "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
     proof:
