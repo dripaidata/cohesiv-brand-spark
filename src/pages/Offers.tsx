@@ -243,7 +243,9 @@ const OfferCard = ({
 );
 
 const Offers = () => {
-  const [active, setActive] = useState(0);
+  const hashId = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
+  const initial = Math.max(0, offers.findIndex((o) => o.id === hashId));
+  const [active, setActive] = useState(initial);
 
   return (
     <div className="min-h-screen bg-background font-sans">
