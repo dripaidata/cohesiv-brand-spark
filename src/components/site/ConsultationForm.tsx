@@ -78,6 +78,7 @@ const ConsultationForm = () => {
     toast.success("Thanks - we'll be in touch within one business day.");
     form.reset();
     setSelected([]);
+    setSelectedOffers([]);
   };
 
   return (
