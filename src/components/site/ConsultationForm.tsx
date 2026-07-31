@@ -11,6 +11,12 @@ import { supabase } from "@/integrations/supabase/client";
 
 const services = ["AI Strategy", "Data & Analytics", "Agentic Workflows"];
 
+const offerOptions = [
+  "AI Enablement Workshop",
+  "Prospecting Agent",
+  "Decision Intelligence Platform",
+];
+
 const submissionSchema = z.object({
   first_name: z.string().trim().min(1, "First name is required").max(100),
   last_name: z.string().trim().min(1, "Last name is required").max(100),
@@ -22,9 +28,13 @@ const submissionSchema = z.object({
 
 const ConsultationForm = () => {
   const [selected, setSelected] = useState<string[]>([]);
+  const [selectedOffers, setSelectedOffers] = useState<string[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const toggle = (s: string) =>
     setSelected((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));
+  const toggleOffer = (s: string) =>
+    setSelectedOffers((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));
+
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,6 +64,7 @@ const ConsultationForm = () => {
       title: parsed.data.title || null,
       challenges: parsed.data.challenges,
       services: selected,
+      offers: selectedOffers,
       nda: false,
     });
     setSubmitting(false);
@@ -67,6 +78,7 @@ const ConsultationForm = () => {
     toast.success("Thanks - we'll be in touch within one business day.");
     form.reset();
     setSelected([]);
+    setSelectedOffers([]);
   };
 
   return (
@@ -133,6 +145,33 @@ const ConsultationForm = () => {
               })}
             </div>
           </div>
+
+          <div>
+            <Label className="text-xs font-mono uppercase tracking-widest text-primary-foreground/60">
+              Offer of interest <span className="normal-case tracking-normal text-primary-foreground/40">(optional)</span>
+            </Label>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {offerOptions.map((o) => {
+                const active = selectedOffers.includes(o);
+                return (
+                  <button
+                    type="button"
+                    key={o}
+                    onClick={() => toggleOffer(o)}
+                    className={`rounded-full border px-4 py-2 text-sm transition-all ${
+                      active
+                        ? "border-cyan bg-cyan text-navy-ink"
+                        : "border-white/20 text-primary-foreground/80 hover:border-cyan/60"
+                    }`}
+                  >
+                    {o}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+
 
           <div className="grid gap-2">
             <Label htmlFor="challenges" className="text-xs font-mono uppercase tracking-widest text-primary-foreground/60">
