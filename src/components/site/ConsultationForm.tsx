@@ -146,6 +146,33 @@ const ConsultationForm = () => {
             </div>
           </div>
 
+          <div>
+            <Label className="text-xs font-mono uppercase tracking-widest text-primary-foreground/60">
+              Offer of interest <span className="normal-case tracking-normal text-primary-foreground/40">(optional)</span>
+            </Label>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {offerOptions.map((o) => {
+                const active = selectedOffers.includes(o);
+                return (
+                  <button
+                    type="button"
+                    key={o}
+                    onClick={() => toggleOffer(o)}
+                    className={`rounded-full border px-4 py-2 text-sm transition-all ${
+                      active
+                        ? "border-cyan bg-cyan text-navy-ink"
+                        : "border-white/20 text-primary-foreground/80 hover:border-cyan/60"
+                    }`}
+                  >
+                    {o}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+
+
           <div className="grid gap-2">
             <Label htmlFor="challenges" className="text-xs font-mono uppercase tracking-widest text-primary-foreground/60">
               Describe your challenges
