@@ -22,8 +22,10 @@ interface Offer {
   problem: string;
   problemList?: string[];
   gets: { lead: string; rest: string }[];
-  price: string;
+  price?: string;
   timeline: string;
+  priceNote?: string;
+  offerSheet?: boolean;
   value: string;
   proof: string;
   proofHref: string;
