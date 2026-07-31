@@ -29,8 +29,8 @@ const offers = [
     icon: iconData,
     number: "03",
     name: "Decision Intelligence Platform",
-    price: "From $40,000",
-    detail: "Optional active maintenance",
+    price: "Mid five figures",
+    detail: "typical starting range · 120 days",
     summary: "Data foundation, metrics layer, live dashboards, and LLM analysts that turn weeks of work into hours.",
   },
 ];
