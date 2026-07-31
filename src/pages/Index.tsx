@@ -25,6 +25,7 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <HomeOffers />
         <HowWeWork />
         <Credentials />
         <Proof />
