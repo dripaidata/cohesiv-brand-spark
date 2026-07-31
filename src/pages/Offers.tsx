@@ -164,11 +164,15 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
         {offer.proofLabel} <ArrowRight className="size-4" />
       </Link>
     </div>
-    <Button asChild variant="hero" size="lg" className="w-full">
-      <a href="/#consultation">
-        Start here <ArrowRight className="!size-5" />
-      </a>
-    </Button>
+    {offer.offerSheet ? (
+      <OfferSheetDialog offer={offer.name} />
+    ) : (
+      <Button asChild variant="hero" size="lg" className="w-full">
+        <a href="/#consultation">
+          Start here <ArrowRight className="!size-5" />
+        </a>
+      </Button>
+    )}
   </div>
 );
 
