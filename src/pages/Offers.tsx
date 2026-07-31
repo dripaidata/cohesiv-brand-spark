@@ -6,6 +6,7 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Reveal from "@/components/site/Reveal";
 import ConsultationForm from "@/components/site/ConsultationForm";
+import OfferSheetDialog from "@/components/site/OfferSheetDialog";
 import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
