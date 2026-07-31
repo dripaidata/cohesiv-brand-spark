@@ -6,6 +6,7 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Reveal from "@/components/site/Reveal";
 import ConsultationForm from "@/components/site/ConsultationForm";
+import OfferSheetDialog from "@/components/site/OfferSheetDialog";
 import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
@@ -22,8 +23,10 @@ interface Offer {
   problem: string;
   problemList?: string[];
   gets: { lead: string; rest: string }[];
-  price: string;
+  price?: string;
   timeline: string;
+  priceNote?: string;
+  offerSheet?: boolean;
   value: string;
   proof: string;
   proofHref: string;
@@ -103,8 +106,10 @@ const offers: Offer[] = [
       { lead: "A team of LLM analysts", rest: "answering plain-English questions with real SQL, guardrails, and a QA suite" },
       { lead: "Enablement throughout,", rest: "so your people run it after handoff" },
     ],
-    price: "From $40,000",
-    timeline: "+ $2,500–3,500/mo optional active maintenance · 120 days · 3 phases with hard outputs and an off-ramp at each",
+    timeline: "120 days · 3 phases · hard outputs at each",
+    priceNote:
+      "Engagements are scoped to your systems and typically start in the mid five figures.",
+    offerSheet: true,
     value:
       "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
     proof:
@@ -160,11 +165,15 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
         {offer.proofLabel} <ArrowRight className="size-4" />
       </Link>
     </div>
-    <Button asChild variant="hero" size="lg" className="w-full">
-      <a href="/#consultation">
-        Start here <ArrowRight className="!size-5" />
-      </a>
-    </Button>
+    {offer.offerSheet ? (
+      <OfferSheetDialog offer={offer.name} />
+    ) : (
+      <Button asChild variant="hero" size="lg" className="w-full">
+        <a href="/#consultation">
+          Start here <ArrowRight className="!size-5" />
+        </a>
+      </Button>
+    )}
   </div>
 );
 
@@ -199,9 +208,20 @@ const OfferCard = ({
       <em className="text-cyan not-italic">{offer.payoff}</em>
     </h2>
 
-    <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-border pt-5">
-      <span className="display-serif text-4xl text-cyan">{offer.price}</span>
-      <span className="text-xs leading-relaxed text-muted-foreground">{offer.timeline}</span>
+    <div className="mt-6 border-t border-border pt-5">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        {offer.price ? (
+          <>
+            <span className="display-serif text-4xl text-cyan">{offer.price}</span>
+            <span className="text-xs leading-relaxed text-muted-foreground">{offer.timeline}</span>
+          </>
+        ) : (
+          <span className="display-serif text-2xl text-cyan">{offer.timeline}</span>
+        )}
+      </div>
+      {offer.priceNote && (
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{offer.priceNote}</p>
+      )}
     </div>
 
     <div
