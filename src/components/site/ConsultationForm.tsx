@@ -28,9 +28,13 @@ const submissionSchema = z.object({
 
 const ConsultationForm = () => {
   const [selected, setSelected] = useState<string[]>([]);
+  const [selectedOffers, setSelectedOffers] = useState<string[]>([]);
   const [submitting, setSubmitting] = useState(false);
   const toggle = (s: string) =>
     setSelected((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));
+  const toggleOffer = (s: string) =>
+    setSelectedOffers((p) => (p.includes(s) ? p.filter((x) => x !== s) : [...p, s]));
+
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
