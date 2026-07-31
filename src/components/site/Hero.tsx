@@ -35,6 +35,9 @@ const Hero = () => (
             </a>
           </Button>
           <Button asChild variant="outlineLight" size="xl">
+            <a href="/offers">See offers</a>
+          </Button>
+          <Button asChild variant="outlineLight" size="xl">
             <a href="/work">See our work</a>
           </Button>
         </div>
