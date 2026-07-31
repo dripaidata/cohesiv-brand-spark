@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
@@ -13,7 +14,8 @@ import iconData from "@/assets/icon-data.png";
 interface Offer {
   id: string;
   icon: string;
-  eyebrow: string;
+  number: string;
+  name: string;
   title: string;
   payoff: string;
   who: string;
@@ -32,7 +34,8 @@ const offers: Offer[] = [
   {
     id: "workshop",
     icon: iconAi,
-    eyebrow: "Offer 01 · AI Enablement Workshop",
+    number: "01",
+    name: "AI Enablement Workshop",
     title: "Your team, working with AI ",
     payoff: "on their real work.",
     who: "Mid-market leadership and revenue teams (5–20 people) who know they should be using AI but haven't gotten past ChatGPT experiments.",
@@ -55,7 +58,8 @@ const offers: Offer[] = [
   {
     id: "prospecting-agent",
     icon: iconAgentic,
-    eyebrow: "Offer 02 · Prospecting Agent",
+    number: "02",
+    name: "Prospecting Agent",
     title: "Your outbound research, ",
     payoff: "done before you sit down.",
     who: "B2B teams where anyone — founders, sellers, partners, consultants — runs their own research, account and contact logging, and outreach.",
@@ -80,7 +84,8 @@ const offers: Offer[] = [
   {
     id: "platform",
     icon: iconData,
-    eyebrow: "Offer 03 · Decision Intelligence Platform",
+    number: "03",
+    name: "Decision Intelligence Platform",
     title: "From manual exports ",
     payoff: "to AI analysts.",
     who: "Mid-market companies ($10M–$250M) running finance, operations, or an investment function on manual exports and fragile workbooks.",
@@ -109,127 +114,160 @@ const offers: Offer[] = [
   },
 ];
 
-const OfferSection = ({ offer, index }: { offer: Offer; index: number }) => (
-  <section
-    id={offer.id}
-    className={`scroll-mt-24 py-24 md:py-32 ${index % 2 === 0 ? "bg-background" : "bg-secondary"}`}
-  >
-    <div className="container-wide">
-      <Reveal>
-        <div className="grid items-end gap-10 md:grid-cols-12">
-          <div className="md:col-span-8">
-            <img src={offer.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
-            <p className="eyebrow mt-8 text-cyan">{offer.eyebrow}</p>
-            <h2 className="display-serif mt-5 text-4xl text-navy-ink text-balance md:text-6xl">
-              {offer.title}
-              <em className="text-cyan not-italic">{offer.payoff}</em>
-            </h2>
-          </div>
-          <p className="text-base leading-relaxed text-muted-foreground md:col-span-4">{offer.value}</p>
-        </div>
-      </Reveal>
-
-      <Reveal delay={80}>
-        <div className="mt-16 grid gap-10 border-t border-border pt-10 md:grid-cols-2">
-          <div>
-            <p className="eyebrow text-navy-deep">Who it's for</p>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground">{offer.who}</p>
-          </div>
-          <div>
-            <p className="eyebrow text-navy-deep">The problem</p>
-            {offer.problemList ? (
-              <ul className="mt-4 space-y-2.5">
-                {offer.problemList.map((p) => (
-                  <li key={p} className="flex items-start gap-3 text-base leading-relaxed text-muted-foreground">
-                    <span className="mt-2.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">{offer.problem}</p>
-            )}
-          </div>
-        </div>
-      </Reveal>
-
-      <Reveal delay={140}>
-        <div className="mt-12 rounded-sm border border-border bg-card p-8 shadow-card md:p-10">
-          <p className="eyebrow text-cyan">What you get</p>
-          <ul className="mt-6 space-y-4">
-            {offer.gets.map((g) => (
-              <li key={g.lead} className="flex items-start gap-3 text-base leading-relaxed text-navy-deep">
-                <span className="mt-2.5 inline-block h-1.5 w-1.5 flex-shrink-0 rounded-full bg-cyan" />
-                <span>
-                  <strong className="font-semibold text-navy-ink">{g.lead}</strong> {g.rest}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Reveal>
-
-      <Reveal delay={200}>
-        <div className="mt-8 flex flex-col gap-8 rounded-sm bg-navy-ink p-8 text-primary-foreground md:flex-row md:items-center md:justify-between md:p-10">
-          <div>
-            <p className="eyebrow text-cyan">Investment</p>
-            <p className="display-serif mt-3 text-5xl text-cyan md:text-6xl">{offer.price}</p>
-          </div>
-          <div className="md:max-w-sm">
-            <p className="eyebrow text-primary-foreground/60">Timeline</p>
-            <p className="mt-3 text-base leading-relaxed text-primary-foreground/80">{offer.timeline}</p>
-          </div>
-          <Button asChild variant="hero" size="lg">
-            <a href="/#consultation">Start here <ArrowRight className="!size-5" /></a>
-          </Button>
-        </div>
-      </Reveal>
-
-      <Reveal delay={260}>
-        <div className="mt-8 border-t border-border pt-8">
-          <p className="eyebrow text-navy-deep">Proof</p>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">{offer.proof}</p>
-          <Link
-            to={offer.proofHref}
-            className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-navy-ink transition-colors hover:text-cyan"
-          >
-            {offer.proofLabel} <ArrowRight className="size-4" />
-          </Link>
-        </div>
-      </Reveal>
+const OfferDetail = ({ offer }: { offer: Offer }) => (
+  <div className="mt-6 space-y-6 border-t border-border pt-6">
+    <div>
+      <p className="eyebrow text-navy-deep">Who it's for</p>
+      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{offer.who}</p>
     </div>
-  </section>
-);
-
-const Offers = () => (
-  <div className="min-h-screen bg-background font-sans">
-    <Seo
-      title="Productized AI & Data Engagements | Drip AI & Data"
-      description="Three fixed-scope engagements with published pricing: an AI enablement workshop, a custom prospecting agent, and a decision intelligence platform."
-      path="/offers"
-    />
-    <Navbar />
-    <main>
-      <section className="bg-background py-24 md:py-32">
-        <div className="container-wide">
-          <p className="eyebrow text-cyan">Productized engagements</p>
-          <h1 className="display-serif mt-6 max-w-4xl text-5xl text-navy-ink text-balance md:text-7xl">
-            Three ways to start. <em className="text-cyan not-italic">One that fits.</em>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg text-muted-foreground">
-            Fixed scopes, published pricing, and hard outputs. No six-month discovery phases.
-          </p>
-        </div>
-      </section>
-
-      {offers.map((o, i) => (
-        <OfferSection key={o.id} offer={o} index={i} />
-      ))}
-
-      <ConsultationForm />
-    </main>
-    <Footer />
+    <div>
+      <p className="eyebrow text-navy-deep">The problem</p>
+      {offer.problemList ? (
+        <ul className="mt-2 space-y-1.5">
+          {offer.problemList.map((p) => (
+            <li key={p} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground">
+              <span className="mt-2 inline-block h-1 w-1 flex-shrink-0 rounded-full bg-cyan" />
+              {p}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{offer.problem}</p>
+      )}
+    </div>
+    <div>
+      <p className="eyebrow text-cyan">What you get</p>
+      <ul className="mt-2 space-y-2.5">
+        {offer.gets.map((g) => (
+          <li key={g.lead} className="flex items-start gap-2.5 text-sm leading-relaxed text-muted-foreground">
+            <span className="mt-2 inline-block h-1 w-1 flex-shrink-0 rounded-full bg-cyan" />
+            <span>
+              <strong className="font-semibold text-navy-ink">{g.lead}</strong> {g.rest}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div className="rounded-sm bg-navy-ink p-5 text-primary-foreground">
+      <p className="eyebrow text-primary-foreground/60">Why it's worth it</p>
+      <p className="mt-2 text-sm leading-relaxed text-primary-foreground/80">{offer.value}</p>
+      <p className="eyebrow mt-5 text-primary-foreground/60">Proof</p>
+      <p className="mt-2 text-sm leading-relaxed text-primary-foreground/80">{offer.proof}</p>
+      <Link
+        to={offer.proofHref}
+        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-cyan transition-colors hover:text-primary-foreground"
+      >
+        {offer.proofLabel} <ArrowRight className="size-4" />
+      </Link>
+    </div>
+    <Button asChild variant="hero" size="lg" className="w-full">
+      <a href="/#consultation">
+        Start here <ArrowRight className="!size-5" />
+      </a>
+    </Button>
   </div>
 );
+
+const OfferCard = ({
+  offer,
+  active,
+  onActivate,
+}: {
+  offer: Offer;
+  active: boolean;
+  onActivate: () => void;
+}) => (
+  <article
+    id={offer.id}
+    onMouseEnter={onActivate}
+    onFocus={onActivate}
+    onClick={onActivate}
+    tabIndex={0}
+    className={`group relative scroll-mt-28 cursor-pointer rounded-sm border bg-card p-7 text-left shadow-card w-full outline-none transition-all duration-500 ease-out lg:min-w-0 ${
+      active
+        ? "border-cyan shadow-elev lg:flex-[2.2] lg:-translate-y-1"
+        : "border-border lg:flex-[1] lg:opacity-80 hover:border-cyan/50"
+    }`}
+  >
+    <div className="flex items-start justify-between gap-4">
+      <img src={offer.icon} alt="" loading="lazy" className="h-12 w-12 object-contain" />
+      <span className="eyebrow text-muted-foreground">{offer.number}</span>
+    </div>
+    <p className="eyebrow mt-6 text-cyan">{offer.name}</p>
+    <h2 className="display-serif mt-3 text-3xl text-navy-ink text-balance">
+      {offer.title}
+      <em className="text-cyan not-italic">{offer.payoff}</em>
+    </h2>
+
+    <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-border pt-5">
+      <span className="display-serif text-4xl text-cyan">{offer.price}</span>
+      <span className="text-xs leading-relaxed text-muted-foreground">{offer.timeline}</span>
+    </div>
+
+    <div
+      className={`grid transition-all duration-500 ease-out ${
+        active ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+      }`}
+    >
+      <div className="overflow-hidden">
+        <OfferDetail offer={offer} />
+      </div>
+    </div>
+
+    {!active && (
+      <p className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-navy-ink">
+        Hover to see details <ArrowRight className="size-4" />
+      </p>
+    )}
+  </article>
+);
+
+const Offers = () => {
+  const [active, setActive] = useState(0);
+
+  return (
+    <div className="min-h-screen bg-background font-sans">
+      <Seo
+        title="Productized AI & Data Engagements | Drip AI & Data"
+        description="Three fixed-scope engagements with published pricing: an AI enablement workshop, a custom prospecting agent, and a decision intelligence platform."
+        path="/offers"
+      />
+      <Navbar />
+      <main>
+        <section className="bg-background pb-10 pt-16 md:pb-14 md:pt-20">
+          <div className="container-wide">
+            <p className="eyebrow text-cyan">Productized engagements</p>
+            <h1 className="display-serif mt-4 max-w-3xl text-4xl text-navy-ink text-balance md:text-6xl">
+              Three ways to start. <em className="text-cyan not-italic">One that fits.</em>
+            </h1>
+            <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
+              Fixed scopes, published pricing, and hard outputs. No six-month discovery phases.
+            </p>
+          </div>
+        </section>
+
+        <section className="pb-24 md:pb-28">
+          <div className="container-wide">
+            <Reveal>
+              <div className="flex flex-col items-start gap-5 lg:flex-row">
+                {offers.map((o, i) => (
+                  <OfferCard
+                    key={o.id}
+                    offer={o}
+                    active={active === i}
+                    onActivate={() => setActive(i)}
+                  />
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        <ConsultationForm />
+      </main>
+      <Footer />
+    </div>
+  );
+};
 
 export default Offers;
