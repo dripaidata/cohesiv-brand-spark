@@ -64,6 +64,7 @@ const ConsultationForm = () => {
       title: parsed.data.title || null,
       challenges: parsed.data.challenges,
       services: selected,
+      offers: selectedOffers,
       nda: false,
     });
     setSubmitting(false);
