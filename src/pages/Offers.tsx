@@ -208,9 +208,20 @@ const OfferCard = ({
       <em className="text-cyan not-italic">{offer.payoff}</em>
     </h2>
 
-    <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-border pt-5">
-      <span className="display-serif text-4xl text-cyan">{offer.price}</span>
-      <span className="text-xs leading-relaxed text-muted-foreground">{offer.timeline}</span>
+    <div className="mt-6 border-t border-border pt-5">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        {offer.price ? (
+          <>
+            <span className="display-serif text-4xl text-cyan">{offer.price}</span>
+            <span className="text-xs leading-relaxed text-muted-foreground">{offer.timeline}</span>
+          </>
+        ) : (
+          <span className="display-serif text-2xl text-cyan">{offer.timeline}</span>
+        )}
+      </div>
+      {offer.priceNote && (
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{offer.priceNote}</p>
+      )}
     </div>
 
     <div
