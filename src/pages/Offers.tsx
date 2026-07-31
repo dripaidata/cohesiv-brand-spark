@@ -104,7 +104,7 @@ const offers: Offer[] = [
       { lead: "Enablement throughout,", rest: "so your people run it after handoff" },
     ],
     price: "From $40,000",
-    timeline: "+ $2,500–3,500/mo · 120 days · 3 phases with hard outputs and an off-ramp at each",
+    timeline: "+ $2,500–3,500/mo optional active maintenance · 120 days · 3 phases with hard outputs and an off-ramp at each",
     value:
       "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
     proof:
