@@ -11,6 +11,12 @@ import { supabase } from "@/integrations/supabase/client";
 
 const services = ["AI Strategy", "Data & Analytics", "Agentic Workflows"];
 
+const offerOptions = [
+  "AI Enablement Workshop",
+  "Prospecting Agent",
+  "Decision Intelligence Platform",
+];
+
 const submissionSchema = z.object({
   first_name: z.string().trim().min(1, "First name is required").max(100),
   last_name: z.string().trim().min(1, "Last name is required").max(100),
