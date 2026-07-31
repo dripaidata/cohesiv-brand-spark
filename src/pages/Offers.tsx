@@ -169,7 +169,7 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
       <OfferSheetDialog offer={offer.name} />
     ) : (
       <Button asChild variant="hero" size="lg" className="w-full">
-        <a href="/#consultation">
+        <a href="#consultation">
           Start here <ArrowRight className="!size-5" />
         </a>
       </Button>
