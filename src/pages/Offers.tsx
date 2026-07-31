@@ -73,7 +73,7 @@ const offers: Offer[] = [
       { lead: "Optional ongoing tuning:", rest: "ICP refinement, message variant refreshes, list updates" },
     ],
     price: "$12,000",
-    timeline: "per system + $1,000/mo · 4 weeks from intake to handoff",
+    timeline: "per system · $1,000/mo optional management after handoff · 4 weeks from intake to handoff",
     value:
       "Anyone running their own prospecting loses 4–5 hours a week to it. This gives that time back.",
     proof:
