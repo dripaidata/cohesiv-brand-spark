@@ -9,15 +9,17 @@ interface SeoProps {
   path: string;
   ogImage?: string;
   ogType?: "website" | "article";
+  noindex?: boolean;
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
-const Seo = ({ title, description, path, ogImage = DEFAULT_OG, ogType = "website", jsonLd }: SeoProps) => {
+const Seo = ({ title, description, path, ogImage = DEFAULT_OG, ogType = "website", noindex, jsonLd }: SeoProps) => {
   const url = `${SITE}${path}`;
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      {noindex && <meta name="robots" content="noindex" />}
       <link rel="canonical" href={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
