@@ -29,11 +29,18 @@ const Footer = () => (
       </div>
     </div>
     <div className="border-t border-white/10">
-      <div className="container-wide flex flex-col items-start justify-between gap-2 py-6 text-xs text-primary-foreground/50 md:flex-row md:items-center">
+      <div className="container-wide flex flex-col items-start justify-between gap-4 py-6 text-xs text-primary-foreground/50 md:flex-row md:items-center">
         <p>© {new Date().getFullYear()} Drip AI &amp; Data. All rights reserved.</p>
+        <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-5 gap-y-2">
+          <span className="font-mono uppercase tracking-[0.18em] text-primary-foreground/40">Legal</span>
+          <Link to="/privacy" className="hover:text-cyan">Privacy Policy</Link>
+          <Link to="/terms" className="hover:text-cyan">Terms of Service</Link>
+          <Link to="/data-deletion" className="hover:text-cyan">Data Deletion</Link>
+        </nav>
         <p className="font-mono">DRIP / AI / DATA</p>
       </div>
     </div>
+
   </footer>
 );
 
