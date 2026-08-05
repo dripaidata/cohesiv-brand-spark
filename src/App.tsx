@@ -48,7 +48,11 @@ const App = () => (
           <Route path="/labs/congressional-trades-fund" element={<CongressionalTradesFund />} />
           <Route path="/labs/dynasty-war-room" element={<DynastyWarRoom />} />
           <Route path="/labs/dynasty-cap-manager" element={<Navigate to="/labs/dynasty-war-room" replace />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/data-deletion" element={<DataDeletion />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
