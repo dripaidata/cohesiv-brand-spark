@@ -26,7 +26,7 @@ const LegalLayout = ({ title, seoTitle, description, path, markdown }: LegalLayo
 
   return (
     <div className="min-h-screen bg-background">
-      <Seo title={seoTitle} description={description} path={path} />
+      <Seo title={seoTitle} description={description} path={path} noindex />
       <Navbar />
       <main className="container-wide py-28 md:py-40">
         <div className="mx-auto w-full max-w-[720px]">
