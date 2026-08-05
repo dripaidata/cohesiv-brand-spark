@@ -16,13 +16,22 @@ interface LegalLayoutProps {
 const INTERNAL = /^(https?:\/\/(www\.)?dripaidata\.com)?(\/(privacy|terms|data-deletion)\/?)$/;
 
 const LegalLayout = ({ title, seoTitle, description, path, markdown }: LegalLayoutProps) => {
-  const [rawHeader, ...restParts] = markdown.split(/\n---\n/);
-  const body = restParts.join("\n---\n");
-  const metaLines = rawHeader
-    .split("\n")
-    .map((l) => l.trim())
-    .filter((l) => l.startsWith("**") && l.endsWith("**"))
-    .map((l) => l.replace(/\*\*/g, ""));
+  const lines = markdown.split("\n");
+  const metaLines: string[] = [];
+  const bodyLines: string[] = [];
+  let inHeader = true;
+  for (const line of lines) {
+    const t = line.trim();
+    if (inHeader && (t === "" || t.startsWith("# "))) continue;
+    if (inHeader && t.startsWith("**") && t.endsWith("**")) {
+      metaLines.push(t.replace(/\*\*/g, ""));
+      continue;
+    }
+    inHeader = false;
+    bodyLines.push(line);
+  }
+  const body = bodyLines.join("\n");
+
 
   return (
     <div className="min-h-screen bg-background">
