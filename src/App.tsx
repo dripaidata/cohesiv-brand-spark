@@ -14,7 +14,11 @@ import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
 import RealEstateDataAndAIPlatform from "./pages/RealEstateDataAndAIPlatform.tsx";
+import Privacy from "./pages/Privacy.tsx";
+import Terms from "./pages/Terms.tsx";
+import DataDeletion from "./pages/DataDeletion.tsx";
 import NotFound from "./pages/NotFound.tsx";
+
 
 import ScrollToTop from "./components/ScrollToTop.tsx";
 
