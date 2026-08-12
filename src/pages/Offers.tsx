@@ -108,7 +108,6 @@ const offers: Offer[] = [
     timeline: "120 days · 3 phases · hard outputs at each",
     priceNote:
       "Engagements are scoped to your systems and typically start in the mid five figures.",
-    offerSheet: true,
     value:
       "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
     proof:
