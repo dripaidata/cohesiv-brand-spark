@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
 import iconData from "@/assets/icon-data.png";
+import iconEngagement from "@/assets/icon-engagement.png";
 
 interface Offer {
   id: string;
