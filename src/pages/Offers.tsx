@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
 import iconData from "@/assets/icon-data.png";
+import iconEngagement from "@/assets/icon-engagement.png";
 
 interface Offer {
   id: string;
@@ -30,6 +31,7 @@ interface Offer {
   proof: string;
   proofHref: string;
   proofLabel: string;
+  ctaLabel: string;
 }
 
 const offers: Offer[] = [
@@ -56,6 +58,7 @@ const offers: Offer[] = [
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
     proofHref: "/about",
     proofLabel: "About Drip AI & Data",
+    ctaLabel: "Start here",
   },
   {
     id: "prospecting-agent",
@@ -82,6 +85,7 @@ const offers: Offer[] = [
       "In production with a creative agency: a full morning reclaimed weekly, every prospect verified on their live LinkedIn profile before contact, every touch logged.",
     proofHref: "/work/prospecting-agent",
     proofLabel: "Read the case study",
+    ctaLabel: "Start here",
   },
   {
     id: "platform",
@@ -114,6 +118,36 @@ const offers: Offer[] = [
       "~1,350 units. Reconciled to the penny across 516 property-months. Weeks of work now done in hours, on under $20/mo of cloud cost.",
     proofHref: "/case-studies/real-estate-data-and-ai-platform",
     proofLabel: "Read the case study",
+    ctaLabel: "Schedule a call",
+  },
+  {
+    id: "retainer",
+    icon: iconEngagement,
+    number: "04",
+    name: "AI & Product Development Retainer",
+    title: "A senior AI builder on your team, ",
+    payoff: "without the hire.",
+    who: "Founder-led and PE-backed mid-market teams with more AI and product ideas than senior capacity to build them. Usually a second engagement — the workshop, the agent, or the platform is live and the list of what's next keeps growing.",
+    problem:
+      "AI work doesn't hold still long enough for a fixed scope. Priorities move monthly, projects stall in the gaps between SOWs, and a senior hire costs $200k+ fully loaded and takes six months to ramp.",
+    gets: [
+      { lead: "Reserved capacity:", rest: "40 hours a month of senior strategy and hands-on build, priorities set with you each month" },
+      { lead: "Strategy that ends in decisions:", rest: "use case selection, sequencing, build-vs-buy, vendor evaluation — no 80-page decks" },
+      { lead: "Product development:", rest: "agents, pipelines, internal tools, and client-facing features shipped to production" },
+      { lead: "Direct access:", rest: "a shared channel, a weekly working session, no account manager and no ticket queue" },
+      { lead: "Enablement throughout:", rest: "your team runs what we build, documented as we go" },
+    ],
+    price: "$10,000/mo",
+    timeline: "40 hours included · 3-month minimum, then month to month",
+    priceNote:
+      "Additional hours available at $250/hr with written approval. Unused hours don't roll over.",
+    value:
+      "A senior AI hire runs $200k+ fully loaded and six months to ramp. This starts in two weeks.",
+    proof:
+      "Prospecting Agent, Social Coach, and a real-estate data and AI platform were all built on this capacity — solo, in production, on real money.",
+    proofHref: "/work",
+    proofLabel: "See the work",
+    ctaLabel: "Book a working session",
   },
 ];
 
@@ -164,11 +198,11 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
       </Link>
     </div>
     {offer.id === "platform" ? (
-      <ScheduleCallButton label="Schedule a call" />
+      <ScheduleCallButton label={offer.ctaLabel} />
     ) : (
       <Button asChild variant="hero" size="lg" className="w-full">
         <a href="#consultation">
-          Start here <ArrowRight className="!size-5" />
+          {offer.ctaLabel} <ArrowRight className="!size-5" />
         </a>
       </Button>
     )}
@@ -249,7 +283,7 @@ const Offers = () => {
     <div className="min-h-screen bg-background font-sans">
       <Seo
         title="Productized AI & Data Engagements | Drip AI & Data"
-        description="Three fixed-scope engagements with published pricing: an AI enablement workshop, a custom prospecting agent, and a decision intelligence platform."
+        description="Four engagements with published pricing and scope: an AI enablement workshop, a custom prospecting agent, a decision intelligence platform, and a monthly AI & product development retainer."
         path="/offers"
       />
       <Navbar />
@@ -258,10 +292,10 @@ const Offers = () => {
           <div className="container-wide">
             <p className="eyebrow text-cyan">Productized engagements</p>
             <h1 className="display-serif mt-4 max-w-3xl text-4xl text-navy-ink text-balance md:text-6xl">
-              Three ways to start. <em className="text-cyan not-italic">One that fits.</em>
+              Four ways to start. <em className="text-cyan not-italic">One that fits.</em>
             </h1>
             <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Fixed scopes, published pricing, and hard outputs. No six-month discovery phases.
+              Fixed scopes, published pricing, and hard outputs — plus standing capacity when the work doesn't stop.
             </p>
           </div>
         </section>
