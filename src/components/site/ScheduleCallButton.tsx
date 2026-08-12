@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const SCHEDULE_URL = "https://calendar.app.google/qwWrh2y2JmV74NB19";
+const SCHEDULE_URL = "https://calendar.app.google/bGhsbEhewJtu8zTf7";
 
 const ScheduleCallButton = ({
   label = "Schedule a call",
