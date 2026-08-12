@@ -4,6 +4,7 @@ import Reveal from "./Reveal";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
 import iconData from "@/assets/icon-data.png";
+import iconEngagement from "@/assets/icon-engagement.png";
 
 const offers = [
   {
@@ -32,6 +33,15 @@ const offers = [
     price: "Mid five figures",
     detail: "typical starting range · 120 days",
     summary: "Data foundation, metrics layer, live dashboards, and LLM analysts that turn weeks of work into hours.",
+  },
+  {
+    id: "retainer",
+    icon: iconEngagement,
+    number: "04",
+    name: "AI & Product Development Retainer",
+    price: "$10,000/mo",
+    detail: "40 hours included · 3-month minimum",
+    summary: "Reserved senior capacity for strategy, product development, and hands-on build — without the full-time hire.",
   },
 ];
 
