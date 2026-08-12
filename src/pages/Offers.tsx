@@ -31,6 +31,7 @@ interface Offer {
   proof: string;
   proofHref: string;
   proofLabel: string;
+  ctaLabel: string;
 }
 
 const offers: Offer[] = [
