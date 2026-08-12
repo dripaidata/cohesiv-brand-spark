@@ -35,7 +35,7 @@ If we later offer a hosted version of any Product, where we store your data on o
 
 ### 2.1 Information you give us
 
-**Website and inquiries.** Name, email address, company name, phone number, and anything you include in a message when you contact us, request an offer sheet, subscribe to our newsletter, or book a consultation.
+**Website and inquiries.** Name, email address, company name, phone number, and anything you include in a message when you contact us, schedule a call, subscribe to our newsletter, or book a consultation.
 
 **Product licensing and support.** Contact and billing information for the person or organization licensing a Product, and anything you send us when requesting support.
 

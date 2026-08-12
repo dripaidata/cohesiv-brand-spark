@@ -6,7 +6,7 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Reveal from "@/components/site/Reveal";
 import ConsultationForm from "@/components/site/ConsultationForm";
-import OfferSheetDialog from "@/components/site/OfferSheetDialog";
+import ScheduleCallButton from "@/components/site/ScheduleCallButton";
 import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
@@ -26,7 +26,6 @@ interface Offer {
   price?: string;
   timeline: string;
   priceNote?: string;
-  offerSheet?: boolean;
   value: string;
   proof: string;
   proofHref: string;
@@ -109,7 +108,6 @@ const offers: Offer[] = [
     timeline: "120 days · 3 phases · hard outputs at each",
     priceNote:
       "Engagements are scoped to your systems and typically start in the mid five figures.",
-    offerSheet: true,
     value:
       "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
     proof:
@@ -165,8 +163,8 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
         {offer.proofLabel} <ArrowRight className="size-4" />
       </Link>
     </div>
-    {offer.offerSheet ? (
-      <OfferSheetDialog offer={offer.name} />
+    {offer.id === "platform" ? (
+      <ScheduleCallButton label="Schedule a call" />
     ) : (
       <Button asChild variant="hero" size="lg" className="w-full">
         <a href="#consultation">
