@@ -283,7 +283,7 @@ const Offers = () => {
     <div className="min-h-screen bg-background font-sans">
       <Seo
         title="Productized AI & Data Engagements | Drip AI & Data"
-        description="Three fixed-scope engagements with published pricing: an AI enablement workshop, a custom prospecting agent, and a decision intelligence platform."
+        description="Four engagements with published pricing and scope: an AI enablement workshop, a custom prospecting agent, a decision intelligence platform, and a monthly AI & product development retainer."
         path="/offers"
       />
       <Navbar />
