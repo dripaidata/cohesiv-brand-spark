@@ -237,7 +237,7 @@ const OfferCard = ({
     <p className="eyebrow mt-6 text-cyan">{offer.name}</p>
     <h2 className="display-serif mt-3 text-3xl text-navy-ink text-balance">
       {offer.title}
-      <em className="text-cyan not-italic">{offer.payoff}</em>
+      {offer.payoff && <em className="text-cyan not-italic">{offer.payoff}</em>}
     </h2>
 
     <div className="mt-6 border-t border-border pt-5">
@@ -292,10 +292,10 @@ const Offers = () => {
           <div className="container-wide">
             <p className="eyebrow text-cyan">Productized engagements</p>
             <h1 className="display-serif mt-4 max-w-3xl text-4xl text-navy-ink text-balance md:text-6xl">
-              Four ways to start. <em className="text-cyan not-italic">One that fits.</em>
+              Four engagements with clear scope and published pricing
             </h1>
             <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Fixed scopes, published pricing, and hard outputs — plus standing capacity when the work doesn't stop.
+              Each engagement has a fixed scope, published pricing, and a clear deliverable. The retainer adds ongoing strategy and build capacity when the work does not stop.
             </p>
           </div>
         </section>
