@@ -292,10 +292,10 @@ const Offers = () => {
           <div className="container-wide">
             <p className="eyebrow text-cyan">Productized engagements</p>
             <h1 className="display-serif mt-4 max-w-3xl text-4xl text-navy-ink text-balance md:text-6xl">
-              Three ways to start. <em className="text-cyan not-italic">One that fits.</em>
+              Four ways to start. <em className="text-cyan not-italic">One that fits.</em>
             </h1>
             <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Fixed scopes, published pricing, and hard outputs. No six-month discovery phases.
+              Fixed scopes, published pricing, and hard outputs — plus standing capacity when the work doesn't stop.
             </p>
           </div>
         </section>
