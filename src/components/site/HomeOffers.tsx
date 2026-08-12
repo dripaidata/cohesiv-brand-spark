@@ -39,7 +39,6 @@ const offers = [
     icon: iconEngagement,
     number: "04",
     name: "AI & Product Development Retainer",
-    price: "$10,000/mo",
     detail: "40 hours included · 3-month minimum",
     summary: "Reserved senior capacity for strategy, product development, and hands-on build, without the cost and time of a full-time hire.",
   },
@@ -52,7 +51,7 @@ const HomeOffers = () => (
         <div className="max-w-2xl">
           <p className="eyebrow text-cyan">Productized engagements</p>
           <h2 className="display-serif mt-6 text-5xl text-navy-ink text-balance md:text-6xl">
-            Four engagements with clear scope and published pricing
+            Four engagements with clear scope
           </h2>
         </div>
         <Link
@@ -77,7 +76,7 @@ const HomeOffers = () => (
               </div>
               <p className="eyebrow mt-8 text-cyan">{o.name}</p>
               <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span className="display-serif text-3xl text-navy-ink">{o.price}</span>
+                {o.price && <span className="display-serif text-3xl text-navy-ink">{o.price}</span>}
                 <span className="text-xs text-muted-foreground">{o.detail}</span>
               </div>
               <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{o.summary}</p>

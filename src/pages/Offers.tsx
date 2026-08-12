@@ -137,17 +137,14 @@ const offers: Offer[] = [
       { lead: "Direct access:", rest: "a shared channel, a weekly working session, no account manager and no ticket queue" },
       { lead: "Enablement throughout:", rest: "your team runs what we build, documented as we go" },
     ],
-    price: "$10,000/mo",
     timeline: "40 hours included · 3-month minimum, then month to month",
-    priceNote:
-      "Additional hours available at $250/hr with written approval. Unused hours don't roll over.",
     value:
       "A senior AI hire costs more than $200,000 fully loaded and takes six months to ramp. The retainer starts in two weeks.",
     proof:
       "The Prospecting Agent, Social Coach, and real estate data and AI platform were all built on this capacity, solo, in production, with real money.",
     proofHref: "/work",
     proofLabel: "See the work",
-    ctaLabel: "Book a working session",
+    ctaLabel: "Schedule a call",
   },
 ];
 
