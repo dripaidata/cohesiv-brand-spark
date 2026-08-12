@@ -52,7 +52,7 @@ const HomeOffers = () => (
         <div className="max-w-2xl">
           <p className="eyebrow text-cyan">Productized engagements</p>
           <h2 className="display-serif mt-6 text-5xl text-navy-ink text-balance md:text-6xl">
-            Three ways to start. <em className="text-cyan not-italic">One that fits.</em>
+            Four ways to start. <em className="text-cyan not-italic">One that fits.</em>
           </h2>
         </div>
         <Link
@@ -64,7 +64,7 @@ const HomeOffers = () => (
         </Link>
       </div>
 
-      <div className="mt-16 grid gap-6 md:grid-cols-3">
+      <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {offers.map((o, i) => (
           <Reveal key={o.id} delay={i * 120}>
             <Link
