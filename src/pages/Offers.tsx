@@ -26,7 +26,6 @@ interface Offer {
   price?: string;
   timeline: string;
   priceNote?: string;
-  offerSheet?: boolean;
   value: string;
   proof: string;
   proofHref: string;
