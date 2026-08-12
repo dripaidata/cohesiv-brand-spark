@@ -58,6 +58,7 @@ const offers: Offer[] = [
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
     proofHref: "/about",
     proofLabel: "About Drip AI & Data",
+    ctaLabel: "Start here",
   },
   {
     id: "prospecting-agent",
@@ -84,6 +85,7 @@ const offers: Offer[] = [
       "In production with a creative agency: a full morning reclaimed weekly, every prospect verified on their live LinkedIn profile before contact, every touch logged.",
     proofHref: "/work/prospecting-agent",
     proofLabel: "Read the case study",
+    ctaLabel: "Start here",
   },
   {
     id: "platform",
@@ -116,6 +118,36 @@ const offers: Offer[] = [
       "~1,350 units. Reconciled to the penny across 516 property-months. Weeks of work now done in hours, on under $20/mo of cloud cost.",
     proofHref: "/case-studies/real-estate-data-and-ai-platform",
     proofLabel: "Read the case study",
+    ctaLabel: "Schedule a call",
+  },
+  {
+    id: "retainer",
+    icon: iconEngagement,
+    number: "04",
+    name: "AI & Product Development Retainer",
+    title: "A senior AI builder on your team, ",
+    payoff: "without the hire.",
+    who: "Founder-led and PE-backed mid-market teams with more AI and product ideas than senior capacity to build them. Usually a second engagement — the workshop, the agent, or the platform is live and the list of what's next keeps growing.",
+    problem:
+      "AI work doesn't hold still long enough for a fixed scope. Priorities move monthly, projects stall in the gaps between SOWs, and a senior hire costs $200k+ fully loaded and takes six months to ramp.",
+    gets: [
+      { lead: "Reserved capacity:", rest: "40 hours a month of senior strategy and hands-on build, priorities set with you each month" },
+      { lead: "Strategy that ends in decisions:", rest: "use case selection, sequencing, build-vs-buy, vendor evaluation — no 80-page decks" },
+      { lead: "Product development:", rest: "agents, pipelines, internal tools, and client-facing features shipped to production" },
+      { lead: "Direct access:", rest: "a shared channel, a weekly working session, no account manager and no ticket queue" },
+      { lead: "Enablement throughout:", rest: "your team runs what we build, documented as we go" },
+    ],
+    price: "$10,000/mo",
+    timeline: "40 hours included · 3-month minimum, then month to month",
+    priceNote:
+      "Additional hours available at $250/hr with written approval. Unused hours don't roll over.",
+    value:
+      "A senior AI hire runs $200k+ fully loaded and six months to ramp. This starts in two weeks.",
+    proof:
+      "Prospecting Agent, Social Coach, and a real-estate data and AI platform were all built on this capacity — solo, in production, on real money.",
+    proofHref: "/work",
+    proofLabel: "See the work",
+    ctaLabel: "Book a working session",
   },
 ];
 
