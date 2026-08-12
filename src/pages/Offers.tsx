@@ -40,13 +40,13 @@ const offers: Offer[] = [
     icon: iconAi,
     number: "01",
     name: "AI Enablement Workshop",
-    title: "Your team, working with AI ",
-    payoff: "on their real work.",
-    who: "Mid-market leadership and revenue teams (5–20 people) who know they should be using AI but haven't gotten past ChatGPT experiments.",
+    title: "Hands-on AI training for teams ready to use AI in their daily work",
+    payoff: "",
+    who: "Mid-market leadership and revenue teams (5 to 20 people) who know they should be using AI but have not gotten past ChatGPT experiments.",
     problem:
-      "Generic AI training doesn't stick. Teams leave inspired and change nothing, because none of it was built on their workflows or data.",
+      "Most AI training is generic. Teams leave inspired but do not change how they work, because nothing was built around their workflows or data.",
     gets: [
-      { lead: "Pre-session audit", rest: "identifying the 3–5 highest-leverage tasks on your team" },
+      { lead: "Pre-session audit", rest: "identifying the 3 to 5 highest-leverage tasks on your team" },
       { lead: "Hands-on session in Claude", rest: "(half or full day), built entirely around your real work, not demos" },
       { lead: "Take-home playbook:", rest: "the prompts, workflows, and guardrails your team built" },
       { lead: "30-day follow-up session", rest: "to reinforce adoption and answer what came up in practice" },
@@ -54,7 +54,7 @@ const offers: Offer[] = [
     price: "$4,000",
     timeline: "half-day workshop · $7,500 full day · 2 weeks from signing to session",
     value:
-      "Trained by the architect who shipped production AI at Fidelity, Manulife, and Rocket Software.",
+      "Training led by the person who shipped production AI systems at Fidelity, Manulife, and Rocket Software.",
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
     proofHref: "/about",
     proofLabel: "About Drip AI & Data",
@@ -65,11 +65,11 @@ const offers: Offer[] = [
     icon: iconAgentic,
     number: "02",
     name: "Prospecting Agent",
-    title: "Your outbound research, ",
-    payoff: "done before you sit down.",
-    who: "B2B teams where anyone — founders, sellers, partners, consultants — runs their own research, account and contact logging, and outreach.",
+    title: "A prospecting agent that prepares accounts and outreach before you start selling",
+    payoff: "",
+    who: "B2B teams where founders, sellers, partners, and consultants each handle their own research, account and contact logging, and outreach.",
     problem:
-      "Research, LinkedIn verification, and one-off drafting is real but mechanical work. It crowds out the conversations that actually move deals.",
+      "Research, LinkedIn verification, and drafting are mechanical tasks that take time away from the conversations that move deals forward.",
     gets: [
       { lead: "A custom AI prospecting agent", rest: "built around your ICP, your voice, and your offer" },
       { lead: "Researches accounts,", rest: "verifies LinkedIn profiles, drafts outreach in your voice, logs every touch" },
@@ -80,7 +80,7 @@ const offers: Offer[] = [
     price: "$7,500",
     timeline: "per system · 4 weeks from intake to handoff",
     value:
-      "Anyone running their own prospecting loses 4–5 hours a week to it. This gives that time back.",
+      "Anyone running their own prospecting loses 4 to 5 hours a week to it. This gives that time back.",
     proof:
       "In production with a creative agency: a full morning reclaimed weekly, every prospect verified on their live LinkedIn profile before contact, every touch logged.",
     proofHref: "/work/prospecting-agent",
@@ -92,15 +92,15 @@ const offers: Offer[] = [
     icon: iconData,
     number: "03",
     name: "Decision Intelligence Platform",
-    title: "From manual exports ",
-    payoff: "to AI analysts.",
-    who: "Mid-market companies ($10M–$250M) running finance, operations, or an investment function on manual exports and fragile workbooks.",
+    title: "A decision intelligence platform with governed data, dashboards, and AI analysts",
+    payoff: "",
+    who: "Mid-market companies ($10M to $250M) running finance, operations, or an investment function on manual exports and fragile workbooks.",
     problem: "",
     problemList: [
       "Month-end takes days of exports and copy-paste.",
-      "The same metric shows three numbers in three spreadsheets.",
-      "One person knows how the workbook works.",
-      "A simple board question takes a week.",
+      "The same metric shows three different numbers in three different spreadsheets.",
+      "Only one person knows how the workbook works.",
+      "A simple board question takes a week to answer.",
     ],
     gets: [
       { lead: "Data foundation:", rest: "automated nightly pipelines from your systems of record into a governed cloud warehouse" },
@@ -113,7 +113,7 @@ const offers: Offer[] = [
     priceNote:
       "Engagements are scoped to your systems and typically start in the mid five figures.",
     value:
-      "A single data hire runs $120k+ plus ramp time, then they onboard, and only then do you begin to build the platform.",
+      "A single data hire costs more than $120,000 per year plus ramp time, and the platform still needs to be built after they start.",
     proof:
       "~1,350 units. Reconciled to the penny across 516 property-months. Weeks of work now done in hours, on under $20/mo of cloud cost.",
     proofHref: "/case-studies/real-estate-data-and-ai-platform",
@@ -125,14 +125,14 @@ const offers: Offer[] = [
     icon: iconEngagement,
     number: "04",
     name: "AI & Product Development Retainer",
-    title: "A senior AI builder on your team, ",
-    payoff: "without the hire.",
-    who: "Founder-led and PE-backed mid-market teams with more AI and product ideas than senior capacity to build them. Usually a second engagement — the workshop, the agent, or the platform is live and the list of what's next keeps growing.",
+    title: "Monthly AI and product development capacity from a senior builder",
+    payoff: "",
+    who: "Founder-led and PE-backed mid-market teams that have more AI and product ideas than senior capacity to build them. Usually this is a second engagement, after the workshop, the agent, or the platform is live and the list of next steps keeps growing.",
     problem:
-      "AI work doesn't hold still long enough for a fixed scope. Priorities move monthly, projects stall in the gaps between SOWs, and a senior hire costs $200k+ fully loaded and takes six months to ramp.",
+      "AI work does not hold still long enough for a fixed scope. Priorities move monthly, projects stall between SOWs, and a senior hire costs more than $200,000 fully loaded and takes six months to ramp.",
     gets: [
       { lead: "Reserved capacity:", rest: "40 hours a month of senior strategy and hands-on build, priorities set with you each month" },
-      { lead: "Strategy that ends in decisions:", rest: "use case selection, sequencing, build-vs-buy, vendor evaluation — no 80-page decks" },
+      { lead: "Strategy that ends in decisions:", rest: "use case selection, sequencing, build versus buy, and vendor evaluation without 80-page decks" },
       { lead: "Product development:", rest: "agents, pipelines, internal tools, and client-facing features shipped to production" },
       { lead: "Direct access:", rest: "a shared channel, a weekly working session, no account manager and no ticket queue" },
       { lead: "Enablement throughout:", rest: "your team runs what we build, documented as we go" },
@@ -142,9 +142,9 @@ const offers: Offer[] = [
     priceNote:
       "Additional hours available at $250/hr with written approval. Unused hours don't roll over.",
     value:
-      "A senior AI hire runs $200k+ fully loaded and six months to ramp. This starts in two weeks.",
+      "A senior AI hire costs more than $200,000 fully loaded and takes six months to ramp. The retainer starts in two weeks.",
     proof:
-      "Prospecting Agent, Social Coach, and a real-estate data and AI platform were all built on this capacity — solo, in production, on real money.",
+      "The Prospecting Agent, Social Coach, and real estate data and AI platform were all built on this capacity, solo, in production, with real money.",
     proofHref: "/work",
     proofLabel: "See the work",
     ctaLabel: "Book a working session",
