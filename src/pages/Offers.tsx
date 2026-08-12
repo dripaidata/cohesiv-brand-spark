@@ -73,10 +73,10 @@ const offers: Offer[] = [
       { lead: "Researches accounts,", rest: "verifies LinkedIn profiles, drafts outreach in your voice, logs every touch" },
       { lead: "One intake form in,", rest: "a working system out, handed back as a tool you run yourselves" },
       { lead: "Team training included:", rest: "2 hands-on Claude sessions ($2,500 value), so handoff doubles as AI enablement" },
-      { lead: "Optional ongoing tuning:", rest: "ICP refinement, message variant refreshes, list updates" },
+      { lead: "Yours to run:", rest: "no monthly fee, no lock-in after handoff" },
     ],
-    price: "$12,000",
-    timeline: "per system · $1,000/mo optional management after handoff · 4 weeks from intake to handoff",
+    price: "$7,500",
+    timeline: "per system · 4 weeks from intake to handoff",
     value:
       "Anyone running their own prospecting loses 4–5 hours a week to it. This gives that time back.",
     proof:

@@ -20,8 +20,8 @@ const offers = [
     icon: iconAgentic,
     number: "02",
     name: "Prospecting Agent",
-    price: "$12,000",
-    detail: "$1,000/mo optional management",
+    price: "$7,500",
+    detail: "one-time · 4 weeks to handoff",
     summary: "A custom AI agent that researches accounts, verifies contacts, and drafts outreach in your voice.",
   },
   {
