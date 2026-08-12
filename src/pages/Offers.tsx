@@ -198,11 +198,11 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
       </Link>
     </div>
     {offer.id === "platform" ? (
-      <ScheduleCallButton label="Schedule a call" />
+      <ScheduleCallButton label={offer.ctaLabel} />
     ) : (
       <Button asChild variant="hero" size="lg" className="w-full">
         <a href="#consultation">
-          Start here <ArrowRight className="!size-5" />
+          {offer.ctaLabel} <ArrowRight className="!size-5" />
         </a>
       </Button>
     )}
