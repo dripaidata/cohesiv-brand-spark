@@ -236,7 +236,8 @@ const OfferCard = ({
       <img src={offer.icon} alt="" loading="lazy" className="h-12 w-12 object-contain" />
       <span className="eyebrow text-muted-foreground">{offer.number}</span>
     </div>
-    <p className="eyebrow mt-6 text-cyan">{offer.name}</p>
+    <p className="eyebrow mt-6 text-cyan">{offer.tag}</p>
+    <p className="mt-2 text-base font-medium text-navy-ink">{offer.name}</p>
     <h2 className="display-serif mt-3 text-3xl text-navy-ink text-balance">
       {offer.title}
       {offer.payoff && <em className="text-cyan not-italic">{offer.payoff}</em>}
