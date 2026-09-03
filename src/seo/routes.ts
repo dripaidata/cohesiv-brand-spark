@@ -35,7 +35,7 @@ export const ROUTE_SEO = {
     path: "/offers",
     title: "Productized AI & Data Engagements | Drip AI & Data",
     description:
-      "Four engagements with published pricing and scope: an AI enablement workshop, a custom prospecting agent, a decision intelligence platform, and a monthly AI & product development retainer.",
+      "Four engagements with clear scope, defined timelines, and hard outputs. Workshops, agent builds, data platforms, and fractional CTO retainers for mid-market companies.",
     changefreq: "monthly",
     priority: "0.9",
   },

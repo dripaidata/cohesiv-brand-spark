@@ -141,7 +141,7 @@ const FractionalCTO = () => (
         number: "04",
         tag: "FRACTIONAL CTO",
         name: "AI & Product Development Retainer",
-        detail: "40 hrs/mo · 3-month minimum",
+        detail: "40 hours included · 3-month minimum",
         summary:
           "A senior AI builder and technical operator embedded in your team, applied to data, AI, or product work as priorities shift.",
         icon: iconEngagement,

@@ -23,7 +23,7 @@ const cases = [
   },
   {
     slug: "real-estate-data-and-ai-platform",
-    href: "/case-studies/real-estate-data-and-ai-platform",
+    href: "/work/real-estate-data-and-ai-platform",
     icon: iconData,
     sector: "Real Estate Data & AI",
     title: "Real Estate Data & AI Platform",

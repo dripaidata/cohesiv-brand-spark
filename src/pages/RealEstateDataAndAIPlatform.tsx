@@ -60,7 +60,7 @@ const chat: { role: "q" | "a"; text: string }[] = [
 
 const RealEstateDataAndAIPlatform = () => (
   <CaseStudyLayout
-    backHref="/case-studies"
+    backHref="/work"
     backLabel="All case studies"
     eyebrow="REAL ESTATE · DATA FOUNDATION · ANALYTICS · AI"
     title="Real Estate Data & AI Platform"

@@ -13,8 +13,8 @@ const offers = [
     number: "01",
     tag: "AI IMPLEMENTATION",
     name: "AI Enablement Workshop",
-    price: "$4,000",
-    detail: "$7,500 full day",
+    price: "$4,000 half day",
+    detail: "$7,500 full day · on-site or remote",
     summary: "Hands-on AI training built around your team's real work, with a playbook they can use immediately.",
   },
   {
