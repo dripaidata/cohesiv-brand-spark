@@ -10,12 +10,19 @@ import CalendarButton from "./CalendarButton";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
-const services = ["AI Strategy", "Data & Analytics", "Agentic Workflows"];
+const services = [
+  "Data & Analytics",
+  "AI Implementation",
+  "Product Development",
+  "Fractional CTO",
+  "Not sure yet",
+];
 
 const offerOptions = [
   "AI Enablement Workshop",
   "Prospecting Agent",
   "Decision Intelligence Platform",
+  "AI & Product Development Retainer",
 ];
 
 const submissionSchema = z.object({
