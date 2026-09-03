@@ -24,7 +24,11 @@ const faqs = [
   },
   {
     q: "Will you work with our existing team and tools?",
-    a: "Almost always. We're operators, not platform sellers. We optimize what you have before recommending new spend, and we embed alongside your team - not in place of it.",
+    a: "Almost always. We start with what you already have and only recommend new spend when the existing stack genuinely cannot get there. The difference is what happens next. When something does need to be built, we build it rather than handing you a vendor shortlist.",
+  },
+  {
+    q: "Do you actually build software, or just advise on it?",
+    a: "We build. Full stack, in production, with the same team that scoped it. Two of our own products are running live, and client builds ship in two-week increments with ownership transferred as we go.",
   },
   {
     q: "What's the engagement timeline?",
