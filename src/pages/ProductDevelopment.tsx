@@ -4,6 +4,7 @@ import iconAgentic from "@/assets/icon-agentic.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import dripLabsLogo from "@/assets/drip-labs-logo.png";
 import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const labs = [
   {
@@ -69,8 +70,8 @@ const ProductDevelopment = () => (
       </>
     }
     intro="There is a gap between a strategy deck and a running system, and it is usually where mid-market projects die. We close it by building the thing. Same operator who scoped it, shipping in two-week increments, transferring ownership as we go."
-    seoTitle="Product Development for Mid-Market Companies | Drip AI & Data"
-    seoDescription="Full-stack applications in React, Node, and PostgreSQL, with multi-tenant architecture, integrations, autonomous pipelines, and handover documentation."
+    seoTitle={ROUTE_SEO["/product-development"].title}
+    seoDescription={ROUTE_SEO["/product-development"].description}
     path="/product-development"
     problemHeading={
       <>

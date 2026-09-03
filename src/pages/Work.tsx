@@ -7,6 +7,7 @@ import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import iconData from "@/assets/icon-data.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const cases = [
   {
@@ -58,11 +59,7 @@ const cases = [
 const Work = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
-      <Seo
-        title="Our Work - Drip AI & Data"
-        description="Selected client engagements across financial services, insurance, healthcare, and cybersecurity. Verified outcomes from enterprise data and AI leadership."
-        path="/work"
-      />
+      <Seo {...ROUTE_SEO["/work"]} />
       <Navbar />
       <main>
         {/* Header */}

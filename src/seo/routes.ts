@@ -138,14 +138,14 @@ export const ROUTE_SEO = {
     path: "/terms",
     title: "Terms of Service | Drip AI & Data",
     description:
-      "The terms that govern use of the Drip AI & Data website, products, and services.",
+      "The terms governing use of dripaidata.com and the software products developed by Drip AI & Data LLC.",
     noindex: true,
   },
   "/data-deletion": {
     path: "/data-deletion",
     title: "Data Deletion | Drip AI & Data",
     description:
-      "How to request deletion of personal data held by Drip AI & Data, and what happens after a request.",
+      "How to delete data associated with Drip AI & Data products and with dripaidata.com.",
     noindex: true,
   },
 } satisfies Record<string, RouteSeo>;

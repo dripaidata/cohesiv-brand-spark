@@ -3,6 +3,7 @@ import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import iconData from "@/assets/icon-data.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const AIImplementation = () => (
   <PillarPage
@@ -13,8 +14,8 @@ const AIImplementation = () => (
       </>
     }
     intro="Most AI projects stall in the same place. Not model selection, not infrastructure. They stall because the judgment the system needs to replicate lives in someone's head and has never been written down. Getting that on paper is the work. Everything after it is engineering."
-    seoTitle="AI Implementation for Mid-Market Companies | Drip AI & Data"
-    seoDescription="Use case selection with real ROI math, agents that research and draft, LLM analysts on your own data, and deployment into the tools your team already uses."
+    seoTitle={ROUTE_SEO["/ai-implementation"].title}
+    seoDescription={ROUTE_SEO["/ai-implementation"].description}
     path="/ai-implementation"
     problemHeading={
       <>

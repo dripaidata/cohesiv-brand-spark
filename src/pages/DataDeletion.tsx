@@ -1,11 +1,12 @@
 import deletion from "@/content/legal/data-deletion.md?raw";
 import LegalLayout from "@/components/site/LegalLayout";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const DataDeletion = () => (
   <LegalLayout
     title="Data Deletion"
-    seoTitle="Data Deletion | Drip AI & Data"
-    description="How to delete data associated with Drip AI & Data products and with dripaidata.com."
+    seoTitle={ROUTE_SEO["/data-deletion"].title}
+    description={ROUTE_SEO["/data-deletion"].description}
     path="/data-deletion"
     markdown={deletion}
   />

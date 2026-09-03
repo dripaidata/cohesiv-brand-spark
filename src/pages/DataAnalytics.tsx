@@ -1,6 +1,7 @@
 import PillarPage from "@/components/site/PillarPage";
 import iconData from "@/assets/icon-data.png";
 import iconMartech from "@/assets/icon-martech.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const DataAnalytics = () => (
   <PillarPage
@@ -11,8 +12,8 @@ const DataAnalytics = () => (
       </>
     }
     intro="Two teams pull the same metric and get different numbers. The dashboard broke in March and nobody has fixed it. The monthly report is four people, three days, and a spreadsheet only one of them understands. This is what scaling without a data foundation actually looks like."
-    seoTitle="Data & Analytics Consulting for Mid-Market | Drip AI & Data"
-    seoDescription="Warehouse architecture, resilient pipelines, a governed semantic layer, and live dashboards so one metric means one thing across your company."
+    seoTitle={ROUTE_SEO["/data-analytics"].title}
+    seoDescription={ROUTE_SEO["/data-analytics"].description}
     path="/data-analytics"
     problemHeading={
       <>

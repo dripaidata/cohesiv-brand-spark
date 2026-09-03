@@ -13,15 +13,12 @@ import Labs from "@/components/site/Labs";
 
 import FAQ from "@/components/site/FAQ";
 import ConsultationForm from "@/components/site/ConsultationForm";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background font-sans">
-      <Seo
-        title="Drip AI & Data - Decision Intelligence"
-        description="Enterprise-grade data and AI leadership for mid-market companies in financial services, healthcare, and cybersecurity - at a fraction of in-house cost."
-        path="/"
-      />
+      <Seo {...ROUTE_SEO["/"]} />
       <Navbar />
       <main>
         <Hero />
