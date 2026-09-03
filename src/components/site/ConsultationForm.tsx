@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 import { ArrowRight, Loader2 } from "lucide-react";
+import CalendarButton from "./CalendarButton";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -105,14 +106,9 @@ const ConsultationForm = () => {
               </li>
             ))}
           </ul>
-          <a
-            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2fUKpgf62qjDycvC33C_9hklBknwxwNBYhBtJAkvtH_auJacgrf3jlp3F-wla7ph83zpEj67YG?gv=true"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-cyan underline-offset-4 hover:underline"
-          >
-            Or grab time on my calendar directly.
-          </a>
+          <div className="mt-8">
+            <CalendarButton label="Book an appointment" />
+          </div>
         </div>
 
         <form
