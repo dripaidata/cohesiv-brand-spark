@@ -49,7 +49,26 @@ const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) =
     const host = hostRef.current;
     if (!host) return;
 
+    const renderFallback = () => {
+      if (cancelled || !host || host.childElementCount > 0) return;
+      const a = document.createElement("a");
+      a.href = SCHEDULE_URL;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.textContent = label;
+      a.className = "calendar-button-fallback";
+      host.appendChild(a);
+    };
+
+    const waitForApi = (attempts: number): Promise<void> =>
+      new Promise((resolve, reject) => {
+        if (window.calendar?.schedulingButton) return resolve();
+        if (attempts <= 0) return reject(new Error("scheduling api unavailable"));
+        window.setTimeout(() => waitForApi(attempts - 1).then(resolve, reject), 100);
+      });
+
     loadScript()
+      .then(() => waitForApi(30))
       .then(() => {
         if (cancelled || !host || !window.calendar?.schedulingButton) return;
         host.innerHTML = "";
@@ -60,17 +79,7 @@ const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) =
           target: host,
         });
       })
-      .catch(() => {
-        // Fallback: plain link styled by the site if Google's script is blocked.
-        if (cancelled || !host) return;
-        const a = document.createElement("a");
-        a.href = SCHEDULE_URL;
-        a.target = "_blank";
-        a.rel = "noopener noreferrer";
-        a.textContent = label;
-        a.className = "calendar-button-fallback";
-        host.appendChild(a);
-      });
+      .catch(renderFallback);
 
     return () => {
       cancelled = true;
