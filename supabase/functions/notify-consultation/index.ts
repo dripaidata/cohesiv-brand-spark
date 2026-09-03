@@ -71,6 +71,12 @@ Deno.serve(async (req) => {
     return json({ ok: true, sent: result.sent })
   } catch (error) {
     console.error('notify-consultation failed', error)
+    const code = (error as { code?: string })?.code
+    // Sender domain still verifying / emails disabled: submission is already
+    // stored, so don't fail the user-facing request.
+    if (code === 'domain_not_verified' || code === 'emails_disabled') {
+      return json({ ok: true, sent: false, reason: code }, 202)
+    }
     return json({ error: 'Failed to send notification' }, 500)
   }
 })
