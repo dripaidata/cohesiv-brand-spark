@@ -60,8 +60,8 @@ const chat: { role: "q" | "a"; text: string }[] = [
 
 const RealEstateDataAndAIPlatform = () => (
   <CaseStudyLayout
-    backHref="/case-studies"
-    backLabel="All case studies"
+    backHref="/work"
+    backLabel="All work"
     eyebrow="REAL ESTATE · DATA FOUNDATION · ANALYTICS · AI"
     title="Real Estate Data & AI Platform"
     intro="How a family-run real estate investor went from spreadsheet archaeology to a fully custom data and AI platform: data accuracy and automation, customized and always on analytics, and LLM analysts for financial reporting, leasing and vacancy, performance vs pro forma, and distributions. Weeks of manual work now done in hours, every month and quarter."

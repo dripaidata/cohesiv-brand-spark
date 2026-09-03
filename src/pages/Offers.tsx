@@ -54,8 +54,8 @@ const offers: Offer[] = [
       { lead: "Take-home playbook:", rest: "the prompts, workflows, and guardrails your team built" },
       { lead: "30-day follow-up session", rest: "to reinforce adoption and answer what came up in practice" },
     ],
-    price: "$4,000",
-    timeline: "half-day workshop · $7,500 full day · 2 weeks from signing to session",
+    price: "$4,000 half day",
+    timeline: "$7,500 full day · on-site or remote · 2 weeks from signing to session",
     value:
       "Training led by the person who shipped production AI systems at Fidelity, Manulife, and Rocket Software.",
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
@@ -84,7 +84,7 @@ const offers: Offer[] = [
     price: "$7,500",
     timeline: "per system · 4 weeks from intake to handoff",
     value:
-      "Anyone running their own prospecting loses 4 to 5 hours a week to it. This gives that time back.",
+      "Anyone running their own prospecting loses 4 to 6 hours a week to it. This gives that time back.",
     proof:
       "In production with a creative agency: a full morning reclaimed weekly, every prospect verified on their live LinkedIn profile before contact, every touch logged.",
     proofHref: "/work/prospecting-agent",
@@ -121,7 +121,7 @@ const offers: Offer[] = [
       "A single data hire costs more than $120,000 per year plus ramp time, and the platform still needs to be built after they start.",
     proof:
       "~1,350 units. Reconciled to the penny across 516 property-months. Weeks of work now done in hours, on under $20/mo of cloud cost.",
-    proofHref: "/case-studies/real-estate-data-and-ai-platform",
+    proofHref: "/work/real-estate-data-and-ai-platform",
     proofLabel: "Read the case study",
     ctaLabel: "Schedule a call",
   },
@@ -147,9 +147,9 @@ const offers: Offer[] = [
     value:
       "A senior AI hire costs more than $200,000 fully loaded and takes six months to ramp. The retainer starts in two weeks.",
     proof:
-      "The Prospecting Agent, Social Coach, and real estate data and AI platform were all built on this capacity, solo, in production, with real money.",
-    proofHref: "/work",
-    proofLabel: "See the work",
+      "The Prospecting Agent and the real estate data and AI platform were both built on this capacity, solo, in production, with real money.",
+    proofHref: "/work/real-estate-data-and-ai-platform",
+    proofLabel: "Read the case study",
     ctaLabel: "Schedule a call",
   },
 ];
@@ -292,10 +292,10 @@ const Offers = () => {
           <div className="container-wide">
             <p className="eyebrow text-cyan">Productized engagements</p>
             <h1 className="display-serif mt-4 max-w-3xl text-4xl text-navy-ink text-balance md:text-6xl">
-              Four engagements with clear scope and published pricing
+              Four engagements with clear scope and defined timelines
             </h1>
             <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
-              Each engagement has a fixed scope, published pricing, and a clear deliverable. The retainer adds ongoing strategy and build capacity when the work does not stop.
+              Each engagement has a fixed scope, a defined timeline, and a clear deliverable. The retainer adds ongoing strategy and build capacity when the work does not stop.
             </p>
           </div>
         </section>

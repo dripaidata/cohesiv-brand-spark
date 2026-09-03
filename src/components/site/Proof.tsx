@@ -9,7 +9,7 @@ import Reveal from "./Reveal";
 
 const featured = [
   {
-    href: "/case-studies/real-estate-data-and-ai-platform",
+    href: "/work/real-estate-data-and-ai-platform",
     value: 4,
     suffix: " months",
     label: "Data foundation, analytics & AI",
