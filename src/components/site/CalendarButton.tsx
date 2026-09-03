@@ -42,7 +42,7 @@ const loadScript = () =>
   });
 
 const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) => {
-  const hostRef = useRef<HTMLDivElement>(null);
+  const hostRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -50,7 +50,7 @@ const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) =
     if (!host) return;
 
     const renderFallback = () => {
-      if (cancelled || !host || host.childElementCount > 0) return;
+      if (cancelled || !host || (host.parentElement?.childElementCount ?? 0) > 1) return;
       const a = document.createElement("a");
       a.href = SCHEDULE_URL;
       a.target = "_blank";
@@ -71,7 +71,7 @@ const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) =
       .then(() => waitForApi(30))
       .then(() => {
         if (cancelled || !host || !window.calendar?.schedulingButton) return;
-        host.innerHTML = "";
+        host.parentElement?.querySelectorAll("button, .calendar-button-fallback").forEach((n) => n.remove());
         window.calendar.schedulingButton.load({
           url: SCHEDULE_URL,
           color: "#039BE5",
@@ -86,7 +86,11 @@ const CalendarButton = ({ label = "Book an appointment" }: { label?: string }) =
     };
   }, [label]);
 
-  return <div ref={hostRef} className="calendar-scheduling-button" />;
+  return (
+    <div className="calendar-scheduling-button">
+      <span ref={hostRef} className="hidden" />
+    </div>
+  );
 };
 
 export default CalendarButton;
