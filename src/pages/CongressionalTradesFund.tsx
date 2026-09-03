@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const CongressionalTradesFund = () => (
   <CaseStudyLayout
@@ -22,11 +23,7 @@ const CongressionalTradesFund = () => (
       ["Status", "Live, paper-traded, monitored"],
     ]}
     next={{ href: "/labs/dynasty-war-room", label: "Dynasty War Room" }}
-    seo={{
-      path: "/labs/congressional-trades-fund",
-      title: "Congressional Trades Fund - Drip Labs",
-      description: "Autonomous pipeline ingesting STOCK Act disclosures, scoring signals with ML, and executing trades via brokerage API with human approval gates.",
-    }}
+    seo={ROUTE_SEO["/labs/congressional-trades-fund"]}
   >
     <h2>What we built and why it matters</h2>
     <p>

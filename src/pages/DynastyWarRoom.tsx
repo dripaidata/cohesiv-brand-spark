@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const DynastyWarRoom = () => (
   <CaseStudyLayout
@@ -23,11 +24,7 @@ const DynastyWarRoom = () => (
     ]}
     next={{ href: "/work/congressional-trades-fund", label: "Congressional Trades Fund" }}
     heroCta={{ href: "https://www.dynastywarroom.com", label: "Enlist Now!", external: true }}
-    seo={{
-      path: "/labs/dynasty-cap-manager",
-      title: "Dynasty War Room - Drip Labs",
-      description: "Multi-league fantasy football platform modeling NFL salary caps, contract types, and an 8-phase state machine across isolated league databases.",
-    }}
+    seo={ROUTE_SEO["/labs/dynasty-war-room"]}
   >
     <h2>The Quality Audit - March 2026</h2>
     <p>

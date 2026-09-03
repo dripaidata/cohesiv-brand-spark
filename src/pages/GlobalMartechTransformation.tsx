@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import iconMartech from "@/assets/icon-martech.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const GlobalMartechTransformation = () => (
   <CaseStudyLayout
@@ -22,11 +23,7 @@ const GlobalMartechTransformation = () => (
       ["Scope", "Strategy, architecture, vendor, delivery"],
     ]}
     next={{ href: "/work/real-time-content-personalization", label: "Real-Time Content Personalization" }}
-    seo={{
-      path: "/work/global-martech-transformation",
-      title: "Global MarTech Transformation - Drip AI & Data",
-      description: "Nine-market analytics, tagging, and personalization rebuild for a Fortune 500 insurer. Quote form conversion lifted +293%.",
-    }}
+    seo={ROUTE_SEO["/work/global-martech-transformation"]}
   >
     <h2>The situation</h2>
     <p>

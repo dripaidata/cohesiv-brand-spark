@@ -6,6 +6,7 @@ import iconAgentic from "@/assets/icon-agentic.png";
 import iconAiStrategy from "@/assets/icon-ai-strategy.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconMartech from "@/assets/icon-martech.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const capabilities = [
   {
@@ -69,8 +70,8 @@ const FractionalCTO = () => (
       </>
     }
     intro="A permanent CTO is the right answer eventually. But the hire takes six to nine months, costs north of $300K fully loaded, and needs another year to ramp. A retainer gives you that seniority now, and we help you hire the right permanent leader when the time comes."
-    seoTitle="Fractional CTO for Mid-Market Companies | Drip AI & Data"
-    seoDescription="Senior technical leadership on retainer: strategy, architecture, AI, data, product direction, and team hiring without the six-month search."
+    seoTitle={ROUTE_SEO["/fractional-cto"].title}
+    seoDescription={ROUTE_SEO["/fractional-cto"].description}
     path="/fractional-cto"
     problemEyebrow="The problem"
     problemHeading={

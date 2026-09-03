@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import iconData from "@/assets/icon-data.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const phases = [
   {
@@ -80,12 +81,7 @@ const RealEstateDataAndAIPlatform = () => (
       ["Stack", "Cloud data warehouse · Governed metrics layer · Dashboards · LLM agents"],
       ["Timeline", "4 months to full platform"],
     ]}
-    seo={{
-      path: "/case-studies/real-estate-data-and-ai-platform",
-      title: "Case Study: Real Estate Data & AI Platform | Drip AI & Data",
-      description:
-        "How a family-run real estate investor replaced spreadsheets and a breaking dashboard tool with a custom data foundation, analytics, and LLM analysts, saving weeks of manual work every month and quarter.",
-    }}
+    seo={ROUTE_SEO["/work/real-estate-data-and-ai-platform"]}
   >
     <p className="eyebrow text-cyan !mt-0">THE STARTING POINT</p>
     <h2>Good data, locked in the wrong places</h2>

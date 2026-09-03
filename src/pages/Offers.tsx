@@ -12,6 +12,7 @@ import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
 import iconData from "@/assets/icon-data.png";
 import iconEngagement from "@/assets/icon-engagement.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 interface Offer {
   id: string;
@@ -284,11 +285,7 @@ const Offers = () => {
 
   return (
     <div className="min-h-screen bg-background font-sans">
-      <Seo
-        title="Productized AI & Data Engagements | Drip AI & Data"
-        description="Four engagements with published pricing and scope: an AI enablement workshop, a custom prospecting agent, a decision intelligence platform, and a monthly AI & product development retainer."
-        path="/offers"
-      />
+      <Seo {...ROUTE_SEO["/offers"]} />
       <Navbar />
       <main>
         <section className="bg-background pb-10 pt-16 md:pb-14 md:pt-20">

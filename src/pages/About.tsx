@@ -4,6 +4,7 @@ import Seo from "@/components/site/Seo";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
 import logo from "@/assets/logo-full.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const roles = [
   {
@@ -59,11 +60,7 @@ const principles = [
 
 const About = () => (
   <div className="min-h-screen bg-background font-sans">
-    <Seo
-      title="About Danny Ellowitz - Drip AI & Data"
-      description="Boutique consultancy founded by Danny Ellowitz on eleven years of leading data, analytics, and AI inside Fidelity, Manulife, Rocket Software, and Kaspersky."
-      path="/about"
-    />
+    <Seo {...ROUTE_SEO["/about"]} />
     <Navbar />
     <main>
       {/* Hero */}

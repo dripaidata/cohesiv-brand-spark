@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import iconPipeline from "@/assets/icon-pipeline.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const ProspectingAgent = () => (
   <CaseStudyLayout
@@ -21,11 +22,7 @@ const ProspectingAgent = () => (
       ["Stack", "LLM agents · LinkedIn verification · Excel"],
       ["Scope", "Intake → system generation → run"],
     ]}
-    seo={{
-      path: "/work/prospecting-agent",
-      title: "The Prospecting Agent · Drip AI & Data",
-      description: "Custom AI prospecting agents that research companies, verify LinkedIn profiles, and draft outreach in your voice. Built around each client's ICP.",
-    }}
+    seo={ROUTE_SEO["/work/prospecting-agent"]}
   >
     <h2>What it is</h2>
     <p>

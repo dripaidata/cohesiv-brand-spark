@@ -1,5 +1,6 @@
 import CaseStudyLayout from "@/components/site/CaseStudyLayout";
 import iconEngagement from "@/assets/icon-engagement.png";
+import { ROUTE_SEO } from "@/seo/routes";
 
 const RealTimeContentPersonalization = () => (
   <CaseStudyLayout
@@ -22,11 +23,7 @@ const RealTimeContentPersonalization = () => (
       ["Scope", "Strategy, decisioning model, experimentation"],
     ]}
     next={{ href: "/work/global-martech-transformation", label: "Global MarTech Transformation" }}
-    seo={{
-      path: "/work/real-time-content-personalization",
-      title: "Real-Time Content Personalization - Drip AI & Data",
-      description: "First-party, real-time personalization framework for financial services - CTA engagement +650% with experimentation built in.",
-    }}
+    seo={ROUTE_SEO["/work/real-time-content-personalization"]}
   >
     <h2>The situation</h2>
     <p>
