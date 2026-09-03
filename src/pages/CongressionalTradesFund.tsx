@@ -3,8 +3,8 @@ import iconPipeline from "@/assets/icon-pipeline.png";
 
 const CongressionalTradesFund = () => (
   <CaseStudyLayout
-    backHref="/labs"
-    backLabel="All labs"
+    backHref="/product-development"
+    backLabel="Product Development"
     eyebrow="Drip Labs · February 2026"
     title="Congressional Trades Fund"
     intro="A fully autonomous pipeline that ingests STOCK Act disclosures, enriches them with lobbying and contract intelligence, scores every signal with ML, and executes trades through a brokerage API - with mandatory human approval at two gates."

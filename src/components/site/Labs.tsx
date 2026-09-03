@@ -28,11 +28,11 @@ const Labs = () => (
         <div className="md:col-span-7">
           <img src={dripLabsLogo} alt="Drip Labs" className="h-20 w-auto md:h-24" loading="lazy" />
           <h2 className="display-serif mt-6 text-5xl text-navy-ink text-balance md:text-6xl">
-            Our R&amp;D arm. <em className="text-cyan not-italic">Where we prove things work</em> before we sell them.
+            Our R&amp;D arm. <em className="text-cyan not-italic">And our product portfolio.</em>
           </h2>
         </div>
         <p className="md:col-span-5 text-base leading-relaxed text-muted-foreground">
-          We don't just talk about agentic AI - we ship it. Drip Labs is where we build production-grade autonomous systems on real data, real money, and real outcomes.
+          Drip Labs is where we build and run our own production software. A fully autonomous trading pipeline and a live multi-league fantasy platform, both shipped, both running on real data. When we say we build products, these are what we point at.
         </p>
       </div>
 
@@ -54,10 +54,10 @@ const Labs = () => (
       </div>
 
       <div className="mt-12">
-        <a href="/labs" className="group inline-flex items-center gap-2 text-sm font-medium text-navy-deep hover:text-cyan">
-          Explore Drip Labs
+        <Link to="/product-development" className="group inline-flex items-center gap-2 text-sm font-medium text-navy-deep hover:text-cyan">
+          See how we build products
           <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-        </a>
+        </Link>
       </div>
     </div>
   </section>

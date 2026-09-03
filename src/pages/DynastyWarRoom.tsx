@@ -3,8 +3,8 @@ import dynastyWarRoomLogo from "@/assets/dynasty-war-room-logo.png";
 
 const DynastyWarRoom = () => (
   <CaseStudyLayout
-    backHref="/labs"
-    backLabel="All labs"
+    backHref="/product-development"
+    backLabel="Product Development"
     eyebrow="Drip Labs · May 2026"
     title="Dynasty War Room"
     intro="A fantasy football platform built to model the NFL - manage a full salary cap, contract types, and more as you look to build a true dynasty."
