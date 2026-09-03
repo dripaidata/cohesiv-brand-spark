@@ -14,9 +14,9 @@ const Footer = () => (
         <p className="eyebrow text-cyan">Explore</p>
         <ul className="mt-4 space-y-3 text-sm">
           <li><a href="/work" className="hover:text-cyan">Our Work</a></li>
-          <li><a href="/case-studies" className="hover:text-cyan">Case Studies</a></li>
-          <li><a href="/labs" className="hover:text-cyan">Drip Labs</a></li>
+          <li><a href="/product-development" className="hover:text-cyan">Drip Labs</a></li>
           <li><a href="/about" className="hover:text-cyan">About</a></li>
+
           <li><a href="/#consultation" className="hover:text-cyan">Book a consultation</a></li>
         </ul>
       </div>
