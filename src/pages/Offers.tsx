@@ -6,7 +6,6 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Reveal from "@/components/site/Reveal";
 import ConsultationForm from "@/components/site/ConsultationForm";
-import ScheduleCallButton from "@/components/site/ScheduleCallButton";
 import { Button } from "@/components/ui/button";
 import iconAi from "@/assets/icon-ai-strategy.png";
 import iconAgentic from "@/assets/icon-agentic.png";
@@ -61,7 +60,7 @@ const offers: Offer[] = [
     proof: "Clients run their own AI systems day-to-day after handoff, with no analyst in the loop.",
     proofHref: "/about",
     proofLabel: "About Drip AI & Data",
-    ctaLabel: "Start here",
+    ctaLabel: "Book a consultation",
   },
   {
     id: "prospecting-agent",
@@ -89,7 +88,7 @@ const offers: Offer[] = [
       "In production with a creative agency: a full morning reclaimed weekly, every prospect verified on their live LinkedIn profile before contact, every touch logged.",
     proofHref: "/work/prospecting-agent",
     proofLabel: "Read the case study",
-    ctaLabel: "Start here",
+    ctaLabel: "Book a consultation",
   },
   {
     id: "platform",
@@ -123,7 +122,7 @@ const offers: Offer[] = [
       "~1,350 units. Reconciled to the penny across 516 property-months. Weeks of work now done in hours, on under $20/mo of cloud cost.",
     proofHref: "/work/real-estate-data-and-ai-platform",
     proofLabel: "Read the case study",
-    ctaLabel: "Schedule a call",
+    ctaLabel: "Book a consultation",
   },
   {
     id: "retainer",
@@ -150,7 +149,7 @@ const offers: Offer[] = [
       "The Prospecting Agent and the real estate data and AI platform were both built on this capacity, solo, in production, with real money.",
     proofHref: "/work/real-estate-data-and-ai-platform",
     proofLabel: "Read the case study",
-    ctaLabel: "Schedule a call",
+    ctaLabel: "Book a consultation",
   },
 ];
 
@@ -200,15 +199,11 @@ const OfferDetail = ({ offer }: { offer: Offer }) => (
         {offer.proofLabel} <ArrowRight className="size-4" />
       </Link>
     </div>
-    {offer.id === "platform" ? (
-      <ScheduleCallButton label={offer.ctaLabel} />
-    ) : (
-      <Button asChild variant="hero" size="lg" className="w-full">
-        <a href="#consultation">
-          {offer.ctaLabel} <ArrowRight className="!size-5" />
-        </a>
-      </Button>
-    )}
+    <Button asChild variant="hero" size="lg" className="w-full">
+      <a href="#consultation" onClick={(e) => e.stopPropagation()}>
+        {offer.ctaLabel} <ArrowRight className="!size-5" />
+      </a>
+    </Button>
   </div>
 );
 
