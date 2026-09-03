@@ -4,7 +4,7 @@
 **Effective date: August 5, 2026**
 **Last updated: August 5, 2026**
 
-These Terms of Service ("Terms") govern your use of dripaidata.com and the software applications Drip AI & Data LLC ("Drip," "we," "us") develops and makes available, including Social Coach and Prospecting Agent (each a "Product," together the "Products").
+These Terms of Service ("Terms") govern your use of dripaidata.com and the software applications Drip AI & Data LLC ("Drip," "we," "us") develops and makes available, including Dynasty War Room and Congressional Trades Fund (each a "Product," together the "Products").
 
 By using our website or any Product, you agree to these Terms. If you do not agree, do not use them.
 
