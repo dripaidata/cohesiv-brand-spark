@@ -73,7 +73,7 @@ const Email = ({
 export const template = {
   component: Email,
   subject: (data: Record<string, any>) =>
-    `New consultation request${data?.company ? ` - ${data.company}` : ''}`,
+    `New consultation request from ${[data?.firstName, data?.lastName].filter(Boolean).join(' ') || 'a visitor'}`,
   displayName: 'Consultation request',
   previewData: {
     firstName: 'Jane',
