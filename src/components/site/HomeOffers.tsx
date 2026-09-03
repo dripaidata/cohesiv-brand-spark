@@ -78,7 +78,8 @@ const HomeOffers = () => (
                 <img src={o.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
                 <span className="eyebrow text-muted-foreground">{o.number}</span>
               </div>
-              <p className="eyebrow mt-8 text-cyan">{o.name}</p>
+              <p className="eyebrow mt-8 text-cyan">{o.tag}</p>
+              <p className="mt-2 text-lg font-medium text-navy-ink">{o.name}</p>
               <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 {o.price && <span className="display-serif text-3xl text-navy-ink">{o.price}</span>}
                 <span className="text-xs text-muted-foreground">{o.detail}</span>
