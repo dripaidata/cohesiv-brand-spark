@@ -93,7 +93,7 @@ const About = () => (
                 </div>
                 <div className="border-t border-white/10 pt-3">
                   <dt className="font-mono text-xs uppercase tracking-widest text-primary-foreground/50">Practice</dt>
-                  <dd className="mt-1">AI Strategy · Data &amp; Analytics · Agentic Workflows</dd>
+                  <dd className="mt-1">Data &amp; Analytics · AI Implementation · Product Development</dd>
                 </div>
               </dl>
             </div>

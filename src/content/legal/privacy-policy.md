@@ -9,7 +9,7 @@ Drip AI & Data LLC ("Drip," "we," "us") respects your privacy. This policy expla
 This policy covers:
 
 - **dripaidata.com** — our website, including forms, downloads, and newsletter signups
-- **Our Products** — the software applications Drip develops and makes available, including Social Coach and Prospecting Agent
+- **Our Products** — the software applications Drip develops and makes available, including Dynasty War Room and Congressional Trades Fund
 - **Client communications** — email, scheduling, and inquiry handling
 
 Consulting engagements are governed by the Master Services Agreement and Statement of Work executed with each client. Where those documents address data handling, they control over this policy for that engagement.
