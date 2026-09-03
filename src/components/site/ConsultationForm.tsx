@@ -57,24 +57,50 @@ const ConsultationForm = () => {
     }
 
     setSubmitting(true);
-    const { error } = await supabase.from("consultation_submissions").insert({
-      first_name: parsed.data.first_name,
-      last_name: parsed.data.last_name,
-      email: parsed.data.email,
-      company: parsed.data.company,
-      title: parsed.data.title || null,
-      challenges: parsed.data.challenges,
-      services: selected,
-      offers: selectedOffers,
-      nda: false,
-    });
+    const { data: inserted, error } = await supabase
+      .from("consultation_submissions")
+      .insert({
+        first_name: parsed.data.first_name,
+        last_name: parsed.data.last_name,
+        email: parsed.data.email,
+        company: parsed.data.company,
+        title: parsed.data.title || null,
+        challenges: parsed.data.challenges,
+        services: selected,
+        offers: selectedOffers,
+        nda: false,
+      })
+      .select("id")
+      .maybeSingle();
+
+    let notified = false;
+    try {
+      const { error: notifyError } = await supabase.functions.invoke("notify-consultation", {
+        body: {
+          submissionId: inserted?.id ?? undefined,
+          first_name: parsed.data.first_name,
+          last_name: parsed.data.last_name,
+          email: parsed.data.email,
+          company: parsed.data.company,
+          title: parsed.data.title || null,
+          challenges: parsed.data.challenges,
+          services: selected,
+          offers: selectedOffers,
+        },
+      });
+      notified = !notifyError;
+      if (notifyError) console.error("Consultation notification failed", notifyError);
+    } catch (err) {
+      console.error("Consultation notification failed", err);
+    }
     setSubmitting(false);
 
-    if (error) {
+    if (error && !notified) {
       console.error("Consultation submission failed", error);
       toast.error("Something went wrong. Please try again or email danny@dripaidata.com.");
       return;
     }
+
 
     toast.success("Thanks - we'll be in touch within one business day.");
     form.reset();
