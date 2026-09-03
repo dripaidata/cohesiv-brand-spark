@@ -115,7 +115,7 @@ const Navbar = () => {
           ))}
         </ul>
         <Button asChild variant="hero" size="lg" className="hidden md:inline-flex">
-          <a href="/#consultation">Book a consultation</a>
+          <a href="#consultation">Book a consultation</a>
         </Button>
         <button
           type="button"
@@ -178,7 +178,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Button asChild variant="hero" size="lg" className="mt-3 w-full">
-              <a href="/#consultation" onClick={() => setOpen(false)}>Book a consultation</a>
+              <a href="#consultation" onClick={() => setOpen(false)}>Book a consultation</a>
             </Button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import ConsultationForm from "./ConsultationForm";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -125,14 +126,7 @@ const CaseStudyLayout = ({ backHref, backLabel, eyebrow, title, intro, icon, sta
         </section>
       )}
 
-      <section className="border-t border-border bg-gradient-fade py-24">
-        <div className="container-wide flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <h2 className="display-serif text-4xl text-navy-ink md:text-5xl">Want one of these for your business?</h2>
-          <Button asChild variant="hero" size="xl">
-            <a href="/#consultation">Book a consultation <ArrowRight className="!size-5" /></a>
-          </Button>
-        </div>
-      </section>
+      <ConsultationForm />
     </main>
     <Footer />
   </div>

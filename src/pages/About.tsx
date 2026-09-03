@@ -1,5 +1,6 @@
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+import ConsultationForm from "@/components/site/ConsultationForm";
 import Seo from "@/components/site/Seo";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
@@ -183,15 +184,7 @@ const About = () => (
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="border-t border-border bg-gradient-fade py-24">
-        <div className="container-wide flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <h2 className="display-serif text-4xl text-navy-ink md:text-5xl">Let's figure out what's holding you back.</h2>
-          <Button asChild variant="hero" size="xl">
-            <a href="/#consultation">Book a consultation <ArrowRight className="!size-5" /></a>
-          </Button>
-        </div>
-      </section>
+      <ConsultationForm />
     </main>
     <Footer />
   </div>

@@ -105,6 +105,14 @@ const ConsultationForm = () => {
               </li>
             ))}
           </ul>
+          <a
+            href="https://calendar.app.google/bGhsbEhewJtu8zTf7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-cyan underline-offset-4 hover:underline"
+          >
+            Or grab time on my calendar directly.
+          </a>
         </div>
 
         <form

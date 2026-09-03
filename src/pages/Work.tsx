@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import Footer from "@/components/site/Footer";
+import ConsultationForm from "@/components/site/ConsultationForm";
 import Seo from "@/components/site/Seo";
 import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
@@ -122,6 +123,8 @@ const Work = () => {
             ))}
           </div>
         </section>
+
+        <ConsultationForm />
       </main>
       <Footer />
     </div>
