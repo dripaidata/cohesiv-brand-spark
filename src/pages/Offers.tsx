@@ -17,6 +17,7 @@ interface Offer {
   id: string;
   icon: string;
   number: string;
+  tag: string;
   name: string;
   title: string;
   payoff: string;
@@ -39,6 +40,7 @@ const offers: Offer[] = [
     id: "workshop",
     icon: iconAi,
     number: "01",
+    tag: "AI IMPLEMENTATION",
     name: "AI Enablement Workshop",
     title: "Hands-on AI training for teams ready to use AI in their daily work",
     payoff: "",
@@ -64,6 +66,7 @@ const offers: Offer[] = [
     id: "prospecting-agent",
     icon: iconAgentic,
     number: "02",
+    tag: "AI IMPLEMENTATION · PRODUCT",
     name: "Prospecting Agent",
     title: "A prospecting agent that prepares accounts and outreach before you start selling",
     payoff: "",
@@ -91,6 +94,7 @@ const offers: Offer[] = [
     id: "platform",
     icon: iconData,
     number: "03",
+    tag: "DATA & ANALYTICS",
     name: "Decision Intelligence Platform",
     title: "A decision intelligence platform with governed data, dashboards, and AI analysts",
     payoff: "",
@@ -124,6 +128,7 @@ const offers: Offer[] = [
     id: "retainer",
     icon: iconEngagement,
     number: "04",
+    tag: "FRACTIONAL CTO",
     name: "AI & Product Development Retainer",
     title: "Monthly AI and product development capacity from a senior builder",
     payoff: "",
@@ -231,7 +236,8 @@ const OfferCard = ({
       <img src={offer.icon} alt="" loading="lazy" className="h-12 w-12 object-contain" />
       <span className="eyebrow text-muted-foreground">{offer.number}</span>
     </div>
-    <p className="eyebrow mt-6 text-cyan">{offer.name}</p>
+    <p className="eyebrow mt-6 text-cyan">{offer.tag}</p>
+    <p className="mt-2 text-base font-medium text-navy-ink">{offer.name}</p>
     <h2 className="display-serif mt-3 text-3xl text-navy-ink text-balance">
       {offer.title}
       {offer.payoff && <em className="text-cyan not-italic">{offer.payoff}</em>}

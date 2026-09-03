@@ -11,6 +11,7 @@ const offers = [
     id: "workshop",
     icon: iconAi,
     number: "01",
+    tag: "AI IMPLEMENTATION",
     name: "AI Enablement Workshop",
     price: "$4,000",
     detail: "$7,500 full day",
@@ -20,6 +21,7 @@ const offers = [
     id: "prospecting-agent",
     icon: iconAgentic,
     number: "02",
+    tag: "AI IMPLEMENTATION · PRODUCT",
     name: "Prospecting Agent",
     price: "$7,500",
     detail: "one-time · 4 weeks to handoff",
@@ -29,6 +31,7 @@ const offers = [
     id: "platform",
     icon: iconData,
     number: "03",
+    tag: "DATA & ANALYTICS",
     name: "Decision Intelligence Platform",
     price: "Mid five figures",
     detail: "typical starting range · 120 days",
@@ -38,6 +41,7 @@ const offers = [
     id: "retainer",
     icon: iconEngagement,
     number: "04",
+    tag: "FRACTIONAL CTO",
     name: "AI & Product Development Retainer",
     detail: "40 hours included · 3-month minimum",
     summary: "Reserved senior capacity for strategy, product development, and hands-on build, without the cost and time of a full-time hire.",
@@ -74,7 +78,8 @@ const HomeOffers = () => (
                 <img src={o.icon} alt="" loading="lazy" className="h-16 w-16 object-contain" />
                 <span className="eyebrow text-muted-foreground">{o.number}</span>
               </div>
-              <p className="eyebrow mt-8 text-cyan">{o.name}</p>
+              <p className="eyebrow mt-8 text-cyan">{o.tag}</p>
+              <p className="mt-2 text-lg font-medium text-navy-ink">{o.name}</p>
               <div className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-1">
                 {o.price && <span className="display-serif text-3xl text-navy-ink">{o.price}</span>}
                 <span className="text-xs text-muted-foreground">{o.detail}</span>

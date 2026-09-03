@@ -3,6 +3,7 @@ import Footer from "@/components/site/Footer";
 import Seo from "@/components/site/Seo";
 import Hero from "@/components/site/Hero";
 import Services from "@/components/site/Services";
+import FractionalCTOBand from "@/components/site/FractionalCTOBand";
 import HomeOffers from "@/components/site/HomeOffers";
 import HowWeWork from "@/components/site/HowWeWork";
 import Credentials from "@/components/site/Credentials";
@@ -25,13 +26,14 @@ const Index = () => {
       <main>
         <Hero />
         <Services />
+        <FractionalCTOBand />
         <HomeOffers />
         <HowWeWork />
         <Credentials />
         <Proof />
         <Comparison />
         <Labs />
-        
+
         <FAQ />
         <ConsultationForm />
       </main>
