@@ -106,7 +106,7 @@ const ConsultationForm = () => {
             ))}
           </ul>
           <a
-            href="https://calendar.app.google/bGhsbEhewJtu8zTf7"
+            href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2fUKpgf62qjDycvC33C_9hklBknwxwNBYhBtJAkvtH_auJacgrf3jlp3F-wla7ph83zpEj67YG?gv=true"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-cyan underline-offset-4 hover:underline"
