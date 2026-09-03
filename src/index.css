@@ -140,3 +140,37 @@
   }
   .animate-pulse-soft { animation: pulse-soft 3s ease-in-out infinite; }
 }
+
+/* Google Calendar scheduling button, restyled with site tokens */
+.calendar-scheduling-button button,
+.calendar-scheduling-button a,
+.calendar-button-fallback {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid hsl(var(--cyan)) !important;
+  border-radius: 0.125rem !important;
+  background: transparent !important;
+  padding: 0.75rem 1.5rem !important;
+  font-family: inherit !important;
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.01em;
+  color: hsl(var(--cyan)) !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.calendar-scheduling-button button:hover,
+.calendar-scheduling-button a:hover,
+.calendar-button-fallback:hover {
+  background: hsl(var(--cyan)) !important;
+  color: hsl(var(--navy-ink)) !important;
+}
+
+.calendar-scheduling-button img,
+.calendar-scheduling-button svg {
+  filter: none;
+}
