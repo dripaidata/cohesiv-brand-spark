@@ -13,11 +13,21 @@ const Footer = () => (
       <div className="md:col-span-3">
         <p className="eyebrow text-cyan">Explore</p>
         <ul className="mt-4 space-y-3 text-sm">
-          <li><a href="/work" className="hover:text-cyan">Our Work</a></li>
-          <li><a href="/product-development" className="hover:text-cyan">Drip Labs</a></li>
-          <li><a href="/about" className="hover:text-cyan">About</a></li>
-
-          <li><a href="/#consultation" className="hover:text-cyan">Book a consultation</a></li>
+          {[
+            { to: "/", label: "Home" },
+            { to: "/data-analytics", label: "Data & Analytics" },
+            { to: "/ai-implementation", label: "AI Implementation" },
+            { to: "/product-development", label: "Product Development" },
+            { to: "/fractional-cto", label: "Fractional CTO" },
+            { to: "/offers", label: "Offers" },
+            { to: "/work", label: "Work" },
+            { to: "/about", label: "About" },
+          ].map((l) => (
+            <li key={l.to}>
+              <Link to={l.to} className="hover:text-cyan">{l.label}</Link>
+            </li>
+          ))}
+          <li><a href="#consultation" className="hover:text-cyan">Book a consultation</a></li>
         </ul>
       </div>
       <div className="md:col-span-4">
