@@ -1,208 +1,193 @@
-import CaseStudyLayout from "@/components/site/CaseStudyLayout";
-import iconData from "@/assets/icon-data.png";
+import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Navbar from "@/components/site/Navbar";
+import Footer from "@/components/site/Footer";
+import Seo from "@/components/site/Seo";
+import ConsultationForm from "@/components/site/ConsultationForm";
+import CalendarButton from "@/components/site/CalendarButton";
 import { ROUTE_SEO } from "@/seo/routes";
 
-const phases = [
+const seo = ROUTE_SEO["/work/real-estate-data-and-ai-platform"];
+
+const stats: [string, string][] = [
+  ["Up to 6 weeks to hours", "quarterly close and investor distributions"],
+  ["27 properties", "about 1,350 units, reconciled to the penny"],
+  ["18 reports", "loaded automatically every night"],
+  ["Under $20/mo", "in cloud cost"],
+];
+
+const steps = [
   {
-    n: "01",
-    title: "Automated data pipeline",
-    when: "live in week one",
-    body:
-      "A nightly pipeline pulls 24 reports from their PMS's API into a cloud data warehouse: financials, rent roll, leasing activity, budgets, unit data. No scraping, no browser extensions, nothing that breaks when the vendor redesigns a page. Daily snapshots preserve history the PMS itself throws away, like market rent changes over time.",
+    title: "The data foundation",
+    body: "Every report from their property management system now lands in a cloud data warehouse automatically each night, including about 227,000 general ledger rows, so the numbers are always current and always in one place.",
   },
   {
-    n: "02",
-    title: "A governed metrics layer",
-    when: "months one to two",
-    body:
-      "Raw system data is full of traps: sign conventions, duplicate rows, accounts that mean different things in different reports. We encoded the firm's business logic (NOI definitions, budget conventions, accrual corrections, occupancy math) into 25+ curated views, so every dashboard and every AI answer computes numbers exactly one way: theirs.",
+    title: "Reporting built around how they run the business",
+    body: "A metrics layer encodes their business logic once, so every dashboard and every answer computes the numbers their way. Leadership gets live dashboards and timed reports designed with them, nothing out of the box.",
   },
   {
-    n: "03",
-    title: "Executive dashboards",
-    when: "iterating from week two",
-    body:
-      "Live dashboards for the CEO and CFO: portfolio overview, monthly and quarterly property performance, budget vs. actual with drill down to the account level, occupancy and leasing funnels, and rent performance against the original pro forma underwriting by unit type and renovation status, a view their PMS simply could not produce.",
+    title: "A team of AI analysts",
+    body: "Separate AI analysts for financial performance, leasing and vacancy, rent roll and pro forma, and distributions. The CEO, CFO and team ask plain-English questions and get answers backed by real SQL and a QA suite.",
   },
   {
-    n: "04",
-    title: "AI analysts on top",
-    when: "months three to four",
-    body:
-      "Three conversational AI agents (financial performance, leasing & vacancy, and rent roll & pro forma) that answer plain English questions with real SQL against the governed metrics layer. Each shipped with guardrails and a QA suite of known answer questions, so they decline what the data can't support instead of improvising.",
+    title: "Distributions on autopilot",
+    body: "Quarterly distributions across every investor and property are now calculated automatically, including the waterfall, promote, and investor-specific terms. It reconciles against every recorded capital event, and deal-level returns match the CFO's own model within 2 basis points. Investor letters that used to take days now take moments.",
+  },
+  {
+    title: "Decisions, not just reports",
+    body: "A projections tool tied to actuals and loan terms models refinance and sale scenarios for every deal and ranks the options, so leadership can see how to get the most for themselves and their investors.",
   },
 ];
 
-const beforeItems = [
-  "Portfolio analysis assembled by hand from PMS exports and spreadsheets",
-  "A screen scraping dashboard tool that broke whenever the PMS vendor shipped changes",
-  "Historical market rents overwritten by the PMS, no way to see rent change history",
-  "Pro forma performance, mark to markets, and distributions tracked in fragile manual workbooks",
-  "Every executive question became an interruption to the CFO's day",
-  "Weeks of manual work every month and quarter to close books and answer leadership questions",
+const results: [string, string][] = [
+  ["Quarter-end", "From up to six weeks of manual work to hours of review across a few days."],
+  ["Answers", "From waiting days on a spreadsheet to asking a question in plain English."],
+  ["Ownership", "Their team runs it day to day. No analyst in the loop."],
 ];
 
-const afterItems = [
-  "Weeks of manual reporting and analysis now done in hours every month and quarter",
-  "All 24 core reports land in one warehouse automatically, every night",
-  "Official API integration, stable across vendor UI changes",
-  "Daily snapshots preserve history the source system discards",
-  "Dashboards and pro forma comparisons update themselves, distributions automation underway",
-  "The CEO and team self serve answers, including from anywhere in the world",
-];
-
-const chat: { role: "q" | "a"; text: string }[] = [
-  { role: "q", text: "How did renewals at [property] trend this quarter, how many, and what was the average increase?" },
-  { role: "a", text: "Exact count, correctly weighted average — computed across the quarter's months from the governed views, not a flat average of monthly rates." },
-  { role: "q", text: "How are renovated units leasing up against pro forma?" },
-  { role: "a", text: "Each lease-up vs. pre-renovation rent and original underwriting — and where underlying data was incomplete, the agent flagged the estimate instead of stating it as fact." },
-];
+/** Hidden until a client quote is supplied. */
+const Testimonial = ({ quote, attribution }: { quote?: string; attribution?: string }) => {
+  if (!quote) return null;
+  return (
+    <figure className="mt-12 border-l-4 border-cyan bg-cyan-soft/40 p-6 md:p-8">
+      <blockquote className="display-serif text-2xl leading-snug text-navy-ink md:text-3xl">{quote}</blockquote>
+      {attribution && (
+        <figcaption className="mt-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          {attribution}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
 
 const RealEstateDataAndAIPlatform = () => (
-  <CaseStudyLayout
-    backHref="/work"
-    backLabel="All work"
-    eyebrow="REAL ESTATE · DATA FOUNDATION · ANALYTICS · AI"
-    title="Real Estate Data & AI Platform"
-    intro="How a family-run real estate investor went from spreadsheet archaeology to a fully custom data and AI platform: data accuracy and automation, customized and always on analytics, and LLM analysts for financial reporting, leasing and vacancy, performance vs pro forma, and distributions. Weeks of manual work now done in hours, every month and quarter."
-    icon={iconData}
-    stats={[
-      ["4 months", "kickoff to platform + AI agents in daily use"],
-      ["24 reports", "pulled from their PMS automatically, every night"],
-      ["516/516", "property months reconciled to the penny"],
-      ["< $20/mo", "total cloud infra to run the platform"],
-      ["Weeks → hours", "monthly and quarterly reporting work, compressed by automation"],
-    ]}
-    meta={[
-      ["Sector", "Real estate"],
-      ["Portfolio", "24 properties, ~1,350 units"],
-      ["Region", "Northeast U.S."],
-      ["Role", "Data foundation, analytics, AI implementation"],
-      ["Stack", "Cloud data warehouse · Governed metrics layer · Dashboards · LLM agents"],
-      ["Timeline", "4 months to full platform"],
-    ]}
-    seo={ROUTE_SEO["/work/real-estate-data-and-ai-platform"]}
-  >
-    <p className="eyebrow text-cyan !mt-0">THE STARTING POINT</p>
-    <h2>Good data, locked in the wrong places</h2>
-    <p>
-      The firm manages two dozen multifamily properties, about 1,350 units, with a lean back office. Their
-      property management system ran day to day operations fine, but its reporting couldn't answer the
-      questions that actually drive an investment business: How are in place rents trending against our
-      pro forma? What did renovated units actually lease up at? How is each property performing against
-      budget, this month and cumulatively?
-    </p>
-    <p>
-      What they needed was a real estate data and AI platform from the ground up: a data foundation, an analytics
-      layer, and LLM analysts that could handle financial reporting, leasing and vacancy, performance vs pro forma,
-      and distributions. They had already tried to solve it. A contractor built them a custom dashboard tool that worked by
-      screen scraping their PMS, and every time the vendor changed its login flow or page structure, the
-      tool went dark. Off the shelf BI subscriptions covered some dashboards but none of the analysis
-      that lived outside the PMS: pro forma comparisons, mark to markets, investor level performance. So
-      those stayed where they'd always been, in spreadsheets, maintained by hand, by the CFO.
-    </p>
-
-    <figure className="not-prose my-10 border-l-4 border-cyan bg-cyan-soft/40 p-6 md:p-8">
-      <p className="display-serif text-2xl leading-snug text-navy-ink md:text-3xl !mt-0">
-        The tipping point wasn't a report. It was a working style: the CEO travels for weeks at a time
-        and wanted full visibility into the portfolio without a daily stream of "hey, quick question…"
-        messages that pulled the CFO off real work.
-      </p>
-    </figure>
-
-    <p className="eyebrow text-cyan">THE BUILD</p>
-    <h2>One pipeline, one source of truth, then intelligence on top</h2>
-    <p>We built the platform in layers, each one usable on its own before the next went in.</p>
-
-    <ol className="not-prose mt-10 grid gap-6 md:grid-cols-2">
-      {phases.map((p) => (
-        <li key={p.n} className="rounded-sm border border-border bg-card p-6 shadow-sm md:p-8">
-          <div className="flex items-baseline gap-4">
-            <span className="font-mono text-2xl text-cyan">{p.n}</span>
-            <h3 className="display-serif text-2xl text-navy-ink !mt-0">{p.title}</h3>
+  <div className="min-h-screen bg-background font-sans">
+    <Seo
+      title={seo.title}
+      description={seo.description}
+      path={seo.path}
+      ogType="article"
+      jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: "Quarter-end used to take up to six weeks. Now it's hours of review.",
+        description: seo.description,
+        author: { "@type": "Person", name: "Danny Ellowitz" },
+        publisher: { "@type": "Organization", name: "Drip AI & Data" },
+        mainEntityOfPage: `https://dripaidata.com${seo.path}`,
+      }}
+    />
+    <Navbar />
+    <main>
+      {/* Hero */}
+      <section className="bg-navy-ink py-20 text-primary-foreground md:py-32">
+        <div className="container-wide">
+          <Link to="/work" className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 hover:text-cyan">
+            <ArrowLeft className="size-4" /> All work
+          </Link>
+          <p className="eyebrow mt-12 text-cyan">Case study · Real estate investment and property management</p>
+          <h1 className="display-serif mt-6 max-w-5xl text-4xl text-balance sm:text-5xl md:text-7xl">
+            Quarter-end used to take up to six weeks. <em className="text-cyan">Now it's hours of review.</em>
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg text-primary-foreground/75">
+            A family-run real estate investment firm was running finance and operations out of property management
+            exports and spreadsheets. We rebuilt the back end, then kept building on it.
+          </p>
+          <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map(([n, l]) => (
+              <div key={n} className="bg-navy-ink p-6 md:p-8">
+                <p className="display-serif text-3xl text-cyan md:text-4xl">{n}</p>
+                <p className="eyebrow mt-2 text-primary-foreground/60">{l}</p>
+              </div>
+            ))}
           </div>
-          <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground !mt-3">{p.when}</p>
-          <p className="!mt-4 text-base leading-relaxed text-navy-deep">{p.body}</p>
-        </li>
-      ))}
-    </ol>
+        </div>
+      </section>
 
-    <p className="eyebrow text-cyan mt-16">IN PRACTICE</p>
-    <h2>Questions that used to be a project are now a sentence</h2>
+      {/* Problem */}
+      <section className="py-20 md:py-28">
+        <div className="container-wide max-w-3xl">
+          <p className="eyebrow text-cyan">The problem</p>
+          <h2 className="display-serif mt-4 text-4xl text-navy-ink md:text-5xl">Sound familiar?</h2>
+          <p className="mt-6 text-lg leading-relaxed text-navy-deep">
+            Every month took days of exports and copy and paste to reconcile. Every quarter took up to six weeks to
+            close the books, calculate distributions across every investor and property, and write the investor
+            letters. The analysis that actually runs an investment firm, like pro forma tracking and refinance or sale
+            decisions, lived in workbooks only a couple of people understood. A simple question from leadership could
+            take days to answer.
+          </p>
+        </div>
+      </section>
 
-    <div className="not-prose mt-8 space-y-4">
-      {chat.map((m, i) =>
-        m.role === "q" ? (
-          <div key={i} className="flex justify-start">
-            <div className="max-w-[85%] rounded-sm border border-border bg-muted/60 px-5 py-4 italic text-muted-foreground">
-              "{m.text}"
-            </div>
+      {/* Timeline */}
+      <section className="border-t border-border bg-card py-20 md:py-28">
+        <div className="container-wide max-w-3xl">
+          <p className="eyebrow text-cyan">What we built</p>
+          <h2 className="display-serif mt-4 text-4xl text-navy-ink md:text-5xl">How it came together</h2>
+          <ol className="relative mt-12 space-y-10 border-l border-border pl-8 md:pl-10">
+            {steps.map((s, i) => (
+              <li key={s.title} className="relative">
+                <span className="absolute -left-[calc(2rem+0.75rem)] top-0 flex size-6 items-center justify-center rounded-full bg-cyan font-mono text-xs text-navy-ink md:-left-[calc(2.5rem+0.75rem)]">
+                  {i + 1}
+                </span>
+                <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Step {i + 1}</p>
+                <h3 className="display-serif mt-2 text-2xl text-navy-ink md:text-3xl">{s.title}</h3>
+                <p className="mt-3 text-base leading-relaxed text-navy-deep">{s.body}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* Result */}
+      <section className="py-20 md:py-28">
+        <div className="container-wide">
+          <p className="eyebrow text-cyan">The result</p>
+          <h2 className="display-serif mt-4 text-4xl text-navy-ink md:text-5xl">What changed</h2>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {results.map(([k, v]) => (
+              <div key={k} className="rounded-sm border border-border border-t-4 border-t-cyan bg-card p-6 shadow-sm md:p-8">
+                <p className="font-mono text-xs uppercase tracking-widest text-cyan">{k}</p>
+                <p className="mt-4 text-base leading-relaxed text-navy-ink">{v}</p>
+              </div>
+            ))}
           </div>
-        ) : (
-          <div key={i} className="flex justify-end">
-            <div className="max-w-[85%] rounded-sm bg-cyan-soft px-5 py-4 text-navy-ink">
-              {m.text}
-            </div>
+        </div>
+      </section>
+
+      {/* Relationship */}
+      <section className="border-t border-border bg-card py-20 md:py-28">
+        <div className="container-wide max-w-3xl">
+          <p className="eyebrow text-cyan">The relationship</p>
+          <h2 className="display-serif mt-4 text-4xl text-navy-ink md:text-5xl">Where it went next</h2>
+          <p className="mt-6 text-lg leading-relaxed text-navy-deep">
+            What started as a data foundation is now our fourth engagement with this client, with each phase building
+            on the last. Next up is custom market research software for pricing properties in every market nationwide.
+          </p>
+          <Testimonial />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-navy-ink py-20 text-primary-foreground md:py-28">
+        <div className="container-wide max-w-3xl">
+          <h2 className="display-serif text-4xl text-balance md:text-5xl">Running your firm on spreadsheets and exports?</h2>
+          <p className="mt-6 text-lg text-primary-foreground/75">
+            Let's talk through how your team closes the month and the quarter today, and whether it's worth automating.
+          </p>
+          <div className="mt-8 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <CalendarButton label="Book a call" />
+            <Link to="/fractional-cto" className="group inline-flex items-center gap-2 text-primary-foreground/80 hover:text-cyan">
+              See how we work <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </div>
-        ),
-      )}
-    </div>
-    <p className="!mt-4 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-      Real interactions from the client's agents, anonymized. The CEO and leasing team query these
-      directly, no analyst in the loop.
-    </p>
+        </div>
+      </section>
 
-    <p>
-      Accuracy was treated as a feature, not an aspiration. When we rebuilt their operating expense
-      figures with accrual corrections, we reconciled all 516 property months against their books, to
-      the penny, before switching anything over. When the CFO's hand-kept tally and our model disagreed by one on a key leasing metric, we didn't stop until the model matched his number — for the same reasons he had. Along the
-      way, the platform surfaced data quality issues in the source system the firm didn't know it had:
-      mis tagged accounts, duplicated entries, placeholder dates, each documented and fixed or flagged.
-    </p>
-
-    <p className="!mt-6 text-base leading-relaxed text-navy-deep">
-      The real payoff is time. Work that used to consume weeks of manual effort every month and quarter — pulling exports, reconciling accounts, building board reports, and answering ad hoc questions — now happens in hours. The CFO's team is no longer the bottleneck for every leadership question.
-    </p>
-
-    <p className="eyebrow text-cyan mt-16">BEFORE & AFTER</p>
-    <h2>What changed for the people</h2>
-
-    <div className="not-prose mt-8 grid gap-6 md:grid-cols-2">
-      <div className="rounded-sm border border-border bg-card p-6 md:p-8">
-        <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Before</p>
-        <ul className="mt-4 space-y-3 text-navy-deep">
-          {beforeItems.map((t) => (
-            <li key={t} className="flex gap-3 text-sm leading-relaxed">
-              <span className="mt-2 h-1 w-3 flex-shrink-0 bg-muted-foreground/50" />
-              <span>{t}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="rounded-sm border border-border border-t-4 border-t-cyan bg-card p-6 shadow-md md:p-8">
-        <p className="font-mono text-xs uppercase tracking-widest text-cyan">After</p>
-        <ul className="mt-4 space-y-3 text-navy-ink">
-          {afterItems.map((t) => (
-            <li key={t} className="flex gap-3 text-sm leading-relaxed">
-              <span className="mt-2 h-1 w-3 flex-shrink-0 bg-cyan" />
-              <span>{t}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    <p className="mt-10">
-      And because the platform was engineered, not just assembled, it runs lean: the entire system
-      (pipeline, warehouse, dashboards, agents) operates on under $20 a month of cloud cost, with
-      monitoring in place that has caught and self healed upstream failures without anyone noticing
-      downstream.
-    </p>
-
-    <p className="!mt-16 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-      Client details anonymized at the client's request.
-    </p>
-  </CaseStudyLayout>
+      <ConsultationForm />
+    </main>
+    <Footer />
+  </div>
 );
 
 export default RealEstateDataAndAIPlatform;
