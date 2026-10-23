@@ -4,20 +4,32 @@ import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import iconData from "@/assets/icon-data.png";
+import usMark from "@/assets/utility-switch-mark-hires.png.asset.json";
 import AnimatedNumber from "./AnimatedNumber";
 import Reveal from "./Reveal";
 
 const featured = [
   {
-    href: "/work/real-estate-data-and-ai-platform",
-    value: 4,
+    href: "/work/utility-switch",
+    value: 2,
     suffix: " months",
-    label: "Data foundation, analytics & AI",
+    label: "From idea to product launch",
+    project: "Utility Switch",
+    summary:
+      "A founder with deep utility industry knowledge and no technical team partnered with us as fractional CTO to design, build, and launch a platform that handles utility starts, stops, and transfers for people who are moving. Reminder emails and a single dashboard keep every move on track.",
+    icon: usMark.url,
+    iconLogo: true,
+    badge: "Newest",
+  },
+  {
+    href: "/work/real-estate-data-and-ai-platform",
+    statHeadline: ["6 weeks", " of work into ", "2 days", " of review"],
+    label: "Quarterly close and investor distributions",
     project: "Real Estate Data & AI Platform",
     summary:
       "A family-run real estate investor replaced manual exports and a breaking dashboard with a custom data foundation, always on analytics, and LLM analysts for financial reporting, leasing, performance vs pro forma, and distributions. Weeks of manual work now done in hours.",
     icon: iconData,
-    badge: "Newest",
+    badge: "Engagement",
   },
   {
     href: "/work/prospecting-agent",
