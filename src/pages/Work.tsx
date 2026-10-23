@@ -106,7 +106,7 @@ const Work = () => {
                     </p>
                     <h2 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{c.title}</h2>
                   </div>
-                  <img src={c.icon} alt="" loading="lazy" className="h-16 w-16 flex-shrink-0 rounded-md bg-[hsl(40_20%_97%)] object-contain p-1" />
+                  <img src={c.icon} alt="" loading="lazy" className={c.slug === "utility-switch" ? "logo-tile h-16 w-16 flex-shrink-0 rounded-md object-contain p-1" : "h-20 w-20 flex-shrink-0 object-contain"} />
                 </div>
 
                 <p className="text-base leading-relaxed text-muted-foreground">{c.blurb}</p>
