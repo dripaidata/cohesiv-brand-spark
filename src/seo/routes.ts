@@ -105,9 +105,9 @@ export const ROUTE_SEO = {
   },
   "/work/real-estate-data-and-ai-platform": {
     path: "/work/real-estate-data-and-ai-platform",
-    title: "Case Study: Real Estate Data & AI Platform | Drip AI & Data",
+    title: "From spreadsheets to an AI-powered finance platform | Drip AI and Data",
     description:
-      "How a family-run real estate investor replaced spreadsheets and a breaking dashboard tool with a custom data foundation, analytics, and LLM analysts, saving weeks of manual work every month and quarter.",
+      "How a family-run real estate investment firm went from weeks of quarter-end spreadsheet work to automated distributions, live reporting, and AI analysts their leadership uses every day.",
     changefreq: "yearly",
     priority: "0.6",
   },
