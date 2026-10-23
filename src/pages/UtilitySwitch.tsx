@@ -153,8 +153,7 @@ const UtilitySwitch = () => (
       {/* Timeline */}
       <section className="py-20 md:py-28">
         <div className="container-wide max-w-3xl">
-          <p className="eyebrow text-cyan">What we built</p>
-          <h2 className="display-serif mt-4 text-4xl text-navy-ink md:text-5xl">From research to a running pilot</h2>
+          <h2 className="display-serif text-4xl text-navy-ink md:text-5xl">What we built</h2>
           <ol className="relative mt-12 space-y-10 border-l border-border pl-8 md:pl-10">
             {steps.map((s, i) => (
               <li key={s.title} className="relative">
