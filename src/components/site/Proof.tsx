@@ -8,7 +8,20 @@ import usMark from "@/assets/utility-switch-mark-hires.png.asset.json";
 import AnimatedNumber from "./AnimatedNumber";
 import Reveal from "./Reveal";
 
-const featured = [
+type FeaturedCase = {
+  href: string;
+  label: string;
+  project: string;
+  summary: string;
+  icon: string;
+  value?: number;
+  suffix?: string;
+  statHeadline?: string[];
+  iconLogo?: boolean;
+  badge?: string;
+};
+
+const featured: FeaturedCase[] = [
   {
     href: "/work/utility-switch",
     value: 2,
