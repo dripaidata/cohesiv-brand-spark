@@ -4,20 +4,45 @@ import iconMartech from "@/assets/icon-martech.png";
 import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import iconData from "@/assets/icon-data.png";
+import usMark from "@/assets/utility-switch-mark-hires.png.asset.json";
 import AnimatedNumber from "./AnimatedNumber";
 import Reveal from "./Reveal";
 
-const featured = [
+type FeaturedCase = {
+  href: string;
+  label: string;
+  project: string;
+  summary: string;
+  icon: string;
+  value?: number;
+  suffix?: string;
+  statHeadline?: string[];
+  iconLogo?: boolean;
+  badge?: string;
+};
+
+const featured: FeaturedCase[] = [
+  {
+    href: "/work/utility-switch",
+    value: 2,
+    suffix: " months",
+    label: "From idea to product launch",
+    project: "Utility Switch",
+    summary:
+      "A founder with deep utility industry knowledge and no technical team partnered with us as fractional CTO to design, build, and launch a platform that handles utility starts, stops, and transfers for people who are moving. Reminder emails and a single dashboard keep every move on track.",
+    icon: usMark.url,
+    iconLogo: true,
+    badge: "Newest",
+  },
   {
     href: "/work/real-estate-data-and-ai-platform",
-    value: 4,
-    suffix: " months",
-    label: "Data foundation, analytics & AI",
+    statHeadline: ["6 weeks", " of work into ", "2 days", " of review"],
+    label: "Quarterly close and investor distributions",
     project: "Real Estate Data & AI Platform",
     summary:
       "A family-run real estate investor replaced manual exports and a breaking dashboard with a custom data foundation, always on analytics, and LLM analysts for financial reporting, leasing, performance vs pro forma, and distributions. Weeks of manual work now done in hours.",
     icon: iconData,
-    badge: "Newest",
+    badge: "Engagement",
   },
   {
     href: "/work/prospecting-agent",
@@ -85,15 +110,29 @@ const Proof = () => (
                 <p className="font-mono text-xs uppercase tracking-widest text-cyan">{f.badge}</p>
                 <h3 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{f.project}</h3>
               </div>
-              <img src={f.icon} alt="" loading="lazy" className="h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28" />
+              <img
+                src={f.icon}
+                alt=""
+                loading="lazy"
+                className={f.iconLogo ? "logo-tile h-16 w-16 flex-shrink-0 rounded-md object-contain p-1 md:h-20 md:w-20" : "h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28"}
+              />
             </div>
             <div className="mt-10 grid gap-10 border-t border-border pt-8 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-5">
-                <AnimatedNumber
-                  value={f.value}
-                  suffix={f.suffix}
-                  className="display-serif block text-7xl text-cyan md:text-8xl"
-                />
+                {f.statHeadline ? (
+                  <p className="display-serif text-4xl text-navy-ink text-balance md:text-5xl">
+                    <span className="text-cyan">{f.statHeadline[0]}</span>
+                    {f.statHeadline[1]}
+                    <span className="text-cyan">{f.statHeadline[2]}</span>
+                    {f.statHeadline[3]}
+                  </p>
+                ) : (
+                  <AnimatedNumber
+                    value={f.value}
+                    suffix={f.suffix}
+                    className="display-serif block text-7xl text-cyan md:text-8xl"
+                  />
+                )}
                 <p className="eyebrow mt-2 text-navy-deep">{f.label}</p>
               </div>
               <div className="md:col-span-7">
