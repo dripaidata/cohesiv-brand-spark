@@ -97,15 +97,29 @@ const Proof = () => (
                 <p className="font-mono text-xs uppercase tracking-widest text-cyan">{f.badge}</p>
                 <h3 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{f.project}</h3>
               </div>
-              <img src={f.icon} alt="" loading="lazy" className="h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28" />
+              <img
+                src={f.icon}
+                alt=""
+                loading="lazy"
+                className={f.iconLogo ? "logo-tile h-16 w-16 flex-shrink-0 rounded-md object-contain p-1 md:h-20 md:w-20" : "h-24 w-24 flex-shrink-0 object-contain md:h-28 md:w-28"}
+              />
             </div>
             <div className="mt-10 grid gap-10 border-t border-border pt-8 md:grid-cols-12 md:gap-12">
               <div className="md:col-span-5">
-                <AnimatedNumber
-                  value={f.value}
-                  suffix={f.suffix}
-                  className="display-serif block text-7xl text-cyan md:text-8xl"
-                />
+                {f.statHeadline ? (
+                  <p className="display-serif text-4xl text-navy-ink text-balance md:text-5xl">
+                    <span className="text-cyan">{f.statHeadline[0]}</span>
+                    {f.statHeadline[1]}
+                    <span className="text-cyan">{f.statHeadline[2]}</span>
+                    {f.statHeadline[3]}
+                  </p>
+                ) : (
+                  <AnimatedNumber
+                    value={f.value}
+                    suffix={f.suffix}
+                    className="display-serif block text-7xl text-cyan md:text-8xl"
+                  />
+                )}
                 <p className="eyebrow mt-2 text-navy-deep">{f.label}</p>
               </div>
               <div className="md:col-span-7">
