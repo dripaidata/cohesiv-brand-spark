@@ -148,7 +148,7 @@ const PillarPage = ({
                     <span className="display-serif block text-5xl text-cyan">{c.stat}</span>
                     <p className="eyebrow mt-2 text-navy-deep">{c.label}</p>
                   </div>
-                  <img src={c.icon} alt="" loading="lazy" className="h-16 w-16 flex-shrink-0 object-contain" />
+                  <img src={c.icon} alt="" loading="lazy" className={`h-16 w-16 flex-shrink-0 object-contain ${c.href === "/work/utility-switch" ? "logo-tile rounded-md p-1" : ""}`} />
                 </div>
                 <h3 className="mt-8 text-xl font-semibold tracking-tight text-navy-ink">{c.project}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{c.summary}</p>
