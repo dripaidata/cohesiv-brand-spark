@@ -9,8 +9,20 @@ import iconEngagement from "@/assets/icon-engagement.png";
 import iconPipeline from "@/assets/icon-pipeline.png";
 import iconData from "@/assets/icon-data.png";
 import { ROUTE_SEO } from "@/seo/routes";
+import usMark from "@/assets/utility-switch-mark-hires.png.asset.json";
 
 const cases = [
+  {
+    slug: "utility-switch",
+    href: "/work/utility-switch",
+    icon: usMark.url,
+    sector: "Fractional CTO · Product build",
+    title: "Utility Switch",
+    metric: "~2 months",
+    metricLabel: "idea to launched pilot",
+    blurb: "A founder with deep utility industry knowledge and no technical team partnered with us as fractional CTO to design, build, and launch a platform that handles utility starts, stops, and transfers for people who are moving.",
+    chips: [] as string[],
+  },
   {
     slug: "prospecting-agent",
     href: "/work/prospecting-agent",
@@ -94,7 +106,7 @@ const Work = () => {
                     </p>
                     <h2 className="display-serif mt-3 text-4xl text-navy-ink md:text-5xl">{c.title}</h2>
                   </div>
-                  <img src={c.icon} alt="" loading="lazy" className="h-20 w-20 flex-shrink-0 object-contain" />
+                  <img src={c.icon} alt="" loading="lazy" className="h-16 w-16 flex-shrink-0 rounded-md bg-[hsl(40_20%_97%)] object-contain p-1" />
                 </div>
 
                 <p className="text-base leading-relaxed text-muted-foreground">{c.blurb}</p>

@@ -1,3 +1,4 @@
+import usMark from "@/assets/utility-switch-mark-hires.png.asset.json";
 import PillarPage from "@/components/site/PillarPage";
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
@@ -115,6 +116,15 @@ const FractionalCTO = () => (
     }
     proofIntro="The same judgment that runs a fractional engagement has shaped data platforms, AI deployments, and product builds for mid-market teams."
     caseStudies={[
+      {
+        href: "/work/utility-switch",
+        project: "Utility Switch",
+        stat: "~2 months",
+        label: "Idea to launched pilot",
+        summary:
+          "As fractional CTO for a founder with no technical team, we owned research, architecture, the platform, and the launch of a utility moving service, with local partners on board at launch.",
+        icon: usMark.url,
+      },
       {
         href: "/work/real-estate-data-and-ai-platform",
         project: "Real Estate Data & AI Platform",
