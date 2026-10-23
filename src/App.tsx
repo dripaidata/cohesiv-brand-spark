@@ -17,6 +17,7 @@ import GlobalMartechTransformation from "./pages/GlobalMartechTransformation.tsx
 import RealTimeContentPersonalization from "./pages/RealTimeContentPersonalization.tsx";
 import ProspectingAgent from "./pages/ProspectingAgent.tsx";
 import RealEstateDataAndAIPlatform from "./pages/RealEstateDataAndAIPlatform.tsx";
+import UtilitySwitch from "./pages/UtilitySwitch.tsx";
 import Privacy from "./pages/Privacy.tsx";
 import Terms from "./pages/Terms.tsx";
 import DataDeletion from "./pages/DataDeletion.tsx";
@@ -52,6 +53,8 @@ const App = () => (
           <Route path="/work/real-time-content-personalization" element={<RealTimeContentPersonalization />} />
           <Route path="/work/prospecting-agent" element={<ProspectingAgent />} />
           <Route path="/work/real-estate-data-and-ai-platform" element={<RealEstateDataAndAIPlatform />} />
+
+          <Route path="/work/utility-switch" element={<UtilitySwitch />} />
 
           {/* Labs detail pages */}
           <Route path="/labs/congressional-trades-fund" element={<CongressionalTradesFund />} />

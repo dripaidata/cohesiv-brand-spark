@@ -10,6 +10,7 @@
 
 @layer base {
   :root {
+    --logo-tile: 40 20% 97%;
     --background: 210 33% 98%;
     --foreground: 210 30% 12%;
     --card: 0 0% 100%;
@@ -173,4 +174,8 @@
 .calendar-scheduling-button img,
 .calendar-scheduling-button svg {
   filter: none;
+}
+
+@layer components {
+  .logo-tile { background-color: hsl(var(--logo-tile)); }
 }

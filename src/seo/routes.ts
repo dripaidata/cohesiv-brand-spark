@@ -111,6 +111,14 @@ export const ROUTE_SEO = {
     changefreq: "yearly",
     priority: "0.6",
   },
+  "/work/utility-switch": {
+    path: "/work/utility-switch",
+    title: "Utility Switch: from idea to launched pilot in about two months | Drip AI and Data",
+    description:
+      "How a founder with years in the utility industry partnered with Drip AI and Data as fractional CTO to design, build, and launch Utility Switch, a platform that handles utility starts, stops, and transfers for people who are moving.",
+    changefreq: "yearly",
+    priority: "0.6",
+  },
   "/labs/dynasty-war-room": {
     path: "/labs/dynasty-war-room",
     title: "Dynasty War Room - Drip Labs",
