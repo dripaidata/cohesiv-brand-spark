@@ -114,8 +114,7 @@ const offers: Offer[] = [
       { lead: "Enablement throughout,", rest: "so your people run it after handoff" },
     ],
     timeline: "120 days · 3 phases · hard outputs at each",
-    priceNote:
-      "Engagements are scoped to your systems and typically start in the mid five figures.",
+    priceNote: "Custom scoping based on your systems and data sources.",
     value:
       "A single data hire costs more than $120,000 per year plus ramp time, and the platform still needs to be built after they start.",
     proof:

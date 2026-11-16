@@ -33,8 +33,8 @@ const offers = [
     number: "03",
     tag: "DATA & ANALYTICS",
     name: "Decision Intelligence Platform",
-    price: "Mid five figures",
-    detail: "typical starting range · 120 days",
+    price: "Custom scoping",
+    detail: "scoped to your systems · 120 days",
     summary: "Data foundation, metrics layer, live dashboards, and LLM analysts that turn weeks of work into hours.",
   },
   {
