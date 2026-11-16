@@ -47,6 +47,14 @@ export const ROUTE_SEO = {
     changefreq: "monthly",
     priority: "0.7",
   },
+  "/partners": {
+    path: "/partners",
+    title: "Partners | Drip AI and Data",
+    description:
+      "The specialists Drip AI and Data brings in, and refers clients to, when a client needs expertise beyond technology.",
+    changefreq: "monthly",
+    priority: "0.6",
+  },
   "/data-analytics": {
     path: "/data-analytics",
     title: "Data & Analytics Consulting for Mid-Market | Drip AI & Data",

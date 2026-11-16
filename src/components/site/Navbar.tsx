@@ -23,6 +23,7 @@ const Navbar = () => {
     { href: "/offers", label: "Offers" },
     { href: "/work", label: "Work" },
     { href: "/about", label: "About" },
+    { href: "/partners", label: "Partners" },
   ];
 
   const allServiceHrefs = [...services.map((s) => s.href), serviceFooterLink.href];

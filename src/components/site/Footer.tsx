@@ -22,6 +22,7 @@ const Footer = () => (
             { to: "/offers", label: "Offers" },
             { to: "/work", label: "Work" },
             { to: "/about", label: "About" },
+            { to: "/partners", label: "Partners" },
           ].map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="hover:text-cyan">{l.label}</Link>

@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import Work from "./pages/Work.tsx";
 import Offers from "./pages/Offers.tsx";
 import About from "./pages/About.tsx";
+import Partners from "./pages/Partners.tsx";
 import DataAnalytics from "./pages/DataAnalytics.tsx";
 import AIImplementation from "./pages/AIImplementation.tsx";
 import ProductDevelopment from "./pages/ProductDevelopment.tsx";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/work" element={<Work />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/about" element={<About />} />
+          <Route path="/partners" element={<Partners />} />
 
           {/* Services */}
           <Route path="/data-analytics" element={<DataAnalytics />} />

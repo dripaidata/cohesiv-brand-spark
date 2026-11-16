@@ -8,6 +8,7 @@
 - [Our Work](/work): Selected client engagements with verified outcomes.
 - [Drip Labs](/labs): Internal R&D arm - production systems built to validate ideas.
 - [About](/about): Founder background and career history.
+- [Partners](/partners): Referral partners Drip AI and Data works with.
 
 ## Case Studies
 

@@ -6,6 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Linkedin } from "lucide-react";
 import logo from "@/assets/logo-full.png";
 import { ROUTE_SEO } from "@/seo/routes";
+import { Link } from "react-router-dom";
+import { PartnerGrid } from "@/components/site/PartnerCard";
+import { partners } from "@/content/partners";
 
 const roles = [
   {
@@ -180,6 +183,34 @@ const About = () => (
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners */}
+      <section id="partners" className="scroll-mt-20 bg-card py-24 md:py-32">
+        <div className="container-wide">
+          <div className="grid gap-12 md:grid-cols-12 md:items-end">
+            <div className="md:col-span-8">
+              <p className="eyebrow text-cyan">Partners</p>
+              <h2 className="display-serif mt-6 text-4xl text-navy-ink md:text-5xl">
+                One practice, <em className="text-cyan not-italic">a trusted bench.</em>
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground">
+                When a client needs expertise beyond technology, we bring in people we trust.
+              </p>
+            </div>
+            <div className="md:col-span-4 md:text-right">
+              <Link
+                to="/partners"
+                className="inline-flex items-center gap-2 text-sm font-medium text-navy-deep transition-colors hover:text-cyan"
+              >
+                All partners <ArrowRight className="size-4" />
+              </Link>
+            </div>
+          </div>
+          <div className="mt-16">
+            <PartnerGrid partners={partners} />
           </div>
         </div>
       </section>
