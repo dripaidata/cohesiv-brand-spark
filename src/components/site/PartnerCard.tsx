@@ -38,7 +38,7 @@ export const PartnerCard = ({ partner }: { partner: Partner }) => {
       </div>
 
       <p className="mt-6 font-mono text-xs uppercase tracking-widest text-cyan">
-        Referral partner &middot; {partner.specialty}
+        {partner.relationship ?? "Referral partner"} &middot; {partner.specialty}
         {partner.location ? (
           <span className="text-muted-foreground"> &middot; {partner.location}</span>
         ) : null}
