@@ -42,10 +42,10 @@ export const partners: Partner[] = [
     name: "Anna Sender, CPA",
     role: "Founder, Sender Consulting",
     relationship: "Partner",
-    specialty: "Strategic advisory",
+    specialty: "Strategy and fractional finance",
     location: "Boston, MA",
     blurb:
-      "We bring Anna in when a client needs strategy and finance leadership in the room. A CPA and founder of Sender Consulting, she works with founders and leadership teams on corporate strategy, commercialization and operating models, with a background in M&A advisory and financial transformation. Anna shapes the plan. We build the systems that run it.",
+      "We bring Anna in when a client needs strategy and finance leadership in the room. A CPA and founder of Sender Consulting, she advises founders and leadership teams on corporate strategy, commercialization and operating models, and serves as a fractional CFO and controller, strengthening reporting, cash flow and FP&A. Anna shapes the plan and the finance function. We build the systems that run it.",
     website: { label: "senderconsultingllc.com", url: "https://senderconsultingllc.com" },
     photo: annaSenderPhoto,
   },
