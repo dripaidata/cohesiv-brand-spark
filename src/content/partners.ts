@@ -27,17 +27,6 @@ export interface Partner {
 
 export const partners: Partner[] = [
   {
-    slug: "marc-haslbeck",
-    name: "Marc Haslbeck",
-    role: "Principal, Bilanz",
-    specialty: "Fractional CFO",
-    location: "Cape Cod, MA",
-    blurb:
-      "We bring Marc in when a client needs a CFO in the room. He leads finance for nonprofits and housing organizations, and was CFO of Housing Assistance Corporation, Cape Cod's largest housing nonprofit. Marc owns audit readiness, grant compliance and the board conversation. We build the data foundation underneath, so his reporting is live at close.",
-    website: { label: "cfobilanz.com", url: "https://cfobilanz.com" },
-    photo: marcHaslbeckPhoto,
-  },
-  {
     slug: "anna-sender",
     name: "Anna Sender, CPA",
     role: "Founder, Sender Consulting",
@@ -48,5 +37,16 @@ export const partners: Partner[] = [
       "We bring Anna in when a client needs strategy and finance leadership in the room. A CPA and founder of Sender Consulting, she advises founders and leadership teams on corporate strategy, commercialization and operating models, and serves as a fractional CFO and controller, strengthening reporting, cash flow and FP&A. Anna shapes the plan and the finance function. We build the systems that run it.",
     website: { label: "senderconsultingllc.com", url: "https://senderconsultingllc.com" },
     photo: annaSenderPhoto,
+  },
+  {
+    slug: "marc-haslbeck",
+    name: "Marc Haslbeck",
+    role: "Principal, Bilanz",
+    specialty: "Fractional CFO",
+    location: "Cape Cod, MA",
+    blurb:
+      "We bring Marc in when a client needs a CFO in the room. He leads finance for nonprofits and housing organizations, and was CFO of Housing Assistance Corporation, Cape Cod's largest housing nonprofit. Marc owns audit readiness, grant compliance and the board conversation. We build the data foundation underneath, so his reporting is live at close.",
+    website: { label: "cfobilanz.com", url: "https://cfobilanz.com" },
+    photo: marcHaslbeckPhoto,
   },
 ];
