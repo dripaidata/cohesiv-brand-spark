@@ -8,6 +8,7 @@
 //     partner's initials in a navy circle instead.
 
 import marcHaslbeckPhoto from "@/assets/partners/marc-haslbeck.jpeg";
+import annaSenderPhoto from "@/assets/partners/anna-sender.jpg";
 
 export interface Partner {
   slug: string;
@@ -46,5 +47,6 @@ export const partners: Partner[] = [
     blurb:
       "We bring Anna in when a client needs strategy and finance leadership in the room. A CPA and founder of Sender Consulting, she works with founders and leadership teams on corporate strategy, commercialization and operating models, with a background in M&A advisory and financial transformation. Anna shapes the plan. We build the systems that run it.",
     website: { label: "senderconsultingllc.com", url: "https://senderconsultingllc.com" },
+    photo: annaSenderPhoto,
   },
 ];
