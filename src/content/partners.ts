@@ -9,6 +9,7 @@
 
 import marcHaslbeckPhoto from "@/assets/partners/marc-haslbeck.jpeg";
 import annaSenderPhoto from "@/assets/partners/anna-sender.jpg";
+import jaythanElamPhoto from "@/assets/partners/jaythan-elam.jpg";
 
 export interface Partner {
   slug: string;
@@ -47,6 +48,7 @@ export const partners: Partner[] = [
     blurb:
       "Jointley is a design studio working across brand, product, and web, helping companies turn complex ideas into clear stories, useful products, and reusable design systems. They're also building Tenon, an AI-assisted design harness that takes repetitive production work off designers' plates while keeping human creativity, judgment, and taste in charge. We're building the engineering foundation with them, turning workflows developed inside the studio into a product other teams can use, starting with Webflow to Astro migration on EmDash and Cloudflare.",
     website: { label: "jointley.com", url: "https://jointley.com" },
+    photo: jaythanElamPhoto,
   },
   {
     slug: "marc-haslbeck",
